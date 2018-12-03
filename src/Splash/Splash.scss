@@ -1,0 +1,53 @@
+.splash {
+  background: black;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  color: #ffda00;
+  font-size: 60px;
+}
+
+.fade {
+  width: 100vw;
+  min-height: 60vh;
+  position: relative;
+  background: linear-gradient(0deg, transparent, black 50%);
+  z-index: 1;
+}
+
+.star-wars {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  perspective: 400px;
+  height: 40vh;
+}
+
+.crawl {
+  color: #ffda00;
+  position: relative;
+  top: 1000px;
+  transform-origin: 50% 100%; 
+  animation: crawl 60s linear;
+}
+
+.film-title {
+  
+}
+
+@keyframes crawl {
+  0% {
+    top: 300px;
+    transform: rotateX(20deg) translateZ(0)
+  }
+  100% {
+    top: -6000px;
+    transform: rotateX(25deg) translateZ(-2500px)
+  }
+}

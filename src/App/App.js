@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Splash from '../Splash/Splash'
-import './App.css';
+import './App.scss';
 
 class App extends Component {
   constructor() {
