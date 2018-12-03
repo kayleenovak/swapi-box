@@ -6,20 +6,20 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      showSplash: true
+      showSplash: true,
+      films: []
     }
   }
 
-  ComponentDidMount() {
+  componentDidMount() {
+    console.log('mounted')
     fetch('https://swapi.co/api/films/')
       .then(response => response.json())
       .then(films => {
-
-        console.log(films)
         this.setState({
-        films: films
-
-
+        films: films.results
+      }, () => {
+        console.log(this.state)
       })
 
       })
@@ -29,7 +29,7 @@ class App extends Component {
 
   render() {
     return (
-        <Splash />
+        this.state.films.length ? <Splash films={ this.state.films }/> : <h2>Loading...</h2>
     );
   }
 }

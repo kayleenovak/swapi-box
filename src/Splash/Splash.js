@@ -1,7 +1,12 @@
 import React from 'react';
 
 
-const Splash = () => {
+
+
+const Splash = (props) => {
+  const randomNumber = Math.floor(Math.random() * 7)
+  const randomFilm = props.films[randomNumber]
+  console.log(randomFilm)
   return (
     <div>
       <h1>SWAPI BOX</h1>
@@ -9,7 +14,8 @@ const Splash = () => {
       <div className="fade"></div>
       <section className="star-wars">
         <div className="crawl">
-          <p></p>
+          <h2>{ randomFilm.title }</h2>
+          <p>{ randomFilm.opening_crawl }</p>
         </div>
       </section>
     </div>
