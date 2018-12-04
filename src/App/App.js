@@ -12,24 +12,23 @@ class App extends Component {
   }
 
   componentDidMount() {
-    console.log('mounted')
-    fetch('https://swapi.co/api/films/')
-      .then(response => response.json())
-      .then(films => {
-        this.setState({
-        films: films.results
-      }, () => {
-        console.log(this.state)
-      })
-
-      })
-      .catch(error => console.log(error))
   }
 
+  toggleSplash = () => {
+    this.setState({
+      showSplash: false
+    })
+  }
+
+  renderApp = () => {
+    return (
+      <div>APP</div>
+    )
+  }
 
   render() {
     return (
-        this.state.films.length ? <Splash films={ this.state.films }/> : <h2>Loading...</h2>
+        this.state.showSplash ? <Splash films={ this.state.films } toggleSplash={ this.toggleSplash } /> : this.renderApp()
     );
   }
 }
