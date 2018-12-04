@@ -1,3 +1,13 @@
+@font-face {
+  font-family: 'Star Wars';
+  src: url(../Fonts/starjedi/Starjhol.ttf);
+}
+
+@font-face {
+  font-family: 'Jedi';
+  src: url(../Fonts/starjedi/Starjedi.ttf);
+}
+
 .splash {
   background: black;
   height: 100vh;
@@ -10,15 +20,28 @@
 
 .logo {
   color: #ffda00;
-  font-size: 60px;
+  font-size: 96px;
+  font-family: 'Star Wars';
 }
 
 .fade {
   width: 100vw;
-  min-height: 60vh;
+  min-height: 70vh;
   position: relative;
-  background: linear-gradient(0deg, transparent, black 50%);
+  background: linear-gradient(0deg, transparent, black 25%);
   z-index: 1;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.enter-btn {
+  font-family: 'Jedi';
+  font-size: 60px;
+  background: none;
+  color: #56c5ea;
+  border: none;
 }
 
 .star-wars {
@@ -26,7 +49,7 @@
   justify-content: center;
   position: relative;
   perspective: 400px;
-  height: 40vh;
+  height: 30vh;
 }
 
 .crawl {
@@ -34,11 +57,19 @@
   position: relative;
   top: 1000px;
   transform-origin: 50% 100%; 
-  animation: crawl 60s linear;
+  animation: crawl 82s linear;
+  font-weight: bold;
 }
 
 .film-title {
-  
+  font-size: 80px;
+  text-align: center;
+}
+
+.film-body {
+  font-size: 50px;
+  text-align: justify;
+  line-spacing: 6px;
 }
 
 @keyframes crawl {

@@ -8,13 +8,13 @@ const Splash = (props) => {
   return (
     <div className='splash'>
       <div className="fade">
-        <h1 className='logo'>SWAPI BOX</h1>
-        <button>Enter Site</button>
+        <h1 className='logo'>SWAPi Box</h1>
+        <button className='enter-btn'>$</button>
       </div>
       <section className="star-wars">
         <div className="crawl">
-          <h2> className='film-title'>{ randomFilm.title }</h2>
-          <p className='film-crawl'>{ randomFilm.opening_crawl }</p>
+          <h2 className='film-title'>{ randomFilm.title }</h2>
+          <p className='film-body'>{ randomFilm.opening_crawl }</p>
         </div>
       </section>
     </div>
