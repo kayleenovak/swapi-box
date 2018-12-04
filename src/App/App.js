@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import People from '../helper/People'
 import Splash from '../Splash/Splash'
 import Menu from '../Menu/Menu'
 import './App.scss';
@@ -9,11 +10,16 @@ class App extends Component {
     this.state = {
       showSplash: true,
       films: [],
-      currentSelection: 'People'
+      currentSelection: 'People',
+      people: []
     }
   }
 
-  componentDidMount() {
+  async componentDidMount() {
+    this.people = new People();
+    this.setState({
+      people: await this.people.fetchPeople()
+    })
   }
 
   toggleSplash = () => {
