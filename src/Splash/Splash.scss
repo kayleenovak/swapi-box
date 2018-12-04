@@ -42,6 +42,13 @@
   background: none;
   color: #56c5ea;
   border: none;
+  height: 80px;
+  margin-top: -15px;
+}
+
+.enter-site {
+  color: #56c5ea;
+  margin-top: 0px;
 }
 
 .star-wars {
@@ -57,7 +64,7 @@
   position: relative;
   top: 1000px;
   transform-origin: 50% 100%; 
-  animation: crawl 82s linear;
+  animation: crawl 87s linear;
   font-weight: bold;
 }
 

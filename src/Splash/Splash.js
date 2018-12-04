@@ -10,6 +10,7 @@ const Splash = (props) => {
       <div className="fade">
         <h1 className='logo'>SWAPi Box</h1>
         <button className='enter-btn'>$</button>
+        <p className='enter-site'>Click to Enter</p>
       </div>
       <section className="star-wars">
         <div className="crawl">
