@@ -44,11 +44,13 @@
   border: none;
   height: 80px;
   margin-top: -15px;
+  animation: glow .3s linear;
 }
 
 .enter-site {
   color: #56c5ea;
   margin-top: 0px;
+  animation: glow .3s linear;
 }
 
 .star-wars {
@@ -88,4 +90,11 @@
     top: -6000px;
     transform: rotateX(25deg) translateZ(-2500px)
   }
+}
+
+
+@keyframes glow {
+    to {
+        text-shadow: 0 0 10px #fff;
+    }
 }
