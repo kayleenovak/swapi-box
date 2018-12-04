@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Splash from '../Splash/Splash'
+import Menu from '../Menu/Menu'
 import './App.scss';
 
 class App extends Component {
@@ -7,7 +8,8 @@ class App extends Component {
     super();
     this.state = {
       showSplash: true,
-      films: []
+      films: [],
+      currentSelection: 'People'
     }
   }
 
@@ -25,32 +27,7 @@ class App extends Component {
       <div>
         <div class="stars"></div>
         <div class="twinkling"></div>
-        <div class="container">
-          <ul id="menu">
-            <a class="menu-button icon-plus" href="#menu" title="Show navigation">$</a>
-            <a class="menu-button icon-minus" href="#0" title="Hide navigation">$</a>
-            <li class="menu-item">
-              <a href="#menu">
-                <span>People</span>
-              </a>
-            </li>
-            <li class="menu-item">
-              <a href="#menu">
-                <span>Vehicles</span>
-              </a>
-            </li>
-            <li class="menu-item">
-              <a href="#menu">
-                <span>Planets</span>
-              </a>
-            </li>
-            <li class="menu-item">
-              <a href="#menu">
-                <span>Favorites</span>
-              </a>
-            </li>
-          </ul>
-      </div>
+        <Menu currentSelection={ this.state.currentSelection }/>
     </div>
     )
   }
