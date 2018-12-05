@@ -1,12 +1,13 @@
 import React from 'react'
 import './Card.scss'
+import Images from '../images.js'
 
 const Card = (props) => {
-  console.log(props)
+  const image = 'Luke Skywalker'
   return (
-    <div>
-      <div className='card'>
+    <div className='card'>
       <h1>{props.person.name}</h1>
+      <img src={Images[image]} />
     </div>
     )
 }
