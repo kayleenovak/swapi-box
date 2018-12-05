@@ -12,7 +12,7 @@ class App extends Component {
     this.state = {
       showSplash: true,
       films: [],
-      currentSelection: 'People',
+      currentSelection: null,
       people: []
     }
   }

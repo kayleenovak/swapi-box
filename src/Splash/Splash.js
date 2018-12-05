@@ -19,7 +19,6 @@ export default class Splash extends Component {
         this.setState({
         films: films.results
       }, () => {
-        console.log(this.state)
       })
 
       })

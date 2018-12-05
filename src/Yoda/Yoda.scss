@@ -1,0 +1,65 @@
+.yoda-container {
+  position: relative;
+  top: 300px;
+  left: 300px;
+}
+
+.choose-path {
+  position: absolute;
+  color: #007EB0;
+  font-size: 40px;
+  overflow: hidden;
+  height: 100px;
+  width: 500px;
+  animation: type 2s steps(40, end);
+  animation: glow 1s ease-in-out infinite alternate;
+  animation-fill-mode: forwards;
+  top: -100px;
+  text-align: center;     
+}
+
+.lightsaber {
+  position: absolute;
+  top: -118px;
+  left: -13px;
+  transform: rotate(320deg)
+}
+
+.saber {
+  height: 347px;
+  width: 14px;
+  background: rgb(135,220,90);
+  background: linear-gradient(to right, rgb(135,220,90) 0%,rgb(254,254,254) 30%,rgb(254,254,254) 50%,rgb(254,254,254) 70%,rgb(135,220,90) 100%);
+  filter: blur(1px);
+  border-radius: 5px;       
+}
+
+.handle {
+  background: grey;
+  height: 64px;
+  width: 16px;
+  border-top: 7px solid black;
+  border-bottom: 8px solid black;
+  border-radius: 5px
+}
+
+@keyframes type {
+  0% {
+    width: 0;
+  }
+  99.9% {
+    border-right: .15em solid #007EB0;
+  }
+  100% {
+    border: none;
+  }
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 4px #fff, 0 0 8px #fff, 0 0 12px #007EB0, 0 0 16px #007EB0, 0 0 20px #007EB0, 0 0 24px #007EB0, 0 0 28px #007EB0;
+  }
+  to {
+    text-shadow: 0 0 8px #fff, 0 0 12px #00b5fd, 0 0 16px #00b5fd, 0 0 20px #00b5fd, 0 0 24px #00b5fd, 0 0 28px #00b5fd, 0 0 32px #00b5fd;
+  }
+}
