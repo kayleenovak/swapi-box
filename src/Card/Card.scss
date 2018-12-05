@@ -1,3 +1,23 @@
-h1 {
-  color: white;
+.card {
+  align-items: center;
+  border-radius: 50%;
+  color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  height: 208px;
+  justify-content: center;
+  margin: 12px;
+  text-align: center;
+  position: relative;
+  width: 208px;
+}
+
+.card-image {
+  width:100%;
+  height:100%;
+  border-radius: 50%;
+}
+
+.card-text {
+  position: absolute;
 }

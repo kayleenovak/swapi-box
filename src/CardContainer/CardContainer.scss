@@ -1,0 +1,14 @@
+.card-border {
+  align-items: center;
+  box-shadow: 0 0 17px 4px #0080b5, inset 0 0 17px 2px #0080b5;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 15px;
+}
+
+.card-container {
+  margin-left: auto;
+  padding: 30px;
+  width: 75vw;
+}

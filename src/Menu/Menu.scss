@@ -1,13 +1,108 @@
-.menu-button {
-  animation: button-glow 1s ease-in-out;
-  animation-iteration-count: 4; 
-}
-
 @keyframes button-glow {
-  from {
+  0% {
     box-shadow: 0 0 8px #03b9ffb0, 0 0 16px #03b9ffb0, 0 0 24px #03b9ffb0, 0 0 32px #03b9ffb0, 0 0 40px #03b9ffb0, 0 0 48px #03b9ffb0, 0 0 56px #03b9ffb0;
   }
-  to {
+  50% {
     box-shadow: 0 0 16px #03b9ffb0, 0 0 24px #03b9ffb0, 0 0 32px #03b9ffb0, 0 0 40px #03b9ffb0, 0 0 48px #03b9ffb0, 0 0 56px #03b9ffb0, 0 0 64px #03b9ffb0;
   }
+  100% {
+    box-shadow: 0 0 8px #03b9ffb0, 0 0 16px #03b9ffb0, 0 0 24px #03b9ffb0, 0 0 32px #03b9ffb0, 0 0 40px #03b9ffb0, 0 0 48px #03b9ffb0, 0 0 56px #03b9ffb0;
+  }
 }
+
+#menu {
+  width: 155px;
+  height: 155px;
+  position: absolute;
+  left: 38px;
+  top: 115px;
+  margin: -75px 0 0 -75px;
+  list-style: none;
+  font-size: 200%;
+
+  &:not(:target)>a:first-of-type,
+  &:target>a:last-of-type {
+    opacity: 1;
+    z-index: 1;
+  }
+
+  &:not(:target)>.icon-plus:before,
+  &:target>.icon-minus:before {
+    opacity: 1;
+  }
+
+  &:target>.menu-item:nth-child(6) {
+    transform: rotate(165deg) translateY(-143px) rotate(200deg);
+    transition-delay: 0.4s;
+  }
+
+  &:target>.menu-item:nth-child(5) {
+    transform: rotate(131deg) translateY(-155px) rotate(230deg);
+    transition-delay: 0.3s;
+  }
+
+  &:target>.menu-item:nth-child(4) {
+    transform: rotate(100deg) translateY(-155px) rotate(-105deg);
+    transition-delay: 0.2s;
+  }
+
+  &:target>.menu-item:nth-child(3) {
+    transform: rotate(70deg) translateY(-155px) rotate(278deg);
+    transition-delay: 0.1s;
+  }
+}
+
+.menu-button {
+  display: flex;
+  align-items: center;
+  background-size: 100%;
+  background: black;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #03b9ffb0, 0 0 16px #03b9ffb0, 0 0 24px #03b9ffb0, 0 0 32px #03b9ffb0, 0 0 40px #03b9ffb0, 0 0 48px #03b9ffb0, 0 0 56px #03b9ffb0;
+  color: #03b9ffb0;
+  font-family: 'Jedi';
+  font-size: 67px;
+  height: 150px;
+  justify-content: center;
+  left: 147px;
+  margin: -75px 0 0 -75px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  text-decoration: none;
+  top: 45%;
+  width: 150px;
+  z-index: -1;
+  animation: button-glow 1.5s ease-in-out;
+  animation-iteration-count: 4; 
+  animation-delay: 2.5s;
+}
+
+.menu-item {
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  left: 150px;
+  top: 50%;
+  margin: -50px 0 0 -50px;
+  border-radius: 50%;
+  background-color: #424242;
+  transform: translate(0px, 0px);
+  transition: transform 500ms;
+  z-index: -2;
+  transition: .2s;
+
+  &:hover {
+    opacity: 0.5;
+    box-shadow: 0 5px 10px black; 
+  }
+}
+
+.menu-item a {
+  color: #fff;
+  position: relative;
+  top: 30%;
+  left: -14px;
+  text-decoration: none;
+}
+
