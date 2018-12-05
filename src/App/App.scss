@@ -3,8 +3,11 @@
   margin: 0;
 }
 
+
 .app {
   overflow: hidden;
+  position: relative;
+  min-height: 100vh
 }
 
 @font-face {
