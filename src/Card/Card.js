@@ -6,8 +6,8 @@ const Card = (props) => {
   const image = 'Luke Skywalker'
   return (
     <div className='card'>
-      <h1>{props.person.name}</h1>
-      <img src={Images[image]} />
+      <h1 className='card-text'>{props.person.name}</h1>
+      <img className='card-image' src={Images[image]} />
     </div>
     )
 }

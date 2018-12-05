@@ -11,7 +11,9 @@ const CardContainer = (props) => {
 
   return (
     <div className='card-container'>
-    { cards }
+      <div className='card-border'>
+        { cards }
+      </div>
     </div>
   )
 }
