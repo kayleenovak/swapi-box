@@ -33,7 +33,7 @@ class App extends Component {
   renderApp = () => {
     const { currentSelection, people } = this.state;
     return (
-      <div>
+      <div className='app'>
         <div class="stars"></div>
         <div class="twinkling"></div>
         <Menu currentSelection={ currentSelection }/>

@@ -1,7 +1,7 @@
 .yoda-container {
   position: relative;
   top: 300px;
-  left: 300px;
+  left: 450px;
 }
 
 .choose-path {
@@ -9,13 +9,12 @@
   color: #007EB0;
   font-size: 40px;
   overflow: hidden;
-  height: 100px;
+  height: 50px;
   width: 500px;
   animation: type 2s steps(40, end);
-  animation: glow 1s ease-in-out infinite alternate;
   animation-fill-mode: forwards;
   top: -100px;
-  text-align: center;     
+  left: 80px;    
 }
 
 .lightsaber {
