@@ -1,9 +1,10 @@
+import fetchData from './APICalls.js'
+
 export default class People {
 
   fetchPeople = async () => {
     const url = "https://swapi.co/api/people/";
-    const response = await fetch(url)
-    const data = await response.json();
+    const data = await fetchData(url)
 
     const peopleData = data.results.map(async person => {
       const world = await this.fetchHomeworld(person.homeworld)
@@ -17,14 +18,12 @@ export default class People {
         favorite: false
       }
     })
-    console.log(await Promise.all(peopleData))
     return Promise.all(peopleData)
   }
 
 
   fetchHomeworld = async (url) => {
-    const response = await fetch(url)
-    const data = await response.json();
+    const data = await fetchData(url)
     return {
       homeworld: data.name,
       population: data.population
@@ -33,8 +32,7 @@ export default class People {
 
 
   fetchSpecies = async (url) => {
-    const response = await fetch(url)
-    const data = await response.json();
+    const data = await fetchData(url)
     return {
       species: data.name 
     }
