@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import People from '../helper/People'
 import Splash from '../Splash/Splash'
+import CardContainer from '../CardContainer/CardContainer'
+import Yoda from '../Yoda/Yoda'
 import Menu from '../Menu/Menu'
 import './App.scss';
 
@@ -29,11 +31,15 @@ class App extends Component {
   }
 
   renderApp = () => {
+    const { currentSelection, people } = this.state;
     return (
       <div>
         <div class="stars"></div>
         <div class="twinkling"></div>
-        <Menu currentSelection={ this.state.currentSelection }/>
+        <Menu currentSelection={ currentSelection }/>
+        { currentSelection ? <CardContainer 
+                                    currentSelection={currentSelection} 
+                                    people={people} /> : <Yoda /> }
     </div>
     )
   }
