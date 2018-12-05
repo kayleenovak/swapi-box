@@ -1,3 +1,15 @@
+@keyframes button-glow {
+  0% {
+    box-shadow: 0 0 8px #03b9ffb0, 0 0 16px #03b9ffb0, 0 0 24px #03b9ffb0, 0 0 32px #03b9ffb0, 0 0 40px #03b9ffb0, 0 0 48px #03b9ffb0, 0 0 56px #03b9ffb0;
+  }
+  50% {
+    box-shadow: 0 0 16px #03b9ffb0, 0 0 24px #03b9ffb0, 0 0 32px #03b9ffb0, 0 0 40px #03b9ffb0, 0 0 48px #03b9ffb0, 0 0 56px #03b9ffb0, 0 0 64px #03b9ffb0;
+  }
+  100% {
+    box-shadow: 0 0 8px #03b9ffb0, 0 0 16px #03b9ffb0, 0 0 24px #03b9ffb0, 0 0 32px #03b9ffb0, 0 0 40px #03b9ffb0, 0 0 48px #03b9ffb0, 0 0 56px #03b9ffb0;
+  }
+}
+
 #menu {
   width: 155px;
   height: 155px;
@@ -46,7 +58,7 @@
   background-size: 100%;
   background: black;
   border-radius: 50%;
-  box-shadow: 0 0 20px 6px #03b9ffb0, inset 0 0 4px 2px #03b9ffde;
+  box-shadow: 0 0 8px #03b9ffb0, 0 0 16px #03b9ffb0, 0 0 24px #03b9ffb0, 0 0 32px #03b9ffb0, 0 0 40px #03b9ffb0, 0 0 48px #03b9ffb0, 0 0 56px #03b9ffb0;
   color: #03b9ffb0;
   font-family: 'Jedi';
   font-size: 67px;
@@ -61,7 +73,9 @@
   top: 45%;
   width: 150px;
   z-index: -1;
-
+  animation: button-glow 1.5s ease-in-out;
+  animation-iteration-count: 4; 
+  animation-delay: 2.5s;
 }
 
 .menu-item {
@@ -91,3 +105,4 @@
   left: -14px;
   text-decoration: none;
 }
+

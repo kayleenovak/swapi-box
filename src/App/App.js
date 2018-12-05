@@ -12,7 +12,7 @@ class App extends Component {
     this.state = {
       showSplash: true,
       films: [],
-      currentSelection: 'People',
+      currentSelection: null,
       people: []
     }
   }
@@ -33,7 +33,7 @@ class App extends Component {
   renderApp = () => {
     const { currentSelection, people } = this.state;
     return (
-      <div className="main">
+      <div className='app'>
         <div class="stars"></div>
         <div class="twinkling"></div>
         <Menu currentSelection={ currentSelection }/>
