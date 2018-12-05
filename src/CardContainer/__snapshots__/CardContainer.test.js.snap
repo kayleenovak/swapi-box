@@ -1,0 +1,193 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card Container should match the snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <CardContainer
+    currentSelection="People"
+    people={
+      Array [
+        Object {
+          "favorite": false,
+          "homeworld": "Tatooine",
+          "name": "Luke Skywalker",
+          "population": 20000000,
+          "species": "human",
+        },
+        Object {
+          "favorite": false,
+          "homeworld": "Tatooine",
+          "name": "C3PO",
+          "population": 20000000,
+          "species": "robot",
+        },
+      ]
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <Card
+          person={
+            Object {
+              "favorite": false,
+              "homeworld": "Tatooine",
+              "name": "Luke Skywalker",
+              "population": 20000000,
+              "species": "human",
+            }
+          }
+        />,
+        <Card
+          person={
+            Object {
+              "favorite": false,
+              "homeworld": "Tatooine",
+              "name": "C3PO",
+              "population": 20000000,
+              "species": "robot",
+            }
+          }
+        />,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "person": Object {
+            "favorite": false,
+            "homeworld": "Tatooine",
+            "name": "Luke Skywalker",
+            "population": 20000000,
+            "species": "human",
+          },
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "person": Object {
+            "favorite": false,
+            "homeworld": "Tatooine",
+            "name": "C3PO",
+            "population": 20000000,
+            "species": "robot",
+          },
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <Card
+            person={
+              Object {
+                "favorite": false,
+                "homeworld": "Tatooine",
+                "name": "Luke Skywalker",
+                "population": 20000000,
+                "species": "human",
+              }
+            }
+          />,
+          <Card
+            person={
+              Object {
+                "favorite": false,
+                "homeworld": "Tatooine",
+                "name": "C3PO",
+                "population": 20000000,
+                "species": "robot",
+              }
+            }
+          />,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "person": Object {
+              "favorite": false,
+              "homeworld": "Tatooine",
+              "name": "Luke Skywalker",
+              "population": 20000000,
+              "species": "human",
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "person": Object {
+              "favorite": false,
+              "homeworld": "Tatooine",
+              "name": "C3PO",
+              "population": 20000000,
+              "species": "robot",
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
