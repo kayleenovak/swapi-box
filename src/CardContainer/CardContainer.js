@@ -1,5 +1,6 @@
 import React from 'react'
 import Card from '../Card/Card'
+import './CardContainer.scss'
 
 const CardContainer = (props) => {
 
@@ -9,7 +10,7 @@ const CardContainer = (props) => {
 
 
   return (
-    <div>
+    <div className='card-container'>
     { cards }
     </div>
   )

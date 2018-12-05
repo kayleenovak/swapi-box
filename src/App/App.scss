@@ -3,6 +3,11 @@
   margin: 0;
 }
 
+.main { 
+  position: relative;
+  min-height: 100vh
+}
+
 @font-face {
   font-family: 'Jedi';
   src: url(../Fonts/starjedi/Starjedi.ttf);
