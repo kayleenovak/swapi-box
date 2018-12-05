@@ -17,10 +17,96 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": "Yoda",
+      "children": Array [
+        <p
+          className="choose-path"
+        >
+          Choose a path you must...
+        </p>,
+        <img
+          src="./images/yoda.png"
+        />,
+        <div
+          className="lightsaber"
+        >
+          <div
+            className="saber"
+          />
+          <div
+            className="handle"
+          />
+        </div>,
+      ],
+      "className": "yoda-container",
     },
     "ref": null,
-    "rendered": "Yoda",
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Choose a path you must...",
+          "className": "choose-path",
+        },
+        "ref": null,
+        "rendered": "Choose a path you must...",
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "src": "./images/yoda.png",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "img",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div
+              className="saber"
+            />,
+            <div
+              className="handle"
+            />,
+          ],
+          "className": "lightsaber",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "saber",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "handle",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+    ],
     "type": "div",
   },
   Symbol(enzyme.__nodes__): Array [
@@ -29,10 +115,96 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "children": "Yoda",
+        "children": Array [
+          <p
+            className="choose-path"
+          >
+            Choose a path you must...
+          </p>,
+          <img
+            src="./images/yoda.png"
+          />,
+          <div
+            className="lightsaber"
+          >
+            <div
+              className="saber"
+            />
+            <div
+              className="handle"
+            />
+          </div>,
+        ],
+        "className": "yoda-container",
       },
       "ref": null,
-      "rendered": "Yoda",
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Choose a path you must...",
+            "className": "choose-path",
+          },
+          "ref": null,
+          "rendered": "Choose a path you must...",
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "src": "./images/yoda.png",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "img",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <div
+                className="saber"
+              />,
+              <div
+                className="handle"
+              />,
+            ],
+            "className": "lightsaber",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "saber",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "handle",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+      ],
       "type": "div",
     },
   ],

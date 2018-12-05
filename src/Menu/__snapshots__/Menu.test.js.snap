@@ -19,188 +19,18 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": <ul
-        id="menu"
-      >
-        <a
-          class="menu-button icon-plus"
-          href="#menu"
-          title="Show navigation"
+      "children": Array [
+        <input
+          class="menu-toggler"
+          id="menu-toggler"
+          type="checkbox"
+        />,
+        <label
+          for="menu-toggler"
         >
           $
-        </a>
-        <a
-          class="menu-button icon-minus"
-          href="#0"
-          title="Hide navigation"
-        >
-          $
-        </a>
-        <Button
-          currentSelection="People"
-          name="Vehicles"
-        />
-        <Button
-          currentSelection="People"
-          name="People"
-        />
-        <Button
-          currentSelection="People"
-          name="Planets"
-        />
-        <Button
-          currentSelection="People"
-          name="Favorites"
-        />
-      </ul>,
-      "class": "container",
-    },
-    "ref": null,
-    "rendered": Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": Array [
-          <a
-            class="menu-button icon-plus"
-            href="#menu"
-            title="Show navigation"
-          >
-            $
-          </a>,
-          <a
-            class="menu-button icon-minus"
-            href="#0"
-            title="Hide navigation"
-          >
-            $
-          </a>,
-          <Button
-            currentSelection="People"
-            name="Vehicles"
-          />,
-          <Button
-            currentSelection="People"
-            name="People"
-          />,
-          <Button
-            currentSelection="People"
-            name="Planets"
-          />,
-          <Button
-            currentSelection="People"
-            name="Favorites"
-          />,
-        ],
-        "id": "menu",
-      },
-      "ref": null,
-      "rendered": Array [
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "$",
-            "class": "menu-button icon-plus",
-            "href": "#menu",
-            "title": "Show navigation",
-          },
-          "ref": null,
-          "rendered": "$",
-          "type": "a",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "$",
-            "class": "menu-button icon-minus",
-            "href": "#0",
-            "title": "Hide navigation",
-          },
-          "ref": null,
-          "rendered": "$",
-          "type": "a",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {
-            "currentSelection": "People",
-            "name": "Vehicles",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {
-            "currentSelection": "People",
-            "name": "People",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {
-            "currentSelection": "People",
-            "name": "Planets",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {
-            "currentSelection": "People",
-            "name": "Favorites",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-      ],
-      "type": "ul",
-    },
-    "type": "div",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": <ul
-          id="menu"
-        >
-          <a
-            class="menu-button icon-plus"
-            href="#menu"
-            title="Show navigation"
-          >
-            $
-          </a>
-          <a
-            class="menu-button icon-minus"
-            href="#0"
-            title="Hide navigation"
-          >
-            $
-          </a>
+        </label>,
+        <ul>
           <Button
             currentSelection="People"
             name="Vehicles"
@@ -218,29 +48,42 @@ ShallowWrapper {
             name="Favorites"
           />
         </ul>,
-        "class": "container",
+      ],
+      "class": "nav",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "class": "menu-toggler",
+          "id": "menu-toggler",
+          "type": "checkbox",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "input",
       },
-      "ref": null,
-      "rendered": Object {
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "$",
+          "for": "menu-toggler",
+        },
+        "ref": null,
+        "rendered": "$",
+        "type": "label",
+      },
+      Object {
         "instance": null,
         "key": undefined,
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            <a
-              class="menu-button icon-plus"
-              href="#menu"
-              title="Show navigation"
-            >
-              $
-            </a>,
-            <a
-              class="menu-button icon-minus"
-              href="#0"
-              title="Hide navigation"
-            >
-              $
-            </a>,
             <Button
               currentSelection="People"
               name="Vehicles"
@@ -258,38 +101,9 @@ ShallowWrapper {
               name="Favorites"
             />,
           ],
-          "id": "menu",
         },
         "ref": null,
         "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "$",
-              "class": "menu-button icon-plus",
-              "href": "#menu",
-              "title": "Show navigation",
-            },
-            "ref": null,
-            "rendered": "$",
-            "type": "a",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "$",
-              "class": "menu-button icon-minus",
-              "href": "#0",
-              "title": "Hide navigation",
-            },
-            "ref": null,
-            "rendered": "$",
-            "type": "a",
-          },
           Object {
             "instance": null,
             "key": undefined,
@@ -341,6 +155,152 @@ ShallowWrapper {
         ],
         "type": "ul",
       },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <input
+            class="menu-toggler"
+            id="menu-toggler"
+            type="checkbox"
+          />,
+          <label
+            for="menu-toggler"
+          >
+            $
+          </label>,
+          <ul>
+            <Button
+              currentSelection="People"
+              name="Vehicles"
+            />
+            <Button
+              currentSelection="People"
+              name="People"
+            />
+            <Button
+              currentSelection="People"
+              name="Planets"
+            />
+            <Button
+              currentSelection="People"
+              name="Favorites"
+            />
+          </ul>,
+        ],
+        "class": "nav",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "class": "menu-toggler",
+            "id": "menu-toggler",
+            "type": "checkbox",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "input",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "$",
+            "for": "menu-toggler",
+          },
+          "ref": null,
+          "rendered": "$",
+          "type": "label",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <Button
+                currentSelection="People"
+                name="Vehicles"
+              />,
+              <Button
+                currentSelection="People"
+                name="People"
+              />,
+              <Button
+                currentSelection="People"
+                name="Planets"
+              />,
+              <Button
+                currentSelection="People"
+                name="Favorites"
+              />,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "currentSelection": "People",
+                "name": "Vehicles",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "currentSelection": "People",
+                "name": "People",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "currentSelection": "People",
+                "name": "Planets",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "currentSelection": "People",
+                "name": "Favorites",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": "ul",
+        },
+      ],
       "type": "div",
     },
   ],

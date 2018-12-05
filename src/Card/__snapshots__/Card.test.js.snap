@@ -27,22 +27,46 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": <h1>
-        Luke Skywalker
-      </h1>,
+      "children": Array [
+        <h1
+          className="card-text"
+        >
+          Luke Skywalker
+        </h1>,
+        <img
+          className="card-image"
+          src="../images/Luke.png"
+        />,
+      ],
+      "className": "card",
     },
     "ref": null,
-    "rendered": Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": "Luke Skywalker",
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Luke Skywalker",
+          "className": "card-text",
+        },
+        "ref": null,
+        "rendered": "Luke Skywalker",
+        "type": "h1",
       },
-      "ref": null,
-      "rendered": "Luke Skywalker",
-      "type": "h1",
-    },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "className": "card-image",
+          "src": "../images/Luke.png",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "img",
+      },
+    ],
     "type": "div",
   },
   Symbol(enzyme.__nodes__): Array [
@@ -51,22 +75,46 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "children": <h1>
-          Luke Skywalker
-        </h1>,
+        "children": Array [
+          <h1
+            className="card-text"
+          >
+            Luke Skywalker
+          </h1>,
+          <img
+            className="card-image"
+            src="../images/Luke.png"
+          />,
+        ],
+        "className": "card",
       },
       "ref": null,
-      "rendered": Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "Luke Skywalker",
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Luke Skywalker",
+            "className": "card-text",
+          },
+          "ref": null,
+          "rendered": "Luke Skywalker",
+          "type": "h1",
         },
-        "ref": null,
-        "rendered": "Luke Skywalker",
-        "type": "h1",
-      },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "className": "card-image",
+            "src": "../images/Luke.png",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "img",
+        },
+      ],
       "type": "div",
     },
   ],

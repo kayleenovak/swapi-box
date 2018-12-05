@@ -1,11 +1,18 @@
 import fetchData from './APICalls.js'
 
 export default class People {
+    constructor() {
+      this.fetchData = fetchData
+    }
 
   fetchPeople = async () => {
     const url = "https://swapi.co/api/people/";
-    const data = await fetchData(url)
+    const data = await this.fetchData(url)
+    
+    return await this.cleanPeople(data)
+  }
 
+  cleanPeople = async (data) => {
     const peopleData = data.results.map(async person => {
       const world = await this.fetchHomeworld(person.homeworld)
       const species = await this.fetchSpecies(person.species)

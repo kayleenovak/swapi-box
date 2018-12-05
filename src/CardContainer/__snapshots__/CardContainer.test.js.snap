@@ -37,7 +37,9 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": Array [
+      "children": <div
+        className="card-border"
+      >
         <Card
           person={
             Object {
@@ -48,7 +50,7 @@ ShallowWrapper {
               "species": "human",
             }
           }
-        />,
+        />
         <Card
           person={
             Object {
@@ -59,50 +61,12 @@ ShallowWrapper {
               "species": "robot",
             }
           }
-        />,
-      ],
+        />
+      </div>,
+      "className": "card-container",
     },
     "ref": null,
-    "rendered": Array [
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "function",
-        "props": Object {
-          "person": Object {
-            "favorite": false,
-            "homeworld": "Tatooine",
-            "name": "Luke Skywalker",
-            "population": 20000000,
-            "species": "human",
-          },
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "function",
-        "props": Object {
-          "person": Object {
-            "favorite": false,
-            "homeworld": "Tatooine",
-            "name": "C3PO",
-            "population": 20000000,
-            "species": "robot",
-          },
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-    ],
-    "type": "div",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
+    "rendered": Object {
       "instance": null,
       "key": undefined,
       "nodeType": "host",
@@ -131,6 +95,7 @@ ShallowWrapper {
             }
           />,
         ],
+        "className": "card-border",
       },
       "ref": null,
       "rendered": Array [
@@ -169,6 +134,115 @@ ShallowWrapper {
           "type": [Function],
         },
       ],
+      "type": "div",
+    },
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <div
+          className="card-border"
+        >
+          <Card
+            person={
+              Object {
+                "favorite": false,
+                "homeworld": "Tatooine",
+                "name": "Luke Skywalker",
+                "population": 20000000,
+                "species": "human",
+              }
+            }
+          />
+          <Card
+            person={
+              Object {
+                "favorite": false,
+                "homeworld": "Tatooine",
+                "name": "C3PO",
+                "population": 20000000,
+                "species": "robot",
+              }
+            }
+          />
+        </div>,
+        "className": "card-container",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <Card
+              person={
+                Object {
+                  "favorite": false,
+                  "homeworld": "Tatooine",
+                  "name": "Luke Skywalker",
+                  "population": 20000000,
+                  "species": "human",
+                }
+              }
+            />,
+            <Card
+              person={
+                Object {
+                  "favorite": false,
+                  "homeworld": "Tatooine",
+                  "name": "C3PO",
+                  "population": 20000000,
+                  "species": "robot",
+                }
+              }
+            />,
+          ],
+          "className": "card-border",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "person": Object {
+                "favorite": false,
+                "homeworld": "Tatooine",
+                "name": "Luke Skywalker",
+                "population": 20000000,
+                "species": "human",
+              },
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "person": Object {
+                "favorite": false,
+                "homeworld": "Tatooine",
+                "name": "C3PO",
+                "population": 20000000,
+                "species": "robot",
+              },
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": "div",
+      },
       "type": "div",
     },
   ],
