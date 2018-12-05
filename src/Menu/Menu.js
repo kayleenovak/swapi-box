@@ -5,10 +5,10 @@ import './Menu.scss'
 const Menu = (props) => {
 
   return (
-    <div class="container">
-      <ul id="menu">
-        <a class="menu-button icon-plus" href="#menu" title="Show navigation">$</a>
-        <a class="menu-button icon-minus" href="#0" title="Hide navigation">$</a>
+    <div class="nav">
+      <input class="menu-toggler" id="menu-toggler" type="checkbox"></input>
+      <label for="menu-toggler">$</label>
+      <ul>
         <Button currentSelection={ props.currentSelection } name={ 'Vehicles' }/>
         <Button currentSelection={ props.currentSelection } name={ 'People' }/>
         <Button currentSelection={ props.currentSelection } name={ 'Planets' }/>
