@@ -1,0 +1,13 @@
+.menu-button {
+  animation: button-glow 1s ease-in-out;
+  animation-iteration-count: 4; 
+}
+
+@keyframes button-glow {
+  from {
+    box-shadow: 0 0 8px #03b9ffb0, 0 0 16px #03b9ffb0, 0 0 24px #03b9ffb0, 0 0 32px #03b9ffb0, 0 0 40px #03b9ffb0, 0 0 48px #03b9ffb0, 0 0 56px #03b9ffb0;
+  }
+  to {
+    box-shadow: 0 0 16px #03b9ffb0, 0 0 24px #03b9ffb0, 0 0 32px #03b9ffb0, 0 0 40px #03b9ffb0, 0 0 48px #03b9ffb0, 0 0 56px #03b9ffb0, 0 0 64px #03b9ffb0;
+  }
+}
