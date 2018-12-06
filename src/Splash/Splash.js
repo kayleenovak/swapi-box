@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import fetchData from '../helper/APICalls.js'
 import './Splash.scss';
+import { Link } from 'react-router-dom'
 
 export default class Splash extends Component {
   constructor() {
@@ -25,7 +26,11 @@ render() {
     this.state.film ? <div className='splash'>
       <div className="fade">
         <h1 className='logo'>SWAPi Box</h1>
+
+      <Link to='/main'>
         <button className='enter-btn' onClick={ this.props.toggleSplash }>$</button>
+      </Link>
+
         <p className='enter-site'>Click to Enter</p>
       </div>
       <section className="star-wars">
