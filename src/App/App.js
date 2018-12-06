@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import People from '../helper/People'
 import Vehicles from '../helper/Vehicles'
+import Planets from '../helper/Planets'
 import Splash from '../Splash/Splash'
 import CardContainer from '../CardContainer/CardContainer'
 import Yoda from '../Yoda/Yoda'
@@ -13,19 +14,22 @@ class App extends Component {
     this.state = {
       showSplash: true,
       films: [],
-      currentSelection: null,
+      currentSelection: 'People',
       people: [],
-      vehicles: []
+      vehicles: [],
+      planets: []
     }
   }
 
   async componentDidMount() {
     this.people = new People();
     this.vehicles = new Vehicles();
+    this.planets = new Planets();
 
     this.setState({
       people: await this.people.fetchPeople(),
-      vehicles: await this.vehicles.fetchVehicles()
+      vehicles: await this.vehicles.fetchVehicles(),
+      planets: await this.planets.fetchPlanets()
     })
   }
 
