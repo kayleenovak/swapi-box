@@ -26,3 +26,6 @@ export default class Vehicles {
     return Promise.all(vehicleData)
   }
 }
+
+
+

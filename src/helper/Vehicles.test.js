@@ -7,14 +7,23 @@ import fetchData from './APICalls.js'
 describe('Vehicles', () => {
   let vehicle;
   let mockData;
+  let mockfinal;
   beforeEach(() => {
     vehicle = new Vehicles
-    mockData = [{
+    mockData = {results: [{
       name: 'x-wing',
       model: 'new',
       vehicle_class: 'wheeled',
       passengers: '22',
-    }]
+    }]}
+
+      mockfinal = [{
+        name: 'x-wing',
+        model: 'new',
+        class: 'wheeled',
+        passengers: '22',
+        favorite: false
+      }]
 
   })
 
@@ -37,6 +46,15 @@ describe('Vehicles', () => {
 
       await vehicle.fetchVehicles()
       expect(vehicle.cleanVehicles).toHaveBeenCalledWith(mockData)
+
+    })
+
+    it('should return correct data', async () => {
+      vehicle.fetchData = jest.fn().mockImplementation(() => Promise.resolve(mockData))
+
+      await vehicle.fetchVehicles()
+      const cleanVehicles = await vehicle.cleanVehicles(mockData)
+      expect(cleanVehicles).toEqual(mockfinal)
 
     })
 
