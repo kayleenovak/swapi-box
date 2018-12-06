@@ -6,7 +6,7 @@ export default class Planets {
   }
 
   fetchPlanets = async () => {
-    const url = "https://swapi.co/api/planets/"
+    const url = 'https://swapi.co/api/planets/'
     const data = await this.fetchData(url)
 
     return await this.cleanPlanets(data)

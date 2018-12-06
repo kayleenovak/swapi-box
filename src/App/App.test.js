@@ -22,7 +22,9 @@ describe('App', () => {
       'showSplash': false,
       'films': [],
       'currentSelection': 'People',
-      'people': []
+      'people': [],
+      'vehicles': [],
+      'planets': []
     }
 
     wrapper.instance().toggleSplash()
