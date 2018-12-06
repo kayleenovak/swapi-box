@@ -12,7 +12,7 @@ describe('Planets', () => {
   let mockResidents
   let mockResident
   let mockCleanPlanets
-  let thisCleanPlanets
+  let finalCleanPlanets
   describe('fetchPlanets', () => {
     beforeEach(() => {
       mockPlanets = [{
@@ -26,11 +26,8 @@ describe('Planets', () => {
       }]
       planets = new Planets()
       mockUrl = 'https://swapi.co/api/planets/'
-      mockFetch = jest.fn().mockImplementation(() => {
-        Promise.resolve(mockPlanets)
-      })
-
     })
+
     it('should call fetchData with the correct params', async () => {
       planets.fetchData = jest.fn()
       planets.cleanPlanets = jest.fn()
@@ -76,7 +73,7 @@ describe('Planets', () => {
         'climate': 'dry',
         'residents': ['Chewy', 'Luke Skywalker']
       }
-      thisCleanPlanets = [{
+      finalCleanPlanets = [{
         'climate': 'dry', 
         'favorite': false, 
         'name': 'Tattooine', 
@@ -101,7 +98,7 @@ describe('Planets', () => {
       planets.fetchResidents = jest.fn().mockImplementation(() => Promise.resolve(mockResidents))
       const cleanPlanets = await planets.cleanPlanets(mockPlanets)
 
-      expect(cleanPlanets).toEqual(thisCleanPlanets)
+      expect(cleanPlanets).toEqual(finalCleanPlanets)
     })
 
   })
