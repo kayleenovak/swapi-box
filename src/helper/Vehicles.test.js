@@ -5,17 +5,21 @@ import fetchData from './APICalls.js'
 
 
 describe('Vehicles', () => {
-  let mockFetchCall;
+  let vehicle;
   beforeEach(() => {
-    mockFetchCall = jest.fn().mockImplementation(() => Promise.resolve({
-      
-    }
+    vehicle = new Vehicles
 
   })
 
-
   describe('fetchVehicles', () => {
-    it('should call fetchData with the correct params', () => {
+    it('should call fetchData with the correct params', async () => {
+      vehicle.fetchData = jest.fn()
+      vehicle.cleanVehicles = jest.fn()
+      const expected = "https://swapi.co/api/vehicles/"
+
+      await vehicle.fetchVehicles()
+
+      expect(vehicle.fetchData).toHaveBeenCalledWith(expected)
 
     })
   })
