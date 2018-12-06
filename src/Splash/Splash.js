@@ -1,36 +1,28 @@
 import React, { Component } from 'react';
-
+import fetchData from '../helper/APICalls.js'
 import './Splash.scss';
 
 export default class Splash extends Component {
   constructor() {
     super()
     this.state = {
-      films: []
+      film: null
     }
   }
 
+  async componentDidMount() {
+    const url = 'https://swapi.co/api/films/'
+    const films = await fetchData(url)
+    const randomNumber = Math.floor(Math.random() * 7)
 
-  componentDidMount() {
-    console.log('mounted')
-    fetch('https://swapi.co/api/films/')
-      .then(response => response.json())
-      .then(films => {
-        this.setState({
-        films: films.results
-      }, () => {
-      })
-
-      })
-      .catch(error => console.log(error))
+    this.setState({
+      film: films.results[randomNumber]
+    })
   }
 
 render() {
-  const randomNumber = Math.floor(Math.random() * 7)
-  const randomFilm = this.state.films[randomNumber]
-
   return (
-    this.state.films.length ? <div className='splash'>
+    this.state.film ? <div className='splash'>
       <div className="fade">
         <h1 className='logo'>SWAPi Box</h1>
         <button className='enter-btn' onClick={ this.props.toggleSplash }>$</button>
@@ -38,8 +30,8 @@ render() {
       </div>
       <section className="star-wars">
         <div className="crawl">
-          <h2 className='film-title'>{ randomFilm.title }</h2>
-          <p className='film-body'>{ randomFilm.opening_crawl }</p>
+          <h2 className='film-title'>{ this.state.film.title }</h2>
+          <p className='film-body'>{ this.state.film.opening_crawl }</p>
         </div>
       </section>
     </div> : <h1>Loading...</h1>
