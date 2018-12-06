@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import People from '../helper/People'
+import Vehicles from '../helper/Vehicles'
 import Splash from '../Splash/Splash'
 import CardContainer from '../CardContainer/CardContainer'
 import Yoda from '../Yoda/Yoda'
@@ -12,15 +13,19 @@ class App extends Component {
     this.state = {
       showSplash: true,
       films: [],
-      currentSelection: 'People',
-      people: []
+      currentSelection: null,
+      people: [],
+      vehicles: []
     }
   }
 
   async componentDidMount() {
     this.people = new People();
+    this.vehicles = new Vehicles();
+
     this.setState({
-      people: await this.people.fetchPeople()
+      people: await this.people.fetchPeople(),
+      vehicles: await this.vehicles.fetchVehicles()
     })
   }
 
@@ -31,7 +36,7 @@ class App extends Component {
   }
 
   renderApp = () => {
-    const { currentSelection, people } = this.state;
+    const { currentSelection, people, vehicles } = this.state;
     return (
       <div className='app'>
         <div class="stars"></div>
@@ -39,7 +44,7 @@ class App extends Component {
         <Menu currentSelection={ currentSelection }/>
         { currentSelection ? <CardContainer 
                                     currentSelection={currentSelection} 
-                                    people={people} /> : <Yoda /> }
+                                    people={people} vehicles={vehicles} /> : <Yoda /> }
     </div>
     )
   }
