@@ -14,7 +14,8 @@ class App extends Component {
       currentSelection: null,
       people: [],
       vehicles: [],
-      planets: []
+      planets: [],
+      favorites: []
     }
   }
 
@@ -30,11 +31,21 @@ class App extends Component {
     })
   }
 
+  addFavorite = (data) => {
+    if(!this.state.favorites.includes(data)) {
+      this.setState({
+        favorites: [...this.state.favorites, data]
+      }, () => {
+        console.log(this.state)
+      })
+    }
+  }
+
   render() {
     return (
       <Switch>
         <Route exact path='/' component={Splash} />
-        <Route path='/main' render= {({match}) => <Main {...this.state}/> } /> 
+        <Route path='/main' render= {({match}) => <Main {...this.state} addFavorite={ this.addFavorite }/>} /> 
       </Switch>
     );
   }
