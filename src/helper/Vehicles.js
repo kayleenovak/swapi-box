@@ -1,3 +1,5 @@
+import fetchData from './APICalls.js'
+
 export default class Vehicles {
   constructor() {
     this.fetchData = fetchData
@@ -5,7 +7,7 @@ export default class Vehicles {
 
   fetchVehicles = async () => {
     const url = "https://swapi.co/api/vehicles/";
-    const data await thisfetchData(url)
+    const data = await this.fetchData(url)
 
     return this.cleanVehicles(data)
   }
