@@ -3,9 +3,6 @@ import People from '../helper/People'
 import Vehicles from '../helper/Vehicles'
 import Planets from '../helper/Planets'
 import Splash from '../Splash/Splash'
-import CardContainer from '../CardContainer/CardContainer'
-import Yoda from '../Yoda/Yoda'
-import Menu from '../Menu/Menu'
 import Main from '../Main/Main'
 import { Switch, Route } from 'react-router-dom'
 import './App.scss';
@@ -14,8 +11,7 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      showSplash: true,
-      currentSelection: 'People',
+      currentSelection: null,
       people: [],
       vehicles: [],
       planets: []
@@ -34,17 +30,11 @@ class App extends Component {
     })
   }
 
-  toggleSplash = () => {
-    this.setState({
-      showSplash: false
-    })
-  }
-
   render() {
     return (
       <Switch>
         <Route exact path='/' component={Splash} />
-        <Route exact path='/main' render= {({match}) => <Main {...this.state}/> } /> 
+        <Route path='/main' render= {({match}) => <Main {...this.state}/> } /> 
       </Switch>
     );
   }

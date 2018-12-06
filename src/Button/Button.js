@@ -2,11 +2,8 @@ import React from 'react'
 
 
 const Button = (props) => {
-  const selected = props.name === props.currentSelection ? 'selected' : ''
   return (
-    <li class={`${selected} menu-item`}>
-          <a href="https://www.facebook.com/" target="_blank"> {props.name} </a>
-    </li>
+    <li class='menu-item'>{props.name}</li>
   )
 }
 

@@ -1,22 +1,22 @@
-import React, { Component } from 'react';
-import People from '../helper/People'
-import Vehicles from '../helper/Vehicles'
-import Planets from '../helper/Planets'
-import Splash from '../Splash/Splash'
+import React from 'react';
 import CardContainer from '../CardContainer/CardContainer'
 import Yoda from '../Yoda/Yoda'
 import Menu from '../Menu/Menu'
+import { Route, Switch } from 'react-router-dom'
 
-const Main = ({currentSelection, vehicles, planets, people}) => {
+const Main = ({ vehicles, planets, people}) => {
 
     return (
       <div className='app'>
         <div class="stars"></div>
         <div class="twinkling"></div>
-        <Menu currentSelection={ currentSelection }/>
-        { currentSelection ? <CardContainer 
-                                currentSelection={currentSelection} 
-                                people={people} vehicles={vehicles} /> : <Yoda /> }
+        <Menu />
+      <Switch>
+        <Route exact path='/main' component={Yoda}/>
+        <Route exact path='/main/people' render={({match}) => <CardContainer data={people} /> } />
+        <Route exact path='/main/vehicles' render={({match}) => <CardContainer data={vehicles} /> } />
+        <Route exact path='/main/planets' render={({match}) => <CardContainer data={planets} /> } />
+      </Switch>
     </div>
     )
 

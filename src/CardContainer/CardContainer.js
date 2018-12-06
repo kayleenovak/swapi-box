@@ -4,10 +4,9 @@ import './CardContainer.scss'
 
 const CardContainer = (props) => {
 
-  const cards = props.people.map(person => {
+  const cards = props.data.map(person => {
     return <Card person={person} />
   })
-
 
   return (
     <div className='card-container'>

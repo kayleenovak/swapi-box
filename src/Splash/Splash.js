@@ -27,7 +27,7 @@ render() {
       <div className="fade">
         <h1 className='logo'>SWAPi Box</h1>
 
-      <Link to='/main'>
+      <Link to='/main/'>
         <button className='enter-btn' onClick={ this.props.toggleSplash }>$</button>
       </Link>
 
