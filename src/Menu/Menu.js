@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from '../Button/Button'
 import './Menu.scss'
-import { NavLink } from 'react-router-dom'
+
 
 const Menu = (props) => {
 
@@ -10,12 +10,10 @@ const Menu = (props) => {
       <input class="menu-toggler" id="menu-toggler" type="checkbox"></input>
       <label for="menu-toggler">$</label>
       <ul>
-      <NavLink to='/main/vehicles'>
-        <Button name={ 'Vehicles' }/>
-      </NavLink>
-        <Button name={ 'People' }/>
-        <Button name={ 'Planets' }/>
-        <Button name={ 'Favorites' }/>
+        <Button name={ 'vehicles' }/>
+        <Button name={ 'people' }/>
+        <Button name={ 'planets' }/>
+        <Button name={ 'favorites' }/>
       </ul>
     </div>
   )

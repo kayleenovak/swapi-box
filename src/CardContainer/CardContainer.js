@@ -4,8 +4,8 @@ import './CardContainer.scss'
 
 const CardContainer = (props) => {
 
-  const cards = props.data.map(person => {
-    return <Card person={person} />
+  const cards = props.data.map(prop => {
+    return <Card prop={prop} />
   })
 
   return (
