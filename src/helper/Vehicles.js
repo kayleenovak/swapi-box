@@ -1,15 +1,18 @@
 export default class Vehicles {
+  constructor() {
+    this.fetchData = fetchData
+  }
 
   fetchVehicles = async () => {
     const url = "https://swapi.co/api/vehicles/";
-    const response = await fetch(url)
-    const vehicles = await response.json()
+    const data await thisfetchData(url)
 
-    return this.cleanVehicles(vehicles)
+    return this.cleanVehicles(data)
   }
 
-  cleanVehicles = (vehicles) => {
-    const vehicleData = vehicles.results.map(vehicle => {
+  cleanVehicles = (data) => {
+    const vehicleData = data.results.map(vehicle => {
+      
       return {
         name: vehicle.name,
         model: vehicle.model,
@@ -18,7 +21,6 @@ export default class Vehicles {
         favorite: false
       }
     })
-
     return Promise.all(vehicleData)
   }
 }
