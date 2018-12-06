@@ -45,13 +45,15 @@
   border: none;
   height: 80px;
   margin-top: -15px;
-  animation: glow .3s linear;
+  animation: pulse 3s ease-in-out;
+  animation-iteration-count: infinite;
+  cursor: pointer;
 }
 
 .enter-site {
   color: #56c5ea;
   margin-top: 0px;
-  animation: glow .3s linear;
+  animation: pulse 3s ease-in-out;
 }
 
 .star-wars {
@@ -93,8 +95,14 @@
   }
 }
 
-@keyframes glow {
-    to {
-        text-shadow: 0 0 10px #fff;
+@keyframes pulse {
+    0% {
+        text-shadow: none;
+    }
+    50% {
+        text-shadow: 0 0 13px #fff;
+    }
+    100% {
+        text-shadow: none;
     }
 }
