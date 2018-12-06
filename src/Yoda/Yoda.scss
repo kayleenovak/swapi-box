@@ -5,16 +5,19 @@
 }
 
 .choose-path {
-  position: absolute;
-  color: #007EB0;
-  font-size: 40px;
-  overflow: hidden;
-  height: 50px;
-  width: 500px;
-  animation: type 2s steps(40, end);
   animation-fill-mode: forwards;
-  top: -100px;
+  animation: type 3.2s steps(30, end), 
+  blink-caret .5s step-end infinite alternate;;
+  border-right: .15em solid #007EB0;
+  color: #007EB0;
+  font-family: monospace;
+  font-size: 35px;
+  overflow: hidden;
+  position: absolute;
   left: 80px;    
+  top: -100px;
+  white-space: nowrap;
+  width: 530px;
 }
 
 .lightsaber {
@@ -43,15 +46,15 @@
 }
 
 @keyframes type {
-  0% {
+  from {
     width: 0;
   }
-  99.9% {
-    border-right: .15em solid #007EB0;
-  }
-  100% {
-    border: none;
-  }
+}
+
+@keyframes blink-caret { 
+  50% { 
+    border-color: transparent; 
+  } 
 }
 
 @keyframes glow {

@@ -1,12 +1,12 @@
 @keyframes button-glow {
   0% {
-    box-shadow: 0 0 8px #03b9ffb0, 0 0 16px #03b9ffb0, 0 0 24px #03b9ffb0, 0 0 32px #03b9ffb0, 0 0 40px #03b9ffb0, 0 0 48px #03b9ffb0, 0 0 56px #03b9ffb0;
+    box-shadow: 0 0 8px #03b9ffb0, 0 0 16px #03b9ffb0, 0 0 24px #03b9ffb0, 0 0 32px #03b9ffb0, 0 0 40px #03b9ffb0, 0 0 48px #03b9ffb0;
   }
   50% {
     box-shadow: 0 0 16px #03b9ffb0, 0 0 24px #03b9ffb0, 0 0 32px #03b9ffb0, 0 0 40px #03b9ffb0, 0 0 48px #03b9ffb0, 0 0 56px #03b9ffb0, 0 0 64px #03b9ffb0;
   }
   100% {
-    box-shadow: 0 0 8px #03b9ffb0, 0 0 16px #03b9ffb0, 0 0 24px #03b9ffb0, 0 0 32px #03b9ffb0, 0 0 40px #03b9ffb0, 0 0 48px #03b9ffb0, 0 0 56px #03b9ffb0;
+    box-shadow: 0 0 8px #03b9ffb0, 0 0 16px #03b9ffb0, 0 0 24px #03b9ffb0, 0 0 32px #03b9ffb0, 0 0 40px #03b9ffb0, 0 0 48px #03b9ffb0;
   }
 }
 
@@ -57,7 +57,7 @@
 .menu-toggler + label {
   display: flex;
   align-items: center;
-  box-shadow: 0 0 8px #03b9ffb0, 0 0 16px #03b9ffb0, 0 0 24px #03b9ffb0, 0 0 32px #03b9ffb0, 0 0 40px #03b9ffb0, 0 0 48px #03b9ffb0, 0 0 56px #03b9ffb0;
+  box-shadow: 0 0 8px #03b9ffb0, 0 0 16px #03b9ffb0, 0 0 24px #03b9ffb0, 0 0 32px #03b9ffb0, 0 0 40px #03b9ffb0, 0 0 48px #03b9ffb0;
   justify-content: center;
   color: #0080b5;
   font-size: 40px;
@@ -71,9 +71,9 @@
   top: 27px;
   left: 27px;
   margin: auto;
-  animation: button-glow 1.5s ease-in-out;
+  animation: button-glow 1.5s linear;
   animation-iteration-count: 4; 
-  animation-delay: 2.5s;
+  animation-delay: 2.6s;
 }
 
 .menu-item:nth-child(1) a {
