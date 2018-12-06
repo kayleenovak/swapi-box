@@ -21,8 +21,9 @@ describe('App', () => {
     const expectedState = {
       'showSplash': false,
       'films': [],
-      'currentSelection': 'People',
-      'people': []
+      'currentSelection': null,
+      'people': [],
+      'vehicles': []
     }
 
     wrapper.instance().toggleSplash()

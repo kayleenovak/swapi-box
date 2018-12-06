@@ -9,7 +9,7 @@ export default class Vehicles {
     const url = "https://swapi.co/api/vehicles/";
     const data = await this.fetchData(url)
 
-    return this.cleanVehicles(data)
+    return await this.cleanVehicles(data)
   }
 
   cleanVehicles = (data) => {
