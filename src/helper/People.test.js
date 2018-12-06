@@ -26,10 +26,10 @@ describe('People', () => {
         'species': 'human'
         }
     mockFetch = jest.fn().mockImplementation(() => Promise.resolve(mockPeople))
-    mockFetch2 = jest.fn().mockImplementation(() => Promise.resolve(mockHome))
+    // mockFetch2 = jest.fn().mockImplementation(() => Promise.resolve(mockHome))
     })
 
-  describe('fetchPeople', () => {
+  describe('fetchPeople', () => { 
 
     it('should fire fetchData with the correct params', async () => {
 
@@ -49,6 +49,26 @@ describe('People', () => {
       expect(people.cleanPeople).toHaveBeenCalledWith(mockPeople)
     })
 
+  })
+
+  describe('cleanPeople', () => {
+    it('should call fetchHomeworld with correct params', async () => {
+      people.fetchHomeworld = jest.fn().mockImplementation(() => Promise.resolve(mockHome))
+      people.fetchData = jest.fn().mockImplementation(() => Promise.resolve(mockHome))
+
+      await people.cleanPeople(mockPeople)
+
+      expect(people.fetchHomeworld).toHaveBeenCalled()
+    })
+
+    it('should call fetchSpecies with the correct params', async () => {
+      people.fetchSpecies = jest.fn().mockImplementation(() => Promise.resolve(mockHome))
+      people.fetchData = jest.fn().mockImplementation(() => Promise.resolve(mockHome))
+
+      await people.cleanPeople(mockPeople)
+
+      expect(people.fetchSpecies).toHaveBeenCalled()  
+    })
   })
 })
 

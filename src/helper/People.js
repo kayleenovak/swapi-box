@@ -8,7 +8,7 @@ export default class People {
   fetchPeople = async () => {
     const url = "https://swapi.co/api/people/";
     const data = await this.fetchData(url)
-    
+
     return await this.cleanPeople(data)
   }
 
@@ -30,7 +30,7 @@ export default class People {
 
 
   fetchHomeworld = async (url) => {
-    const data = await fetchData(url)
+    const data = await this.fetchData(url)
     return {
       homeworld: data.name,
       population: data.population
@@ -39,7 +39,7 @@ export default class People {
 
 
   fetchSpecies = async (url) => {
-    const data = await fetchData(url)
+    const data = await this.fetchData(url)
     return {
       species: data.name 
     }
