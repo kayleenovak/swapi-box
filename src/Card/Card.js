@@ -10,6 +10,8 @@ const Card = (props) => {
   const info = allInfo.map(key => {
     return <p>{ key }: { props.prop[key] }</p>
   })
+
+  const favorited = props.prop.favorite ? 'green-saber' : 'white-saber' 
   return (
     <div className='card'>
       <h1 className='card-text'>{props.prop.name}</h1>
@@ -17,7 +19,9 @@ const Card = (props) => {
       { info }
       </div>
       <img className='card-image' src={Images[props.prop.name]} alt={Images[props.prop.name]} />
-      <button className='favorite' onClick={() => props.addFavorite(props.prop)}>Favorite</button>
+      <button className='favorite' onClick={() => props.addFavorite(props.prop, props.itemType  )}>
+        <img src={Images[favorited]} className='white-saber'/>
+      </button>
     </div>
     )
 }

@@ -33,12 +33,22 @@ class App extends Component {
     })
   }
 
-  addFavorite = (data) => {
+  addFavorite = (data, itemType) => {
+    let updatedItems
     if(!this.state.favorites.includes(data)) {
-      const favorites = [...this.state.favorites, data]
-      setLocalStorage(favorites, 'favorites')
-      this.setState({
-        favorites
+      const updatedItems  = this.state[itemType].map(item => {
+      if(item === data) {
+        item.favorite = true
+      }
+      return item
+    })
+    data.favorite = true
+    const favorites = [...this.state.favorites, data]
+    setLocalStorage(favorites, 'favorites')
+    setLocalStorage(updatedItems, itemType)
+    this.setState({
+        favorites,
+        [itemType]: updatedItems
       }, () => {
         console.log(this.state)
       })
