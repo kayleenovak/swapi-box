@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import fetchData from '../helper/APICalls.js'
+import Films from '../helper/Films.js'
 import './Splash.scss';
 import { Link } from 'react-router-dom'
 
@@ -12,8 +12,7 @@ export default class Splash extends Component {
   }
 
   async componentDidMount() {
-    const url = 'https://swapi.co/api/films/'
-    const films = await fetchData(url)
+    const films = Films.fetchFilms()
     const randomNumber = Math.floor(Math.random() * 7)
 
     this.setState({

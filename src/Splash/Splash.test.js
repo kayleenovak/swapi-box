@@ -1,9 +1,13 @@
 import React from 'react'
 import { shallow, mount } from 'enzyme'
 import Splash from './Splash'
+import fetchData from '../helper/APICalls.js'
 
 describe('Splash', () => {
-  it('should match the snapshot', () => {
+  let mockFunction
+  let mockUrl
+  let wrapper
+  beforeEach(() => {
     const mockFilms = [
       {
         'characters': [],
@@ -22,9 +26,21 @@ describe('Splash', () => {
         'vehicles': ['this vehicle', 'that vehicle']
       }
     ]
-    const mockFunction = jest.fn()
-    const wrapper = shallow(<Splash films={ mockFilms } toggleSplash={ mockFunction } />)
+    mockFunction = jest.fn()
+    wrapper = shallow(<Splash films={ mockFilms } toggleSplash={ mockFunction } />)     
+    mockUrl = 'https://swapi.co/api/films/'
+  })
+
+  it('should match the snapshot', () => {
 
     expect(wrapper).toMatchSnapshot()
+  })
+
+  it('should call fetchData with the correct parameters', () => {
+    fetchData = jest.fn()
+
+    wrapper.instance().componentDidMount()
+
+    expect(fetchData).toHaveBeenCalled()
   })
 })
