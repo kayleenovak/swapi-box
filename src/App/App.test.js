@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 import App from './App';
 import { shallow, mount } from 'enzyme'
 
 it('renders without crashing', () => {
   const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
+  ReactDOM.render(router, div);
   ReactDOM.unmountComponentAtNode(div);
 });
 
@@ -17,7 +18,11 @@ describe('App', () => {
   })
 
   it('should toggle the splash page when toggleSplash is invoked', () => {
-    const wrapper = shallow(<App />)
+    const wrapper = shallow(
+      <Router>
+        <App />
+      </Router>)
+
     const expectedState = {
       'showSplash': false,
       'films': [],

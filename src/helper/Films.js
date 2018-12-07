@@ -9,6 +9,6 @@ export default class Films {
   fetchFilms = async () => {
     const url = 'https://swapi.co/api/films/'
 
-    return await fetchData(url)
+    return await this.fetchData(url)
   }
 }

@@ -1,4 +1,5 @@
 import fetchData from './APICalls.js'
+import { setLocalStorage, getLocalStorage } from './localStorage.js'
 
 export default class People {
     constructor() {
@@ -6,10 +7,14 @@ export default class People {
     }
 
   fetchPeople = async () => {
-    const url = "https://swapi.co/api/people/";
-    const data = await this.fetchData(url)
+    if(!localStorage.people) {
+      const url = "https://swapi.co/api/people/";
+      const data = await this.fetchData(url)
+      const cleanPeople = await this.cleanPeople(data)
+      setLocalStorage(cleanPeople, 'people')
+    }
+    return getLocalStorage('people')
 
-    return await this.cleanPeople(data)
   }
 
   cleanPeople = async (data) => {

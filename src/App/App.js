@@ -4,7 +4,7 @@ import Vehicles from '../helper/Vehicles'
 import Planets from '../helper/Planets'
 import Splash from '../Splash/Splash'
 import Main from '../Main/Main'
-import { Switch, Route } from 'react-router-dom'
+import { Switch, Route, withRouter } from 'react-router-dom'
 import './App.scss';
 
 class App extends Component {
@@ -43,12 +43,12 @@ class App extends Component {
 
   render() {
     return (
-      <Switch>
-        <Route exact path='/' component={Splash} />
-        <Route path='/main' render= {({match}) => <Main {...this.state} addFavorite={ this.addFavorite }/>} /> 
-      </Switch>
+      <div>
+          <Route exact path='/' component={Splash} />
+          <Route path='/main' render= {({match}) => <Main {...this.state} addFavorite={ this.addFavorite }/>} /> 
+      </div>
     );
   }
 }
 
-export default App;
+export default withRouter(App);
