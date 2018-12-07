@@ -24,3 +24,4 @@ const Main = ({ vehicles, planets, people, favorites, addFavorite}) => {
   }
 
   export default Main
+
