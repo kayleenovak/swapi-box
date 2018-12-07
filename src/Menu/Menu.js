@@ -8,7 +8,7 @@ const Menu = (props) => {
   return (
     <div class="nav">
       <input class="menu-toggler" id="menu-toggler" type="checkbox"></input>
-      <label for="menu-toggler">$</label>
+      <label htmlFor="menu-toggler">$</label>
       <ul>
         <Button name={ 'Vehicles' }/>
         <Button name={ 'People' }/>
