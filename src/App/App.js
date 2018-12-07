@@ -4,6 +4,7 @@ import Vehicles from '../helper/Vehicles'
 import Planets from '../helper/Planets'
 import Splash from '../Splash/Splash'
 import Main from '../Main/Main'
+import { getLocalStorage, setLocalStorage } from '../helper/localStorage.js'
 import { Switch, Route, withRouter } from 'react-router-dom'
 import './App.scss';
 
@@ -27,14 +28,17 @@ class App extends Component {
     this.setState({
       people: await this.people.fetchPeople(),
       vehicles: await this.vehicles.fetchVehicles(),
-      planets: await this.planets.fetchPlanets()
+      planets: await this.planets.fetchPlanets(),
+      favorites: getLocalStorage('favorites') || []
     })
   }
 
   addFavorite = (data) => {
     if(!this.state.favorites.includes(data)) {
+      const favorites = [...this.state.favorites, data]
+      setLocalStorage(favorites, 'favorites')
       this.setState({
-        favorites: [...this.state.favorites, data]
+        favorites
       }, () => {
         console.log(this.state)
       })
