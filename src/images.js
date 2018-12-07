@@ -29,6 +29,8 @@ const Images = {
   "AT-ST": '../images/atst.png',
   "Storm IV Twin-Pod cloud car": '../images/storm.png',
   "Sail barge": '../images/sail.png',
+  "white-saber": '../images/white-lightsaber.svg',
+  'green-saber': '../images/green-lightsaber.svg'
 }
 
 export default Images;
