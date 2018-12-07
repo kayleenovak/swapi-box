@@ -5,7 +5,7 @@ import './CardContainer.scss'
 const CardContainer = (props) => {
 
   const cards = props.data.map(prop => {
-    return <Card prop={prop} addFavorite={ props.addFavorite } itemType={ props.itemType }/>
+    return <Card prop={prop} handleFavorite={ props.handleFavorite } itemType={ props.itemType }/>
   })
 
   return (

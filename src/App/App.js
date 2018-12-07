@@ -33,33 +33,45 @@ class App extends Component {
     })
   }
 
-  addFavorite = (data, itemType) => {
-    let updatedItems
-    if(!this.state.favorites.includes(data)) {
-      const updatedItems  = this.state[itemType].map(item => {
-      if(item === data) {
-        item.favorite = true
+  handleFavorite = (data, itemType) => {
+    let updatedItems;
+    let favorites;
+
+    const found = this.state.favorites.find(item => item.name === data.name)
+
+    if(!found) {
+      updatedItems = this.toggleFavorite(data, itemType)
+      data.favorite = true
+      favorites = [...this.state.favorites, data]
+    } else {
+      updatedItems = this.toggleFavorite(data, itemType)
+      data.favorite = false
+      favorites = this.state.favorites.filter(item => item.name !== data.name)
+    }
+
+    setLocalStorage(favorites, 'favorites')
+    setLocalStorage(updatedItems, itemType)
+
+    this.setState({
+      favorites,
+      [itemType]: updatedItems
+    })
+  }
+
+  toggleFavorite = (data, itemType) => {
+    return this.state[itemType].map(item => {
+      if (item === data) {
+        item.favorite = !item.favorite
       }
       return item
     })
-    data.favorite = true
-    const favorites = [...this.state.favorites, data]
-    setLocalStorage(favorites, 'favorites')
-    setLocalStorage(updatedItems, itemType)
-    this.setState({
-        favorites,
-        [itemType]: updatedItems
-      }, () => {
-        console.log(this.state)
-      })
-    }
   }
 
   render() {
     return (
       <div>
           <Route exact path='/' component={Splash} />
-          <Route path='/main' render= {({match}) => <Main {...this.state} addFavorite={ this.addFavorite }/>} /> 
+          <Route path='/main' render= {({match}) => <Main {...this.state} handleFavorite={ this.handleFavorite }/>} /> 
       </div>
     );
   }

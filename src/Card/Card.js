@@ -19,7 +19,7 @@ const Card = (props) => {
       { info }
       </div>
       <img className='card-image' src={Images[props.prop.name]} alt={Images[props.prop.name]} />
-      <button className='favorite' onClick={() => props.addFavorite(props.prop, props.itemType  )}>
+      <button className='favorite' onClick={() => props.handleFavorite(props.prop, props.itemType  )}>
         <img src={Images[favorited]} className='white-saber'/>
       </button>
     </div>
