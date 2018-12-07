@@ -8,15 +8,17 @@ const Menu = (props) => {
   return (
     <div class="nav">
       <input class="menu-toggler" id="menu-toggler" type="checkbox"></input>
-      <label for="menu-toggler">$</label>
+      <label htmlFor="menu-toggler">$</label>
       <ul>
-        <Button name={ 'vehicles' }/>
-        <Button name={ 'people' }/>
-        <Button name={ 'planets' }/>
-        <Button name={ 'favorites' }/>
+        <Button name={ 'Vehicles' }/>
+        <Button name={ 'People' }/>
+        <Button name={ 'Planets' }/>
+        <Button name={ 'Favorites' }/>
       </ul>
     </div>
   )
 }
 
 export default Menu
+
+

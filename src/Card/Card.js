@@ -13,9 +13,11 @@ const Card = (props) => {
   return (
     <div className='card'>
       <h1 className='card-text'>{props.prop.name}</h1>
-      <img className='card-image' src={Images[props.prop.name]} />
-      <button onClick={() => props.addFavorite(props.prop)}>Favorite</button>
+      <div className="card-info">
       { info }
+      </div>
+      <img className='card-image' src={Images[props.prop.name]} alt={Images[props.prop.name]} />
+      <button className='favorite' onClick={() => props.addFavorite(props.prop)}>Favorite</button>
     </div>
     )
 }

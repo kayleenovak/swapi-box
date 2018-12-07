@@ -1,12 +1,14 @@
+$main-blue: #03b9ffb0;
+
 @keyframes button-glow {
   0% {
-    box-shadow: 0 0 8px #03b9ffb0, 0 0 16px #03b9ffb0, 0 0 24px #03b9ffb0, 0 0 32px #03b9ffb0, 0 0 40px #03b9ffb0, 0 0 48px #03b9ffb0;
+    box-shadow: 0 0 8px $main-blue, 0 0 16px $main-blue, 0 0 24px $main-blue, 0 0 32px $main-blue, 0 0 40px $main-blue, 0 0 48px $main-blue;
   }
   50% {
-    box-shadow: 0 0 16px #03b9ffb0, 0 0 24px #03b9ffb0, 0 0 32px #03b9ffb0, 0 0 40px #03b9ffb0, 0 0 48px #03b9ffb0, 0 0 56px #03b9ffb0, 0 0 64px #03b9ffb0;
+    box-shadow: 0 0 16px $main-blue, 0 0 24px $main-blue, 0 0 32px $main-blue, 0 0 40px $main-blue, 0 0 48px $main-blue, 0 0 56px $main-blue, 0 0 64px $main-blue;
   }
   100% {
-    box-shadow: 0 0 8px #03b9ffb0, 0 0 16px #03b9ffb0, 0 0 24px #03b9ffb0, 0 0 32px #03b9ffb0, 0 0 40px #03b9ffb0, 0 0 48px #03b9ffb0;
+    box-shadow: 0 0 8px $main-blue, 0 0 16px $main-blue, 0 0 24px $main-blue, 0 0 32px $main-blue, 0 0 40px $main-blue, 0 0 48px $main-blue;
   }
 }
 
@@ -24,36 +26,43 @@
   height: 150px;
   z-index: 2;
   cursor: pointer;
-}
 
-.menu-toggler:hover + label, .menu-toggler:hover + label:before, .menu-toggler:hover + label:after {
-  transition: .2s linear;
-  box-shadow: 0 0 16px #03b9ffb0, 0 0 24px #03b9ffb0, 0 0 32px #03b9ffb0, 0 0 40px #03b9ffb0, 0 0 48px #03b9ffb0, 0 0 56px #03b9ffb0, 0 0 64px #03b9ffb0;
-}
+  &:checked ~ ul .menu-item {
+    opacity: 1;
+  }
 
-.menu-toggler:checked ~ ul .menu-item {
-  opacity: 1;
-}
-.menu-toggler:checked ~ ul .menu-item:nth-child(1) {
-  transform: rotate(160deg) translateX(-115px);
-}
-.menu-toggler:checked ~ ul .menu-item:nth-child(2) {
-  transform: rotate(205deg) translateX(-115px);
-}
-.menu-toggler:checked ~ ul .menu-item:nth-child(3) {
-  transform: rotate(250deg) translateX(-115px);
-}
-.menu-toggler:checked ~ ul .menu-item:nth-child(4) {
-  transform: rotate(295deg) translateX(-115px);
-}
-.menu-toggler:checked ~ ul .menu-item a {
-  pointer-events: auto;
+  &:checked ~ ul .menu-item:nth-child(1) {
+    transform: rotate(160deg) translateX(-115px);
+  }
+
+  &:checked ~ ul .menu-item:nth-child(2) {
+    transform: rotate(205deg) translateX(-115px);
+  }
+
+  &:checked ~ ul .menu-item:nth-child(3) {
+    transform: rotate(250deg) translateX(-115px);
+  }
+
+  &:checked ~ ul .menu-item:nth-child(4) {
+    transform: rotate(295deg) translateX(-115px);
+  }
+
+  &:checked ~ ul .menu-item a {
+    pointer-events: auto;
+  }
+
+  &:hover + label, 
+  &:hover + label:before, 
+  &:hover + label:after {
+    transition: .2s linear;
+    box-shadow: 0 0 14px 8px $main-blue, 0 0 24px 16px $main-blue;
+  }
 }
 
 .menu-toggler + label {
   display: flex;
   align-items: center;
-  box-shadow: 0 0 8px #03b9ffb0, 0 0 16px #03b9ffb0, 0 0 24px #03b9ffb0, 0 0 32px #03b9ffb0, 0 0 40px #03b9ffb0, 0 0 48px #03b9ffb0;
+  box-shadow: 0 0 8px $main-blue, 0 0 16px $main-blue, 0 0 24px $main-blue, 0 0 32px $main-blue, 0 0 40px $main-blue, 0 0 48px $main-blue;
   justify-content: center;
   color: #0080b5;
   font-size: 40px;
@@ -72,19 +81,6 @@
   animation-delay: 2.6s;
 }
 
-.menu-item:nth-child(1) a {
-  transform: rotate(180deg);
-}
-.menu-item:nth-child(2) a {
-  transform: rotate(180deg);
-}
-.menu-item:nth-child(3) a {
-  transform: rotate(180deg);
-}
-.menu-item:nth-child(4) a {
-  transform: rotate(180deg);
-}
-
 .menu-item {
   background-image: url("/images/deathstar.png");
   background-size: cover;
@@ -97,6 +93,19 @@
   height: 80px;
   opacity: 0;
   transition: 0.5s;
+
+  &:nth-child(1) a {
+    transform: rotate(180deg);
+  }
+  &:nth-child(2) a {
+    transform: rotate(180deg);
+  }
+  &:nth-child(3) a {
+    transform: rotate(180deg);
+  }
+  &:nth-child(4) a {
+    transform: rotate(180deg);
+  }
 }
 
 .menu-item a {
@@ -112,9 +121,10 @@
   font-size: 16px;
   pointer-events: none;
   transition: 0.2s;
-}
-.menu-item a:hover {
-  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.3);
-  background: rgba(255, 255, 255, 0.3);
-  font-size: 44.44444px;
+
+  &:hover {
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.3);
+    font-size: 44.44444px;
+  }
 }
