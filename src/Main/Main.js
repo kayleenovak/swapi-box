@@ -13,9 +13,9 @@ const Main = ({ vehicles, planets, people, favorites, addFavorite}) => {
         <Menu />
       <Switch>
         <Route exact path='/main' component={Yoda}/>
-        <Route exact path='/main/people' render={({match}) => <CardContainer data={people} addFavorite={ addFavorite }/> } />
-        <Route exact path='/main/vehicles' render={({match}) => <CardContainer data={vehicles} addFavorite={ addFavorite } /> } />
-        <Route exact path='/main/planets' render={({match}) => <CardContainer data={planets} addFavorite={ addFavorite } /> } />
+        <Route exact path='/main/people' render={({match}) => <CardContainer itemType={'people'} data={people} addFavorite={ addFavorite }/> } />
+        <Route exact path='/main/vehicles' render={({match}) => <CardContainer itemType={'vehicles'} data={vehicles} addFavorite={ addFavorite } /> } />
+        <Route exact path='/main/planets' render={({match}) => <CardContainer itemType={'planets'} data={planets} addFavorite={ addFavorite } /> } />
         <Route exact path='/main/favorites' render={({match}) => <CardContainer data={favorites} addFavorite={ addFavorite } /> } />
       </Switch>
     </div>
@@ -24,4 +24,3 @@ const Main = ({ vehicles, planets, people, favorites, addFavorite}) => {
   }
 
   export default Main
-
