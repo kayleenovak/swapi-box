@@ -12,11 +12,13 @@ export default class Splash extends Component {
   }
 
   async componentDidMount() {
-    const films = Films.fetchFilms()
+    const films = new Films()
+    const film = await films.fetchFilms()
+    console.log(film)
     const randomNumber = Math.floor(Math.random() * 7)
 
     this.setState({
-      film: films.results[randomNumber]
+      film: film.results[randomNumber]
     })
   }
 
