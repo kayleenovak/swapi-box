@@ -40,11 +40,11 @@ class App extends Component {
     const found = this.state.favorites.find(item => item.name === data.name)
 
     if(!found) {
-      updatedItems = this.toggleFavorite(data, itemType)
+      updatedItems = this.toggleItemState(data, itemType)
       data.favorite = true
       favorites = [...this.state.favorites, data]
     } else {
-      updatedItems = this.toggleFavorite(data, itemType)
+      updatedItems = this.toggleItemState(data, itemType)
       data.favorite = false
       favorites = this.state.favorites.filter(item => item.name !== data.name)
     }
@@ -58,7 +58,7 @@ class App extends Component {
     })
   }
 
-  toggleFavorite = (data, itemType) => {
+  toggleItemState = (data, itemType) => {
     return this.state[itemType].map(item => {
       if (item === data) {
         item.favorite = !item.favorite
