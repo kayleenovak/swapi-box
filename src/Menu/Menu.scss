@@ -108,8 +108,7 @@ $main-blue: #03b9ffb0;
   }
 }
 
-.menu-item a {
-  box-shadow: inset -2px 1px 20px #333333;
+.nav-btn {
   display: block;
   width: inherit;
   height: inherit;
@@ -128,3 +127,8 @@ $main-blue: #03b9ffb0;
     font-size: 44.44444px;
   }
 }
+
+.active {
+  box-shadow: 0 0 8px #03b9ffb0, 0 0 16px #03b9ffb0, 0 0 24px #03b9ffb0, 0 0 32px #03b9ffb0, 0 0 40px #03b9ffb0, 0 0 48px #03b9ffb0;
+  }
+
