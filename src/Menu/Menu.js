@@ -11,9 +11,9 @@ const Menu = (props) => {
       <label for="menu-toggler">$</label>
       <ul>
         <Button name={ 'Vehicles' }/>
-        <Button name={ 'people' }/>
-        <Button name={ 'planets' }/>
-        <Button name={ 'favorites' }/>
+        <Button name={ 'People' }/>
+        <Button name={ 'Planets' }/>
+        <Button name={ 'Favorites' }/>
       </ul>
     </div>
   )

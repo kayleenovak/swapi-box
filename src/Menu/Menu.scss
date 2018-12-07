@@ -1,6 +1,5 @@
 $main-blue: #03b9ffb0;
 
-
 @keyframes button-glow {
   0% {
     box-shadow: 0 0 8px $main-blue, 0 0 16px $main-blue, 0 0 24px $main-blue, 0 0 32px $main-blue, 0 0 40px $main-blue, 0 0 48px $main-blue;
@@ -60,7 +59,6 @@ $main-blue: #03b9ffb0;
   }
 }
 
-
 .menu-toggler + label {
   display: flex;
   align-items: center;
@@ -82,7 +80,6 @@ $main-blue: #03b9ffb0;
   animation-iteration-count: 4; 
   animation-delay: 2.6s;
 }
-
 
 .menu-item {
   background-image: url("/images/deathstar.png");
