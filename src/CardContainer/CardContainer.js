@@ -5,9 +5,13 @@ import PropTypes from 'prop-types';
 
 const CardContainer = (props) => {
 
-  const cards = props.data.map(item => {
-    return <Card item={item} handleFavorite={ props.handleFavorite } itemType={ props.itemType } key={item.name}/>
-  })
+  const cards = props.data.map(item =>
+    <Card 
+      item={item} 
+      handleFavorite={ props.handleFavorite } 
+      itemType={ props.itemType } 
+      key={item.name}
+    />)
 
   return (
     <div className='card-container'>

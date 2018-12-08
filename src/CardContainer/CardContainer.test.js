@@ -3,10 +3,15 @@ import { shallow, mount } from 'enzyme'
 import CardContainer from './CardContainer'
 import Card from '../Card/Card'
 
+
 describe('Card Container', () => {
-  it('should match the snapshot', () => {
-    const mockSelection = 'People'
-    const mockPeople = [{
+  let wrapper;
+  let mockPeople;
+  let mockType;
+
+  beforeEach(() => {
+    mockType = 'People'
+    mockPeople = [{
       'name': 'Luke Skywalker',
       'homeworld': 'Tatooine',
       'species': 'human',
@@ -19,32 +24,20 @@ describe('Card Container', () => {
       'species': 'robot',
       'population': 20000000,
       'favorite': false
-    }
-    ]
-    const wrapper = shallow(<CardContainer currentSelection={ mockSelection } people={ mockPeople } />)
+    }]
+    wrapper = shallow(
+      <CardContainer 
+        handleFavorite={jest.fn()}
+        data={ mockPeople } 
+        itemType={ mockType } 
+      />)
+  })
+
+  it('should match the snapshot', () => {
 
     expect(wrapper).toMatchSnapshot()
   })
 
-  it('should render 2 child cards', () => {
-    const mockSelection = 'People'
-    const mockPeople = [{
-      'name': 'Luke Skywalker',
-      'homeworld': 'Tatooine',
-      'species': 'human',
-      'population': 20000000,
-      'favorite': false
-    },
-    {
-      'name': 'C3PO',
-      'homeworld': 'Tatooine',
-      'species': 'robot',
-      'population': 20000000,
-      'favorite': false
-    }
-    ]
-    const wrapper = shallow(<CardContainer currentSelection={ mockSelection } people={ mockPeople } />)
-
+  it('should render all child cards', () => {
     expect(wrapper.find(Card).length).toEqual(2)
   })
-})
