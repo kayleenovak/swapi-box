@@ -1,11 +1,12 @@
 import React from 'react'
 import Card from '../Card/Card'
 import './CardContainer.scss'
+import PropTypes from 'prop-types';
 
 const CardContainer = (props) => {
 
-  const cards = props.data.map(prop => {
-    return <Card prop={prop} handleFavorite={ props.handleFavorite } itemType={ props.itemType }/>
+  const cards = props.data.map(item => {
+    return <Card item={item} handleFavorite={ props.handleFavorite } itemType={ props.itemType } key={item.name}/>
   })
 
   return (
@@ -18,3 +19,9 @@ const CardContainer = (props) => {
 }
 
 export default CardContainer;
+
+CardContainer.propTypes = {
+  handleFavorite: PropTypes.func.isRequired,
+  data: PropTypes.arrayOf(PropTypes.object).isRequired,
+  itemType: PropTypes.string.isRequired
+}

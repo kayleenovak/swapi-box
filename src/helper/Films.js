@@ -1,4 +1,3 @@
-import React from 'react'
 import fetchData from './APICalls.js'
 
 export default class Films {
