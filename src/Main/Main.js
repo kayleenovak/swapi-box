@@ -3,13 +3,14 @@ import CardContainer from '../CardContainer/CardContainer'
 import Yoda from '../Yoda/Yoda'
 import Menu from '../Menu/Menu'
 import { Route, Switch } from 'react-router-dom'
+import PropTypes from 'prop-types';
 
-const Main = ({ vehicles, planets, people, favorites, handleFavorite}) => {
+const Main = ({ vehicles, planets, people, favorites, handleFavorite }) => {
 
   return (
     <div className='app'>
-      <div class="stars"></div>
-      <div class="twinkling"></div>
+      <div className="stars"></div>
+      <div className="twinkling"></div>
       <Menu />
     <Switch>
       <Route exact path='/main' component={Yoda}/>
@@ -22,4 +23,12 @@ const Main = ({ vehicles, planets, people, favorites, handleFavorite}) => {
   )
 }
 
-  export default Main
+export default Main
+
+Main.propTypes = {
+  people: PropTypes.arrayOf(PropTypes.object).isRequired,
+  vehicles: PropTypes.arrayOf(PropTypes.object).isRequired,
+  planets: PropTypes.arrayOf(PropTypes.object).isRequired,
+  favorites: PropTypes.arrayOf(PropTypes.object).isRequired,
+  handleFavorite: PropTypes.func.isRequired
+}

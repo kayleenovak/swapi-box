@@ -3,11 +3,11 @@ import Button from '../Button/Button'
 import './Menu.scss'
 
 
-const Menu = (props) => {
+const Menu = () => {
 
   return (
-    <div class="nav">
-      <input class="menu-toggler" id="menu-toggler" type="checkbox"></input>
+    <div className="nav">
+      <input className="menu-toggler" id="menu-toggler" type="checkbox"></input>
       <label htmlFor="menu-toggler">$</label>
       <ul>
         <Button name={ 'Vehicles' }/>
@@ -19,6 +19,4 @@ const Menu = (props) => {
   )
 }
 
-export default Menu
-
-
+export default Menu;

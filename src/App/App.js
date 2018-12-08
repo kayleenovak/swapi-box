@@ -5,14 +5,13 @@ import Planets from '../helper/Planets'
 import Splash from '../Splash/Splash'
 import Main from '../Main/Main'
 import { getLocalStorage, setLocalStorage } from '../helper/localStorage.js'
-import { Switch, Route, withRouter } from 'react-router-dom'
+import { Route, withRouter } from 'react-router-dom'
 import './App.scss';
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      currentSelection: null,
       people: [],
       vehicles: [],
       planets: [],
