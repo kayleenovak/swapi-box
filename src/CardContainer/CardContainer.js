@@ -16,7 +16,9 @@ const CardContainer = (props) => {
   return (
     <div className='card-container'>
       <div className='card-border'>
-        { cards }
+      {
+       cards.length ? cards : <h1>You have no favorites!</h1>
+      }
       </div>
     </div>
   )
