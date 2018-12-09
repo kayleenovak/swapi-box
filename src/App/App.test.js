@@ -31,11 +31,16 @@ jest.mock('../helper/Vehicles', () => {
   });
 });
 
-// it('renders without crashing', () => {
-//   const div = document.createElement('div');
-//   ReactDOM.render(router, div);
-//   ReactDOM.unmountComponentAtNode(div);
-// });
+it('renders without crashing', () => {
+  const router = (
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>
+)
+  const div = document.createElement('div');
+  ReactDOM.render(router, div);
+  ReactDOM.unmountComponentAtNode(div);
+});
 
 describe('App', () => {
   it('should match the snapshot', () => {
@@ -116,26 +121,32 @@ describe('App', () => {
   describe('handleFavorite', () => {
     const localStorage = require.requireActual('../helper/localStorage');
 
-    let mockFavItem
-    let mockUnfavItem
-    let mockItemType
     let wrapper
-    let mockState
+    let mockPeople
+    let mockUnfavItem
+    let mockFavorites
     let mockAddFavorite
     let mockRemoveFavorite
+    let mockFavItem
+    let mockItemType
+    let mockRemoveFavState
     beforeEach(() => {
       wrapper = shallow(<App />)
-      mockUnfavItem = {'name': 'Luke Skywalker', 'favorite': false}
-      mockAddFavorite = [{'name': 'Leah', 'favorite': true}, {'name': 'Luke Skywalker', 'favorite': true}]
+      mockUnfavItem = {'name': 'Luke', 'favorite': false}
+      mockPeople = [{'name': 'Leah', 'favorite': true}, mockUnfavItem]
+      mockFavorites = [{'name': 'Leah', 'favorite': true}]
+      mockAddFavorite = [{'name': 'Leah', 'favorite': true}, {'name': 'Luke', 'favorite': true}]
       mockRemoveFavorite = []
       mockFavItem = {'name': 'Leah', 'favorite': true}
       mockItemType = 'people'
-      mockState = [{'name': 'Leah', 'favorite': true}]
+      mockRemoveFavState = [{'name': 'Leah', 'favorite': false}]
+
     } )
 
     it('should call toggleItemState if data is not found in wrapper.state.favorites', () => {
-      wrapper.setState({ 'favorites': mockState })
+      wrapper.setState({ 'favorites': mockFavorites })
       const spy = spyOn(wrapper.instance(), 'toggleItemState')
+
       wrapper.instance().forceUpdate()
       wrapper.instance().handleFavorite(mockUnfavItem, 'people')
 
@@ -143,8 +154,9 @@ describe('App', () => {
     })
 
     it('should call toggleItemState if data is found in wrapper.state.favorites', () => {
-      wrapper.setState({ 'favorites': mockState })
+      wrapper.setState({ 'favorites': mockFavorites })
       const spy = spyOn(wrapper.instance(), 'toggleItemState')
+
       wrapper.instance().forceUpdate()
       wrapper.instance().handleFavorite(mockFavItem, 'people')
 
@@ -152,25 +164,39 @@ describe('App', () => {
     })
 
     it('should call setLocalStorage with the correct params if the data passed in is not already in favorites', () => {
-      wrapper.setState({ 'favorites': mockState })
-      localStorage.setLocalStorage = jest.fn()
+      wrapper.setState({ 'favorites': mockFavorites,
+      'people': mockPeople })
+      localStorage.setLocalStorage = jest.fn() 
 
       wrapper.instance().handleFavorite(mockUnfavItem, 'people')
 
-      expect(localStorage.setLocalStorage).toHaveBeenCalledWith(mockAddFavorite, 'favorites')
+      expect(localStorage.setLocalStorage.mock.calls).toEqual([[mockAddFavorite, 'favorites'], [mockAddFavorite, 'people']])
     })
 
     it('should call setLocalStorage with the correct params if the data passed in is already in fvorites', () => {
-      wrapper.setState({ 'favorites': mockState,
-      'people': mockState })
+      wrapper.setState({ 'favorites': mockFavorites,
+      'people': mockPeople })
       localStorage.setLocalStorage = jest.fn()
 
       wrapper.instance().handleFavorite(mockFavItem, 'people')
 
-      expect(localStorage.setLocalStorage).toHaveBeenCalledWith(mockRemoveFavorite, 'favorites')
+      expect(localStorage.setLocalStorage.mock.calls).toEqual([[mockRemoveFavorite, 'favorites'], [mockPeople, 'people']])
+
     })
 
-
+    describe('toggleItemState', () => {
+      it('should take in data and switch the data.favorite to the opposite', () => {
+        const wrapper = shallow(<App />)
+        const mockState = {'favorites': [],
+                            'people': [mockUnfavItem]
+                          }
+        const mockFavState = [{'name': 'Luke', 'favorite': true}]
+        wrapper.setState(mockState)
+        const newPeople = wrapper.instance().toggleItemState(mockUnfavItem, 'people')
+        
+        expect(newPeople).toEqual(mockFavState)
+      })
+    })
 
 
   })
