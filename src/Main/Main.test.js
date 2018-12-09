@@ -28,7 +28,7 @@ describe('Main', () => {
     expect(wrapper.find(Route).length).toEqual(5)
   })
 
-    it('routes /people to a CardContainer', () => {
-      expect(wrapper.find('Route[exact=true][path="/main/people"]').first().prop('render')).toEqual(render);
-    });
+    // it('routes /people to a CardContainer', () => {
+    //   expect(wrapper.find('Route[exact=true][path="/main/people"]').first().prop('render')).toEqual(render);
+    // });
 })
