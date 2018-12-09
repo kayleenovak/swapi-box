@@ -114,13 +114,65 @@ describe('App', () => {
   })
 
   describe('handleFavorite', () => {
+    const localStorage = require.requireActual('../helper/localStorage');
+
+    let mockFavItem
+    let mockUnfavItem
+    let mockItemType
     let wrapper
+    let mockState
+    let mockAddFavorite
+    let mockRemoveFavorite
     beforeEach(() => {
       wrapper = shallow(<App />)
+      mockUnfavItem = {'name': 'Luke Skywalker', 'favorite': false}
+      mockAddFavorite = [{'name': 'Leah', 'favorite': true}, {'name': 'Luke Skywalker', 'favorite': true}]
+      mockRemoveFavorite = []
+      mockFavItem = {'name': 'Leah', 'favorite': true}
+      mockItemType = 'people'
+      mockState = [{'name': 'Leah', 'favorite': true}]
     } )
-    it('should fire toggleItemState if data is not found in wrapper.state.favorites', () => {
 
+    it('should call toggleItemState if data is not found in wrapper.state.favorites', () => {
+      wrapper.setState({ 'favorites': mockState })
+      const spy = spyOn(wrapper.instance(), 'toggleItemState')
+      wrapper.instance().forceUpdate()
+      wrapper.instance().handleFavorite(mockUnfavItem, 'people')
+
+      expect(spy).toHaveBeenCalledWith(mockUnfavItem, 'people')
     })
+
+    it('should call toggleItemState if data is found in wrapper.state.favorites', () => {
+      wrapper.setState({ 'favorites': mockState })
+      const spy = spyOn(wrapper.instance(), 'toggleItemState')
+      wrapper.instance().forceUpdate()
+      wrapper.instance().handleFavorite(mockFavItem, 'people')
+
+      expect(spy).toHaveBeenCalledWith(mockFavItem, 'people')
+    })
+
+    it('should call setLocalStorage with the correct params if the data passed in is not already in favorites', () => {
+      wrapper.setState({ 'favorites': mockState })
+      localStorage.setLocalStorage = jest.fn()
+
+      wrapper.instance().handleFavorite(mockUnfavItem, 'people')
+
+      expect(localStorage.setLocalStorage).toHaveBeenCalledWith(mockAddFavorite, 'favorites')
+    })
+
+    it('should call setLocalStorage with the correct params if the data passed in is already in fvorites', () => {
+      wrapper.setState({ 'favorites': mockState,
+      'people': mockState })
+      localStorage.setLocalStorage = jest.fn()
+
+      wrapper.instance().handleFavorite(mockFavItem, 'people')
+
+      expect(localStorage.setLocalStorage).toHaveBeenCalledWith(mockRemoveFavorite, 'favorites')
+    })
+
+
+
+
   })
 
 })

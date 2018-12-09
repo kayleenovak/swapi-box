@@ -37,7 +37,7 @@ class App extends Component {
     let favorites;
 
     const found = this.state.favorites.find(item => item.name === data.name)
-
+    
     if(!found) {
       updatedItems = this.toggleItemState(data, itemType)
       data.favorite = true
