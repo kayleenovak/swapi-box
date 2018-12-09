@@ -2,20 +2,20 @@ $main-blue: #03b9ffb0;
 
 .card {
   align-items: center;
-  border-radius: 50%;
+/*  border-radius: 50%;*/
   color: #fff;
   display: flex;
   flex-wrap: wrap;
-  height: 208px;
+  height: 300px;
   justify-content: center;
   margin: 12px;
   text-align: center;
   position: relative;
-  width: 208px;
+  width: 300px;
 
   &::before,
   &::after {
-    border-radius: 50%;
+/*    border-radius: 50%;*/
     content: '';
     position: absolute;
     width: 100%;
@@ -56,11 +56,14 @@ $main-blue: #03b9ffb0;
 .card-image {
   width:100%;
   height:100%;
-  border-radius: 50%;
+/*  border-radius: 50%;*/
   position: absolute;
+  filter: drop-shadow(5px 5px 5px #333) drop-shadow(-5px -5px 5px #333);
 }
 
 .card-text {
+  bottom: 0px;
+  width: 100%;
   position: absolute;
   z-index: 2;
 }
@@ -82,10 +85,23 @@ $main-blue: #03b9ffb0;
 .favorite {
   position: absolute;
   z-index: 2;
+  top: 5px;
+  right: 5px;
   background: none;
   border: none;
 }
 
 .white-saber {
-  height: 75px;
+  height: 55px;
+  transform: scaleX(-1);
+  filter: FlipH;
+  filter: drop-shadow(2px 2px 5px #333);
 }
+
+.white-saber:hover {
+animation: grow;
+animation-duration: .5s; 
+}
+
+.white-saber { transition: all .2s ease-in-out; }
+.white-saber:hover { transform: scale(1.5); }

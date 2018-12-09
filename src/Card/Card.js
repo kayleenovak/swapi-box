@@ -15,7 +15,6 @@ const Card = (props) => {
   const favorited = props.item.favorite ? 'green-saber' : 'white-saber' 
   return (
     <div className='card'>
-      <h1 className='card-text'>{props.item.name}</h1>
       <div className="card-info">
         { info }
       </div>
@@ -23,6 +22,9 @@ const Card = (props) => {
       <button className='favorite' onClick={() => props.handleFavorite(props.item, props.itemType  )}>
         <img src={Images[favorited]} className='white-saber' alt='lightsaber'/>
       </button>
+        <h1 className='card-text'>{props.item.name}</h1>
+      <div className='card-text-background'>
+      </div>
     </div>
   )
 }
