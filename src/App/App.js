@@ -37,7 +37,7 @@ class App extends Component {
     let favorites;
 
     const found = this.state.favorites.find(item => item.name === data.name)
-
+    
     if(!found) {
       updatedItems = this.toggleItemState(data, itemType)
       data.favorite = true
@@ -59,6 +59,7 @@ class App extends Component {
 
   toggleItemState = (data, itemType) => {
     return this.state[itemType].map(item => {
+      console.log(item === data)
       if (item === data) {
         item.favorite = !item.favorite
       }
@@ -76,4 +77,4 @@ class App extends Component {
   }
 }
 
-export default withRouter(App);
+export default App;
