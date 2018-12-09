@@ -7,6 +7,7 @@ export default class People {
     }
 
   fetchPeople = async () => {
+    console.log(1)
     if(!localStorage.people) {
       const url = "https://swapi.co/api/people/";
       const data = await this.fetchData(url)
