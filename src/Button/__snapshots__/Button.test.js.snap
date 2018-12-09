@@ -20,37 +20,31 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": <a
-        href="https://www.facebook.com/"
-        target="_blank"
+      "children": <NavLink
+        activeClassName="active"
+        aria-current="page"
+        className="nav-btn"
+        to="/main/Vehicles"
       >
-         
         Vehicles
-         
-      </a>,
-      "class": " menu-item",
+      </NavLink>,
+      "className": "menu-item",
     },
     "ref": null,
     "rendered": Object {
       "instance": null,
       "key": undefined,
-      "nodeType": "host",
+      "nodeType": "function",
       "props": Object {
-        "children": Array [
-          " ",
-          "Vehicles",
-          " ",
-        ],
-        "href": "https://www.facebook.com/",
-        "target": "_blank",
+        "activeClassName": "active",
+        "aria-current": "page",
+        "children": "Vehicles",
+        "className": "nav-btn",
+        "to": "/main/Vehicles",
       },
       "ref": null,
-      "rendered": Array [
-        " ",
-        "Vehicles",
-        " ",
-      ],
-      "type": "a",
+      "rendered": "Vehicles",
+      "type": [Function],
     },
     "type": "li",
   },
@@ -60,37 +54,31 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "children": <a
-          href="https://www.facebook.com/"
-          target="_blank"
+        "children": <NavLink
+          activeClassName="active"
+          aria-current="page"
+          className="nav-btn"
+          to="/main/Vehicles"
         >
-           
           Vehicles
-           
-        </a>,
-        "class": " menu-item",
+        </NavLink>,
+        "className": "menu-item",
       },
       "ref": null,
       "rendered": Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "host",
+        "nodeType": "function",
         "props": Object {
-          "children": Array [
-            " ",
-            "Vehicles",
-            " ",
-          ],
-          "href": "https://www.facebook.com/",
-          "target": "_blank",
+          "activeClassName": "active",
+          "aria-current": "page",
+          "children": "Vehicles",
+          "className": "nav-btn",
+          "to": "/main/Vehicles",
         },
         "ref": null,
-        "rendered": Array [
-          " ",
-          "Vehicles",
-          " ",
-        ],
-        "type": "a",
+        "rendered": "Vehicles",
+        "type": [Function],
       },
       "type": "li",
     },

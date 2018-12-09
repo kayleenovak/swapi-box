@@ -24,7 +24,8 @@ ShallowWrapper {
           Choose a path you must...
         </p>,
         <img
-          src="./images/yoda.png"
+          alt="Yoda"
+          src="../images/yoda.png"
         />,
         <div
           className="lightsaber"
@@ -58,7 +59,8 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "src": "./images/yoda.png",
+          "alt": "Yoda",
+          "src": "../images/yoda.png",
         },
         "ref": null,
         "rendered": null,
@@ -122,7 +124,8 @@ ShallowWrapper {
             Choose a path you must...
           </p>,
           <img
-            src="./images/yoda.png"
+            alt="Yoda"
+            src="../images/yoda.png"
           />,
           <div
             className="lightsaber"
@@ -156,7 +159,8 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "src": "./images/yoda.png",
+            "alt": "Yoda",
+            "src": "../images/yoda.png",
           },
           "ref": null,
           "rendered": null,

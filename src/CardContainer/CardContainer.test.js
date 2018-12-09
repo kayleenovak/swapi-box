@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow, mount } from 'enzyme'
+import { shallow } from 'enzyme'
 import CardContainer from './CardContainer'
 import Card from '../Card/Card'
 
@@ -41,3 +41,4 @@ describe('Card Container', () => {
   it('should render all child cards', () => {
     expect(wrapper.find(Card).length).toEqual(2)
   })
+})
