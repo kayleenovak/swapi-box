@@ -1,7 +1,7 @@
 import React from 'react'
 import { shallow, mount } from 'enzyme'
 import Vehicles from './Vehicles'
-import fetchData from './APICalls.js'
+import fetchData from './APICalls'
 
 
 describe('Vehicles', () => {

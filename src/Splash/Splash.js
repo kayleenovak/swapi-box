@@ -38,7 +38,7 @@ render() {
           <p className='film-body'>{ film.opening_crawl }</p>
         </div>
       </section>
-    </div> : <h1>Loading...</h1>
+    </div> : <div className='splash'>></div>
     )
   }
 }

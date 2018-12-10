@@ -1,5 +1,5 @@
-import fetchData from './APICalls.js'
-import { setLocalStorage, getLocalStorage } from './localStorage.js'
+import fetchData from './APICalls'
+import { setLocalStorage, getLocalStorage } from './localStorage'
 
 export default class Vehicles {
   constructor() {
@@ -7,8 +7,8 @@ export default class Vehicles {
   }
 
   fetchVehicles = async () => {
-    if(!localStorage.vehicles) {
-      const url = "https://swapi.co/api/vehicles/";
+    if (!localStorage.vehicles) {
+      const url = 'https://swapi.co/api/vehicles/'
       const data = await this.fetchData(url)
       const cleanVehicles = await this.cleanVehicles(data)
       setLocalStorage(cleanVehicles, 'vehicles')
@@ -17,8 +17,7 @@ export default class Vehicles {
   }
 
   cleanVehicles = (data) => {
-    const vehicleData = data.results.map(vehicle => {
-      
+    const vehicleData = data.results.map((vehicle) => {
       return {
         name: vehicle.name,
         model: vehicle.model,
@@ -30,6 +29,3 @@ export default class Vehicles {
     return Promise.all(vehicleData)
   }
 }
-
-
-

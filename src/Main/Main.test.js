@@ -28,7 +28,7 @@ describe('Main', () => {
     expect(wrapper.find(Route).length).toEqual(5)
   })
 
-    it('routes /main to the Yoda component', () => {
-      expect(wrapper.find('Route[exact=true][path="/main"]').first().prop('render')).toEqual(component);
-    });
+  it('routes /main to the Yoda component', () => {
+    expect(wrapper.find('Route[exact=true][path="/main"]').first().prop('render')).toEqual(component);
+  });
 })

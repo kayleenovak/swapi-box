@@ -49,4 +49,8 @@ describe('Splash', () => {
 
     expect(mockfetchFilms).toHaveBeenCalled()
   })
+
+  it ('should render a loading page if films has not returned', () => {
+    
+  })
 })
