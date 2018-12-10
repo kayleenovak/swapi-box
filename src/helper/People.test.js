@@ -45,7 +45,7 @@ describe('People', () => {
       expect(people.cleanPeople).toHaveBeenCalledWith(mockPeople)
     })
 
-    it('should call setLocalStorage and getLocalStorage with the correct params', async () => {
+    it('should call getLocalStorage with the correct params', async () => {
       localStorage.setLocalStorage = jest.fn()
       localStorage.getLocalStorage = jest.fn()
 
@@ -79,7 +79,6 @@ describe('People', () => {
         }]
       }
       mockFetch = jest.fn().mockImplementation(() => Promise.resolve(mockPeople))
-      mockUrl = 'https://swapi.co/api/people/'
       mockHomeWorld = {'homeworld': 'Tattooine', 'population': 200000}
       mockSpecies = {'species': 'human'}
       mockHomeWorldFunc = await jest.fn().mockImplementation(() => Promise.resolve(mockHomeWorld))
@@ -105,9 +104,71 @@ describe('People', () => {
       people.fetchData = mockFetch
 
       const cleanPeople = await people.cleanPeople(mockPeople)
-      
+
       expect(cleanPeople).toEqual(cleanPeopleMock)
     })
+  })
+
+  describe('fetchHomeworld', () => {
+
+    let people
+    let mockUrl
+    let mockHomeWorld
+    let mockCleanHomeworld
+
+    beforeEach( async () => {
+      people = new People()
+      mockUrl = 'https://swapi.co/api/people/'
+      mockHomeWorld = {'name': 'Tattooine', 'population': 200000}
+      mockCleanHomeworld = {'homeworld': 'Tattooine', 'population': 200000}
+
+    }) 
+
+    it('should call fetchData with the correct params', async () => {
+      people.fetchData = await jest.fn().mockImplementation(() => Promise.resolve({'name': 'Tattooine', 'population': 200000}))
+    
+      const species = await people.fetchHomeworld(mockUrl)
+
+      expect(people.fetchData).toHaveBeenCalledWith(mockUrl)
+    })
+
+    it('should return an object with homeworld and species', async () => {
+      people.fetchData = await jest.fn().mockImplementation(() => Promise.resolve(mockHomeWorld))
+    
+      const homeworld = await people.fetchHomeworld(mockUrl)
+
+      expect(homeworld).toEqual(mockCleanHomeworld)
+    })
+
+  })
+
+  describe('fetchHomeworld', () => {
+
+    let people
+    let mockUrl
+
+    beforeEach( async () => {
+      people = new People()
+      mockUrl = 'https://swapi.co/api/people/'
+
+    }) 
+
+    it('should call fetchData with the correct params', async () => {
+      people.fetchData = await jest.fn().mockImplementation(() => Promise.resolve({'name': 'human'}))
+    
+      const species = await people.fetchSpecies(mockUrl)
+
+      expect(people.fetchData).toHaveBeenCalledWith(mockUrl)
+    })
+
+    it('should return an object with species', async () => {
+      people.fetchData = await jest.fn().mockImplementation(() => Promise.resolve({'name': 'human'}))
+    
+      const species = await people.fetchSpecies(mockUrl)
+
+      expect(species).toEqual({'species': 'human'})
+    })
+
   })
 })
 
