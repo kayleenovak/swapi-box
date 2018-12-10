@@ -4,6 +4,7 @@ import Planets from './Planets'
 
 
 describe('Planets', () => {
+  
   let mockUrl 
   let mockFetch
   let planets
@@ -13,8 +14,12 @@ describe('Planets', () => {
   let mockResident
   let mockCleanPlanets
   let finalCleanPlanets
+  let localStorage
+  
   describe('fetchPlanets', () => {
+
     beforeEach(() => {
+      localStorage = require('./localStorage')
       mockPlanets = [{
         'results': {
           'name': 'Tattooine',
@@ -29,25 +34,21 @@ describe('Planets', () => {
     })
 
     it('should call fetchData with the correct params', async () => {
-      planets.fetchData = jest.fn()
+      planets.fetchData = jest.fn().mockImplementation(() => Promise.resolve(mockPlanets))
       planets.cleanPlanets = jest.fn()
+      localStorage.getLocalStorage = jest.fn()
+
       const planetData = await planets.fetchPlanets()
 
       expect(planets.fetchData).toHaveBeenCalledWith(mockUrl)
-    })
-
-    it('should call cleanPlanets with the correct params', async () => {
-      planets.fetchData = jest.fn().mockImplementation(() => Promise.resolve(mockPlanets))
-      planets.cleanPlanets = jest.fn()
-      
-      await planets.fetchPlanets()
-
       expect(planets.cleanPlanets).toHaveBeenCalledWith(mockPlanets)
     })
+
   })
 
   describe('cleanPlanets', () => {
     beforeEach(() => {
+      localStorage = require('./localStorage')
       mockPlanets = {
         'results': [
           {
@@ -132,6 +133,7 @@ describe('Planets', () => {
 
     it('should call fetchData with the correct params', async () => {
       planets.fetchData = jest.fn().mockImplementation(() => Promise.resolve(mockResident))
+      
       await planets.fetchResidents(mockResidents)
 
       expect(planets.fetchData).toHaveBeenCalledWith(mockResidents[0])
@@ -139,6 +141,7 @@ describe('Planets', () => {
 
     it('should return an array of resident names', async () => {
       planets.fetchData = jest.fn().mockImplementation(() => Promise.resolve(mockResident))
+      
       const result = await planets.fetchResidents(mockResidents)
 
       expect(result).toEqual(['Luke Skywalker'])
