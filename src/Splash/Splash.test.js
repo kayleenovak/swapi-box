@@ -1,12 +1,13 @@
 import React from 'react'
-import { shallow, mount } from 'enzyme'
+import { shallow } from 'enzyme'
 import Splash from './Splash'
 import fetchData from '../helper/APICalls.js'
 
 describe('Splash', () => {
-  let mockFunction
-  let mockUrl
-  let wrapper
+  let mockFunction;
+  let mockUrl;
+  let wrapper;
+  
   beforeEach(() => {
     const mockFilms = [
       {

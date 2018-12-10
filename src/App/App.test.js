@@ -108,7 +108,6 @@ describe('App', () => {
         'vehicles': ['Star Fighter'],
         'planets': ['Tatooine'],
         'favorites': ['Luke Skywalker'],
-        'currentSelection': null
       }
       localStorage.getLocalStorage = jest.fn(() => ['Luke Skywalker'])
       await wrapper.instance().componentDidMount()

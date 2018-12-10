@@ -21,7 +21,7 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <input
-          class="menu-toggler"
+          className="menu-toggler"
           id="menu-toggler"
           type="checkbox"
         />,
@@ -45,7 +45,7 @@ ShallowWrapper {
           />
         </ul>,
       ],
-      "class": "nav",
+      "className": "nav",
     },
     "ref": null,
     "rendered": Array [
@@ -54,7 +54,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "class": "menu-toggler",
+          "className": "menu-toggler",
           "id": "menu-toggler",
           "type": "checkbox",
         },
@@ -154,7 +154,7 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <input
-            class="menu-toggler"
+            className="menu-toggler"
             id="menu-toggler"
             type="checkbox"
           />,
@@ -178,7 +178,7 @@ ShallowWrapper {
             />
           </ul>,
         ],
-        "class": "nav",
+        "className": "nav",
       },
       "ref": null,
       "rendered": Array [
@@ -187,7 +187,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "class": "menu-toggler",
+            "className": "menu-toggler",
             "id": "menu-toggler",
             "type": "checkbox",
           },

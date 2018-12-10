@@ -4,8 +4,7 @@ exports[`Card Container should match the snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <CardContainer
-    currentSelection="People"
-    people={
+    data={
       Array [
         Object {
           "favorite": false,
@@ -23,6 +22,8 @@ ShallowWrapper {
         },
       ]
     }
+    handleFavorite={[MockFunction]}
+    itemType="People"
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -41,7 +42,8 @@ ShallowWrapper {
         className="card-border"
       >
         <Card
-          person={
+          handleFavorite={[MockFunction]}
+          item={
             Object {
               "favorite": false,
               "homeworld": "Tatooine",
@@ -50,9 +52,11 @@ ShallowWrapper {
               "species": "human",
             }
           }
+          itemType="People"
         />
         <Card
-          person={
+          handleFavorite={[MockFunction]}
+          item={
             Object {
               "favorite": false,
               "homeworld": "Tatooine",
@@ -61,6 +65,7 @@ ShallowWrapper {
               "species": "robot",
             }
           }
+          itemType="People"
         />
       </div>,
       "className": "card-container",
@@ -73,7 +78,8 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <Card
-            person={
+            handleFavorite={[MockFunction]}
+            item={
               Object {
                 "favorite": false,
                 "homeworld": "Tatooine",
@@ -82,9 +88,11 @@ ShallowWrapper {
                 "species": "human",
               }
             }
+            itemType="People"
           />,
           <Card
-            person={
+            handleFavorite={[MockFunction]}
+            item={
               Object {
                 "favorite": false,
                 "homeworld": "Tatooine",
@@ -93,6 +101,7 @@ ShallowWrapper {
                 "species": "robot",
               }
             }
+            itemType="People"
           />,
         ],
         "className": "card-border",
@@ -101,16 +110,18 @@ ShallowWrapper {
       "rendered": Array [
         Object {
           "instance": null,
-          "key": undefined,
+          "key": "Luke Skywalker",
           "nodeType": "function",
           "props": Object {
-            "person": Object {
+            "handleFavorite": [MockFunction],
+            "item": Object {
               "favorite": false,
               "homeworld": "Tatooine",
               "name": "Luke Skywalker",
               "population": 20000000,
               "species": "human",
             },
+            "itemType": "People",
           },
           "ref": null,
           "rendered": null,
@@ -118,16 +129,18 @@ ShallowWrapper {
         },
         Object {
           "instance": null,
-          "key": undefined,
+          "key": "C3PO",
           "nodeType": "function",
           "props": Object {
-            "person": Object {
+            "handleFavorite": [MockFunction],
+            "item": Object {
               "favorite": false,
               "homeworld": "Tatooine",
               "name": "C3PO",
               "population": 20000000,
               "species": "robot",
             },
+            "itemType": "People",
           },
           "ref": null,
           "rendered": null,
@@ -148,7 +161,8 @@ ShallowWrapper {
           className="card-border"
         >
           <Card
-            person={
+            handleFavorite={[MockFunction]}
+            item={
               Object {
                 "favorite": false,
                 "homeworld": "Tatooine",
@@ -157,9 +171,11 @@ ShallowWrapper {
                 "species": "human",
               }
             }
+            itemType="People"
           />
           <Card
-            person={
+            handleFavorite={[MockFunction]}
+            item={
               Object {
                 "favorite": false,
                 "homeworld": "Tatooine",
@@ -168,6 +184,7 @@ ShallowWrapper {
                 "species": "robot",
               }
             }
+            itemType="People"
           />
         </div>,
         "className": "card-container",
@@ -180,7 +197,8 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <Card
-              person={
+              handleFavorite={[MockFunction]}
+              item={
                 Object {
                   "favorite": false,
                   "homeworld": "Tatooine",
@@ -189,9 +207,11 @@ ShallowWrapper {
                   "species": "human",
                 }
               }
+              itemType="People"
             />,
             <Card
-              person={
+              handleFavorite={[MockFunction]}
+              item={
                 Object {
                   "favorite": false,
                   "homeworld": "Tatooine",
@@ -200,6 +220,7 @@ ShallowWrapper {
                   "species": "robot",
                 }
               }
+              itemType="People"
             />,
           ],
           "className": "card-border",
@@ -208,16 +229,18 @@ ShallowWrapper {
         "rendered": Array [
           Object {
             "instance": null,
-            "key": undefined,
+            "key": "Luke Skywalker",
             "nodeType": "function",
             "props": Object {
-              "person": Object {
+              "handleFavorite": [MockFunction],
+              "item": Object {
                 "favorite": false,
                 "homeworld": "Tatooine",
                 "name": "Luke Skywalker",
                 "population": 20000000,
                 "species": "human",
               },
+              "itemType": "People",
             },
             "ref": null,
             "rendered": null,
@@ -225,16 +248,18 @@ ShallowWrapper {
           },
           Object {
             "instance": null,
-            "key": undefined,
+            "key": "C3PO",
             "nodeType": "function",
             "props": Object {
-              "person": Object {
+              "handleFavorite": [MockFunction],
+              "item": Object {
                 "favorite": false,
                 "homeworld": "Tatooine",
                 "name": "C3PO",
                 "population": 20000000,
                 "species": "robot",
               },
+              "itemType": "People",
             },
             "ref": null,
             "rendered": null,

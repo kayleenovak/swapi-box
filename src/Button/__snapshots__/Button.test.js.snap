@@ -28,7 +28,7 @@ ShallowWrapper {
       >
         Vehicles
       </NavLink>,
-      "class": "menu-item",
+      "className": "menu-item",
     },
     "ref": null,
     "rendered": Object {
@@ -62,7 +62,7 @@ ShallowWrapper {
         >
           Vehicles
         </NavLink>,
-        "class": "menu-item",
+        "className": "menu-item",
       },
       "ref": null,
       "rendered": Object {
