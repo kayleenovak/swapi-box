@@ -11,7 +11,14 @@ describe('Card', () => {
       'population': 20000000,
       'favorite': false
     }
-    const wrapper = shallow(<Card person={ mockPerson }/>)
+    const mockFunction = jest.fn()
+    const wrapper = shallow(
+      <Card 
+        item={ mockPerson } 
+        handleFavorite={ mockFunction } 
+        itemType={'people'} 
+        key={'Luke Skywalker'}
+      />)
 
 
     expect(wrapper).toMatchSnapshot()
