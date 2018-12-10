@@ -8,5 +8,8 @@
     "comma-dangle": ["error", "never"],
     "max-lines-per-function": ["error", 30],
     "semi": ["error", "never"],
+    "no-param-reassign": [2, { "props": false }],
+    "react/destructuring-assignment": [<enabled>, 'never'],
+    'arrow-body-style': ["error", "as-needed", { "requireReturnForObjectLiteral": true }]
   }
 }

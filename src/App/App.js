@@ -10,7 +10,7 @@ import './App.scss'
 
 class App extends Component {
   constructor() {
-    super();
+    super()
     this.state = {
       people: [],
       vehicles: [],
@@ -33,37 +33,38 @@ class App extends Component {
   }
 
   handleFavorite = (data, itemType) => {
+    const { favorites } = this.state
     let updatedItems
-    let favorites
+    let newFavorites
 
-    const found = this.state.favorites.find(item => item.name === data.name)
+    const found = favorites.find(item => item.name === data.name)
 
     if (!found) {
       updatedItems = this.toggleItemState(data, itemType)
       data.favorite = true
-      favorites = [...this.state.favorites, data]
+      newFavorites = [...favorites, data]
     } else {
       updatedItems = this.toggleItemState(data, itemType)
       data.favorite = false
-      favorites = this.state.favorites.filter(item => item.name !== data.name)
+      newFavorites = favorites.filter(item => item.name !== data.name)
     }
 
-    setLocalStorage(favorites, 'favorites')
+    setLocalStorage(newFavorites, 'favorites')
     setLocalStorage(updatedItems, itemType)
 
     this.setState({
-      favorites,
+      favorites: newFavorites,
       [itemType]: updatedItems
     })
   }
 
   toggleItemState = (data, itemType) => {
-    return ( this.state[itemType].map(item => {
+    return (this.state[itemType].map((item) => {
       if (item === data) {
         item.favorite = !item.favorite
       }
       return item
-      })
+    })
     )
   }
 

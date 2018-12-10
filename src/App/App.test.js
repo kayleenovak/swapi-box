@@ -1,45 +1,44 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import { BrowserRouter } from 'react-router-dom'
+import { shallow } from 'enzyme'
 import People from '../helper/People'
 import Vehicles from '../helper/Vehicles'
 import Planets from '../helper/Planets'
-import { Route, BrowserRouter, withRouter } from 'react-router-dom';
-import App from './App';
-import * as localStorage from "../helper/localStorage";
-import { shallow, mount } from 'enzyme'
+import App from './App'
 
 
 const mockFetchPeople = jest.fn(() => ['Luke Skywalker'])
 jest.mock('../helper/People', () => {
   return jest.fn().mockImplementation(() => {
-    return {fetchPeople: mockFetchPeople};
-  });
-});
+    return { fetchPeople: mockFetchPeople }
+  })
+})
 
 const mockFetchPlanets = jest.fn(() => ['Tatooine'])
 jest.mock('../helper/Planets', () => {
   return jest.fn().mockImplementation(() => {
-    return {fetchPlanets: mockFetchPlanets};
-  });
-});
+    return { fetchPlanets: mockFetchPlanets }
+  })
+})
 
 const mockFetchVehicles = jest.fn(() => ['Star Fighter'])
 jest.mock('../helper/Vehicles', () => {
   return jest.fn().mockImplementation(() => {
-    return {fetchVehicles: mockFetchVehicles};
-  });
-});
+    return { fetchVehicles: mockFetchVehicles }
+  })
+})
 
 it('renders without crashing', () => {
   const router = (
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>
-)
-  const div = document.createElement('div');
-  ReactDOM.render(router, div);
-  ReactDOM.unmountComponentAtNode(div);
-});
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  )
+  const div = document.createElement('div')
+  ReactDOM.render(router, div)
+  ReactDOM.unmountComponentAtNode(div)
+})
 
 describe('App', () => {
   it('should match the snapshot', () => {
@@ -50,11 +49,10 @@ describe('App', () => {
 
   describe('componentDidMount', () => {
     let wrapper
-    const localStorage = require.requireActual('../helper/localStorage');
+    const localStorage = require.requireActual('../helper/localStorage')
 
     beforeEach(() => {
       wrapper = shallow(<App />)
-
     })
 
     it('should instantiate a new People', async () => {
@@ -103,21 +101,19 @@ describe('App', () => {
 
     it('should setState with the correct data', async () => {
       const expectedState = {
-        'people': ['Luke Skywalker'],
-        'vehicles': ['Star Fighter'],
-        'planets': ['Tatooine'],
-        'favorites': ['Luke Skywalker'],
+        people: ['Luke Skywalker'],
+        vehicles: ['Star Fighter'],
+        planets: ['Tatooine'],
+        favorites: ['Luke Skywalker']
       }
       localStorage.getLocalStorage = jest.fn(() => ['Luke Skywalker'])
       await wrapper.instance().componentDidMount()
 
       expect(wrapper.state()).toEqual(expectedState)
     })
-
   })
-
   describe('handleFavorite', () => {
-    const localStorage = require.requireActual('../helper/localStorage');
+    const localStorage = require.requireActual('../helper/localStorage')
 
     let wrapper
     let mockPeople
@@ -126,18 +122,17 @@ describe('App', () => {
     let mockAddFavorite
     let mockRemoveFavorite
     let mockFavItem
-    let mockItemType
-    let mockRemoveFavState
+
     beforeEach(() => {
       wrapper = shallow(<App />)
-      mockUnfavItem = {'name': 'Luke', 'favorite': false}
-      mockPeople = [{'name': 'Leah', 'favorite': true}, mockUnfavItem]
-      mockFavorites = [{'name': 'Leah', 'favorite': true}]
-      mockAddFavorite = [{'name': 'Leah', 'favorite': true}, {'name': 'Luke', 'favorite': true}]
+      mockUnfavItem = { name: 'Luke', favorite: false }
+      mockPeople = [{ name: 'Leah', favorite: true }, mockUnfavItem]
+      mockFavorites = [{ name: 'Leah', favorite: true }]
+      mockAddFavorite = [{ name: 'Leah', favorite: true }, { name: 'Luke', favorite: true }]
       mockRemoveFavorite = []
-      mockFavItem = {'name': 'Leah', 'favorite': true}
+      mockFavItem = { name: 'Leah', favorite: true }
       mockItemType = 'people'
-      mockRemoveFavState = [{'name': 'Leah', 'favorite': false}]
+      mockRemoveFavState = [{ name: 'Leah', favorite: false }]
 
     } )
 
