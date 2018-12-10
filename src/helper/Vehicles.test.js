@@ -8,6 +8,8 @@ describe('Vehicles', () => {
   let vehicle;
   let mockData;
   let mockfinal;
+  let localStorage
+
   beforeEach(() => {
     vehicle = new Vehicles
     mockData = {results: [{
@@ -17,36 +19,30 @@ describe('Vehicles', () => {
       passengers: '22',
     }]}
 
-      mockfinal = [{
-        name: 'x-wing',
-        model: 'new',
-        class: 'wheeled',
-        passengers: '22',
-        favorite: false
-      }]
+    mockfinal = [{
+      name: 'x-wing',
+      model: 'new',
+      class: 'wheeled',
+      passengers: '22',
+      favorite: false
+    }]
+    localStorage = require('./localStorage')
 
   })
 
   describe('fetchVehicles', () => {
 
-    it('should call fetchData with the correct params', async () => {
-      vehicle.fetchData = jest.fn()
+    it('should call fetchData and cleanVehicles with the correct params', async () => {
+      vehicle.fetchData = jest.fn().mockImplementation(() => Promise.resolve(mockData))
       vehicle.cleanVehicles = jest.fn()
+      localStorage.getLocalStorage = jest.fn()
+
       const expected = "https://swapi.co/api/vehicles/"
 
       await vehicle.fetchVehicles()
 
       expect(vehicle.fetchData).toHaveBeenCalledWith(expected)
-
-    })
-
-    it('should call cleanVehicles with the correct params', async () => {
-      vehicle.fetchData = jest.fn().mockImplementation(() => Promise.resolve(mockData))
-      vehicle.cleanVehicles = jest.fn()
-
-      await vehicle.fetchVehicles()
       expect(vehicle.cleanVehicles).toHaveBeenCalledWith(mockData)
-
     })
 
     it('should return correct data', async () => {
@@ -54,6 +50,7 @@ describe('Vehicles', () => {
 
       await vehicle.fetchVehicles()
       const cleanVehicles = await vehicle.cleanVehicles(mockData)
+
       expect(cleanVehicles).toEqual(mockfinal)
 
     })
