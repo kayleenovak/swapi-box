@@ -21,7 +21,6 @@ export default class People {
     const peopleData = data.results.map(async person => {
       const world = await this.fetchHomeworld(person.homeworld)
       const species = await this.fetchSpecies(person.species)
-
       return {
         name: person.name,
         homeworld: world.homeworld,
