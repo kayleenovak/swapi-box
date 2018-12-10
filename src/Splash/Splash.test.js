@@ -2,15 +2,10 @@ import React from 'react'
 import { shallow } from 'enzyme'
 import Splash from './Splash'
 import fetchData from '../helper/APICalls.js'
+import Films from '../helper/Films'
 
-describe('Splash', () => {
-  let mockFunction;
-  let mockUrl;
-  let wrapper;
-  
-  beforeEach(() => {
-    const mockFilms = [
-      {
+const mockFilms = {
+      results: [{
         'characters': [],
         'created': 2014,
         'director': 'George Lucas',
@@ -25,10 +20,22 @@ describe('Splash', () => {
         'title': 'A New Hope',
         'url': 'http://this.com',
         'vehicles': ['this vehicle', 'that vehicle']
-      }
-    ]
-    mockFunction = jest.fn()
-    wrapper = shallow(<Splash films={ mockFilms } toggleSplash={ mockFunction } />)     
+      }]
+    }
+const mockfetchFilms = jest.fn(() => mockFilms)
+ jest.mock('../helper/Films', () => {
+  return jest.fn().mockImplementation(() => {
+    return {fetchFilms: mockfetchFilms};
+  });
+});
+
+describe('Splash', () => {
+  let mockUrl;
+  let wrapper;
+  
+  beforeEach(() => {
+  
+    wrapper = shallow(<Splash/>)     
     mockUrl = 'https://swapi.co/api/films/'
   })
 
@@ -37,11 +44,9 @@ describe('Splash', () => {
     expect(wrapper).toMatchSnapshot()
   })
 
-  it('should call fetchData with the correct parameters', () => {
-    fetchData = jest.fn()
-
+  it('should call fetchFilms with the correct parameters',  () => {
     wrapper.instance().componentDidMount()
 
-    expect(fetchData).toHaveBeenCalled()
+    expect(mockfetchFilms).toHaveBeenCalled()
   })
 })

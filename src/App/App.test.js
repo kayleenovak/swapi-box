@@ -3,8 +3,7 @@ import ReactDOM from 'react-dom';
 import People from '../helper/People'
 import Vehicles from '../helper/Vehicles'
 import Planets from '../helper/Planets'
-import { BrowserRouter, withRouter } from 'react-router-dom';
-import { Route } from 'react-router-dom'
+import { Route, BrowserRouter, withRouter } from 'react-router-dom';
 import App from './App';
 import * as localStorage from "../helper/localStorage";
 import { shallow, mount } from 'enzyme'
