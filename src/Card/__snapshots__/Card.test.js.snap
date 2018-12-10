@@ -4,7 +4,8 @@ exports[`Card should match the snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Card
-    person={
+    handleFavorite={[MockFunction]}
+    item={
       Object {
         "favorite": false,
         "homeworld": "Tatooine",
@@ -13,6 +14,7 @@ ShallowWrapper {
         "species": "human",
       }
     }
+    itemType="people"
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -33,10 +35,40 @@ ShallowWrapper {
         >
           Luke Skywalker
         </h1>,
+        <div
+          className="card-info"
+        >
+          <p>
+            homeworld
+            : 
+            Tatooine
+          </p>
+          <p>
+            species
+            : 
+            human
+          </p>
+          <p>
+            population
+            : 
+            20000000
+          </p>
+        </div>,
         <img
+          alt="../images/Luke.png"
           className="card-image"
           src="../images/Luke.png"
         />,
+        <button
+          className="favorite"
+          onClick={[Function]}
+        >
+          <img
+            alt="lightsaber"
+            className="white-saber"
+            src="../images/white-lightsaber.svg"
+          />
+        </button>,
       ],
       "className": "card",
     },
@@ -59,12 +91,128 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
+          "children": Array [
+            <p>
+              homeworld
+              : 
+              Tatooine
+            </p>,
+            <p>
+              species
+              : 
+              human
+            </p>,
+            <p>
+              population
+              : 
+              20000000
+            </p>,
+          ],
+          "className": "card-info",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": "homeworld",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "homeworld",
+                ": ",
+                "Tatooine",
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "homeworld",
+              ": ",
+              "Tatooine",
+            ],
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": "species",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "species",
+                ": ",
+                "human",
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "species",
+              ": ",
+              "human",
+            ],
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": "population",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "population",
+                ": ",
+                20000000,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "population",
+              ": ",
+              20000000,
+            ],
+            "type": "p",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "alt": "../images/Luke.png",
           "className": "card-image",
           "src": "../images/Luke.png",
         },
         "ref": null,
         "rendered": null,
         "type": "img",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <img
+            alt="lightsaber"
+            className="white-saber"
+            src="../images/white-lightsaber.svg"
+          />,
+          "className": "favorite",
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "alt": "lightsaber",
+            "className": "white-saber",
+            "src": "../images/white-lightsaber.svg",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "img",
+        },
+        "type": "button",
       },
     ],
     "type": "div",
@@ -81,10 +229,40 @@ ShallowWrapper {
           >
             Luke Skywalker
           </h1>,
+          <div
+            className="card-info"
+          >
+            <p>
+              homeworld
+              : 
+              Tatooine
+            </p>
+            <p>
+              species
+              : 
+              human
+            </p>
+            <p>
+              population
+              : 
+              20000000
+            </p>
+          </div>,
           <img
+            alt="../images/Luke.png"
             className="card-image"
             src="../images/Luke.png"
           />,
+          <button
+            className="favorite"
+            onClick={[Function]}
+          >
+            <img
+              alt="lightsaber"
+              className="white-saber"
+              src="../images/white-lightsaber.svg"
+            />
+          </button>,
         ],
         "className": "card",
       },
@@ -107,12 +285,128 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
+            "children": Array [
+              <p>
+                homeworld
+                : 
+                Tatooine
+              </p>,
+              <p>
+                species
+                : 
+                human
+              </p>,
+              <p>
+                population
+                : 
+                20000000
+              </p>,
+            ],
+            "className": "card-info",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": "homeworld",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "homeworld",
+                  ": ",
+                  "Tatooine",
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                "homeworld",
+                ": ",
+                "Tatooine",
+              ],
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": "species",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "species",
+                  ": ",
+                  "human",
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                "species",
+                ": ",
+                "human",
+              ],
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": "population",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "population",
+                  ": ",
+                  20000000,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                "population",
+                ": ",
+                20000000,
+              ],
+              "type": "p",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "alt": "../images/Luke.png",
             "className": "card-image",
             "src": "../images/Luke.png",
           },
           "ref": null,
           "rendered": null,
           "type": "img",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <img
+              alt="lightsaber"
+              className="white-saber"
+              src="../images/white-lightsaber.svg"
+            />,
+            "className": "favorite",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "alt": "lightsaber",
+              "className": "white-saber",
+              "src": "../images/white-lightsaber.svg",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "img",
+          },
+          "type": "button",
         },
       ],
       "type": "div",

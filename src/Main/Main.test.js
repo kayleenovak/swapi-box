@@ -1,7 +1,7 @@
 import React from 'react'
 import { shallow, mount } from 'enzyme'
 import Main from './Main'
-import { Route } from 'react-router-dom'
+import { Route, component } from 'react-router-dom'
 
 import CardContainer from '../CardContainer/CardContainer'
 
@@ -28,7 +28,7 @@ describe('Main', () => {
     expect(wrapper.find(Route).length).toEqual(5)
   })
 
-    // it('routes /people to a CardContainer', () => {
-    //   expect(wrapper.find('Route[exact=true][path="/main/people"]').first().prop('render')).toEqual(render);
-    // });
+    it('routes /main to the Yoda component', () => {
+      expect(wrapper.find('Route[exact=true][path="/main"]').first().prop('render')).toEqual(component);
+    });
 })
