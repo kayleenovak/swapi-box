@@ -59,13 +59,12 @@ class App extends Component {
   }
 
   toggleItemState = (data, itemType) => {
-    return (this.state[itemType].map((item) => {
+    return this.state[itemType].map((item) => {
       if (item === data) {
         item.favorite = !item.favorite
       }
       return item
     })
-    )
   }
 
   render() {

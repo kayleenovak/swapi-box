@@ -23,7 +23,9 @@ ShallowWrapper {
         <label
           htmlFor="menu-toggler"
         >
-          $
+          <h3>
+            $
+          </h3>
           <input
             className="menu-toggler"
             id="menu-toggler"
@@ -67,7 +69,9 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            "$",
+            <h3>
+              $
+            </h3>,
             <input
               className="menu-toggler"
               id="menu-toggler"
@@ -92,7 +96,17 @@ ShallowWrapper {
         },
         "ref": null,
         "rendered": Array [
-          "$",
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "$",
+            },
+            "ref": null,
+            "rendered": "$",
+            "type": "h3",
+          },
           Object {
             "instance": null,
             "key": undefined,
@@ -235,7 +249,9 @@ ShallowWrapper {
           <label
             htmlFor="menu-toggler"
           >
-            $
+            <h3>
+              $
+            </h3>
             <input
               className="menu-toggler"
               id="menu-toggler"
@@ -279,7 +295,9 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              "$",
+              <h3>
+                $
+              </h3>,
               <input
                 className="menu-toggler"
                 id="menu-toggler"
@@ -304,7 +322,17 @@ ShallowWrapper {
           },
           "ref": null,
           "rendered": Array [
-            "$",
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "$",
+              },
+              "ref": null,
+              "rendered": "$",
+              "type": "h3",
+            },
             Object {
               "instance": null,
               "key": undefined,

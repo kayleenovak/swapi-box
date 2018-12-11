@@ -31,6 +31,9 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <div
+          className="black-bg"
+        />,
+        <div
           className="card-info"
         >
           <h1>
@@ -79,6 +82,17 @@ ShallowWrapper {
     },
     "ref": null,
     "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "className": "black-bg",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "div",
+      },
       Object {
         "instance": null,
         "key": undefined,
@@ -255,6 +269,9 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <div
+            className="black-bg"
+          />,
+          <div
             className="card-info"
           >
             <h1>
@@ -303,6 +320,17 @@ ShallowWrapper {
       },
       "ref": null,
       "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "className": "black-bg",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "div",
+        },
         Object {
           "instance": null,
           "key": undefined,
