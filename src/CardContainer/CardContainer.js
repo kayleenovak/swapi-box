@@ -16,9 +16,12 @@ const CardContainer = (props) => {
   return (
     <div className='card-container'>
       <div className='card-border'>
-      {
-       cards.length ? cards : <h1>You have no favorites!</h1>
-      }
+        <h3>Tap the lightsaber to favorite</h3>
+        <div className='cards'>
+          {
+            cards.length ? cards : <h1>You have no favorites</h1>
+          }
+        </div>
       </div>
     </div>
   )

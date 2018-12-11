@@ -36,6 +36,10 @@ $main-blue: #03b9ffb0;
     transition: 2s;
   }
 
+  &:hover .gradient {
+    opacity: 0;
+  }
+
   &:hover .card-info {
     display: block;
     opacity: 1;
@@ -55,7 +59,6 @@ $main-blue: #03b9ffb0;
 .card-image {
   width:100%;
   height:100%;
-/*  border-radius: 50%;*/
   position: absolute;
   filter: drop-shadow(5px 5px 5px #333) drop-shadow(-5px -5px 5px #333);
 }
@@ -84,23 +87,32 @@ $main-blue: #03b9ffb0;
 .favorite {
   position: absolute;
   z-index: 2;
-  top: 5px;
-  right: 5px;
+  bottom: 10px;
+  right: -30px;
   background: none;
   border: none;
+  outline: none;
 }
 
 .white-saber {
-  height: 55px;
-  transform: scaleX(-1);
+  height: 75px;
+  transform: scaleX(-1) rotate(-45deg);
   filter: FlipH;
-  filter: drop-shadow(2px 2px 5px #333);
+  filter: drop-shadow(2px 2px 5px #fff);
 }
 
-.white-saber:hover {
-animation: grow;
-animation-duration: .5s; 
+.white-saber { 
+  transition: all .2s ease-in-out 
 }
 
-.white-saber { transition: all .2s ease-in-out; }
-.white-saber:hover { transform: scale(1.5); }
+.white-saber:hover { 
+  transform: scale(1.5) scaleX(-1) rotate(-45deg) 
+}
+
+.gradient {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 2;
+  background: linear-gradient(0deg, rgba(255,255,255,0.7455357142857143) 0%, rgba(255,255,255,0.3841911764705882) 26%, rgba(255,255,255,0) 100%);
+}
