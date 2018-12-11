@@ -4,13 +4,13 @@ import Card from '../Card/Card'
 import './CardContainer.scss'
 
 const CardContainer = (props) => {
-  const cards = props.data.map(item =>
+  const cards = props.data.map(item => (
     <Card
       item={item}
       handleFavorite={props.handleFavorite}
       itemType={props.itemType}
       key={item.name}
-    />)
+    />))
 
   return (
     <div className="card-container">
