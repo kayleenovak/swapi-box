@@ -132,3 +132,38 @@ $main-blue: #03b9ffb0;
   box-shadow: 0 0 8px #03b9ffb0, 0 0 16px #03b9ffb0, 0 0 24px #03b9ffb0, 0 0 32px #03b9ffb0, 0 0 40px #03b9ffb0, 0 0 48px #03b9ffb0;
   }
 
+
+  .orbit {
+    box-shadow: 0 0 17px 0px #0080b5, inset 0 0 17px 2px #0080b5;
+    border-radius: 50%;
+    position: absolute;
+  }
+
+  .orbit1 {
+    height: 430px;
+    top: -144px;
+    left: -150px;
+    width: 430px; 
+  }
+
+  .orbit2 {
+    height: 540px;
+    top: -163px;
+    left: -177px;
+    width: 540px;
+  }
+
+  .orbit3 {
+    height: 650px;
+    top: -188px;
+    left: -207px;
+    width: 650px; 
+  }
+
+  .orbit4 {
+    height: 780px;
+    top: -230px;
+    left: -261px;
+    width: 780px;
+  }
+

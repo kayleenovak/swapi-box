@@ -131,9 +131,6 @@ describe('App', () => {
       mockAddFavorite = [{ name: 'Leah', favorite: true }, { name: 'Luke', favorite: true }]
       mockRemoveFavorite = []
       mockFavItem = { name: 'Leah', favorite: true }
-      mockItemType = 'people'
-      mockRemoveFavState = [{ name: 'Leah', favorite: false }]
-
     } )
 
     it('should call toggleItemState if data is not found in wrapper.state.favorites', () => {
