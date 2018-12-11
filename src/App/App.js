@@ -72,7 +72,7 @@ class App extends Component {
     return (
       <div>
         <Route exact path="/" component={Splash} />
-        <Route path="/main" render={({ match }) => <Main {...this.state} handleFavorite={this.handleFavorite} />} />
+        <Route path="/main" render={() => <Main {...this.state} handleFavorite={this.handleFavorite} />} />
       </div>
     )
   }

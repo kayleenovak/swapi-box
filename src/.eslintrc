@@ -6,11 +6,12 @@
     "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     "comma-dangle": ["error", "never"],
-    "max-lines-per-function": ["error", 130],
+    "max-lines-per-function": ["error", 160],
     "semi": ["error", "never"],
     "no-param-reassign": [2, { "props": false }],
     "react/destructuring-assignment": [<enabled>, 'never'],
     'arrow-body-style': ["error", "as-needed"],
     "react/jsx-one-expression-per-line": [<enabled>, { "allow": "single-child" }],
+    "no-else-return": ["error", {allowElseIf: true}]
   }
 }

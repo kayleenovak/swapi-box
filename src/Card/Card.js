@@ -5,9 +5,7 @@ import Images from '../images'
 import Side from '../side'
 
 const Card = (props) => {
-  const allInfo = Object.keys(props.item).filter((key) => {
-    return key !== 'favorite'
-  })
+  const allInfo = Object.keys(props.item).filter(key => (key !== 'favorite'))
 
   const info = allInfo.map((key) => {
     if (key === 'name') {

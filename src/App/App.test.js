@@ -9,25 +9,13 @@ import App from './App'
 
 
 const mockFetchPeople = jest.fn(() => ['Luke Skywalker'])
-jest.mock('../helper/People', () => {
-  return jest.fn().mockImplementation(() => {
-    return { fetchPeople: mockFetchPeople }
-  })
-})
+jest.mock('../helper/People', () => jest.fn().mockImplementation(() => ({ fetchPeople: mockFetchPeople })))
 
 const mockFetchPlanets = jest.fn(() => ['Tatooine'])
-jest.mock('../helper/Planets', () => {
-  return jest.fn().mockImplementation(() => {
-    return { fetchPlanets: mockFetchPlanets }
-  })
-})
+jest.mock('../helper/Planets', () => jest.fn().mockImplementation(() => ({ fetchPlanets: mockFetchPlanets })))
 
 const mockFetchVehicles = jest.fn(() => ['Star Fighter'])
-jest.mock('../helper/Vehicles', () => {
-  return jest.fn().mockImplementation(() => {
-    return { fetchVehicles: mockFetchVehicles }
-  })
-})
+jest.mock('../helper/Vehicles', () => jest.fn().mockImplementation(() => ({ fetchVehicles: mockFetchVehicles })))
 
 it('renders without crashing', () => {
   const router = (
@@ -135,7 +123,7 @@ describe('App', () => {
 
     it('should call toggleItemState if data is not found in wrapper.state.favorites', () => {
       wrapper.setState({ favorites: mockFavorites })
-      const spy = spyOn(wrapper.instance(), 'toggleItemState')
+      const spy = jest.spyOn(wrapper.instance(), 'toggleItemState')
 
       wrapper.instance().forceUpdate()
       wrapper.instance().handleFavorite(mockUnfavItem, 'people')
@@ -145,7 +133,7 @@ describe('App', () => {
 
     it('should call toggleItemState if data is found in wrapper.state.favorites', () => {
       wrapper.setState({ favorites: mockFavorites })
-      const spy = spyOn(wrapper.instance(), 'toggleItemState')
+      const spy = jest.spyOn(wrapper.instance(), 'toggleItemState')
 
       wrapper.instance().forceUpdate()
       wrapper.instance().handleFavorite(mockFavItem, 'people')
