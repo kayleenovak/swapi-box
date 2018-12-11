@@ -1,5 +1,3 @@
-import React from 'react'
-import { shallow } from 'enzyme'
 import fetchData from './APICalls'
 
 describe('API Calls', () => {
@@ -9,8 +7,9 @@ describe('API Calls', () => {
     window.fetch = jest.fn().mockImplementation(
       () => Promise.resolve({
         json: () => Promise.resolve(mockPeople)
-      }))
-    mockPeople = [{name: 'Luke Skywalker'}]
+      })
+    )
+    mockPeople = [{ name: 'Luke Skywalker' }]
     mockUrl = 'www.starwars.com'
   })
 

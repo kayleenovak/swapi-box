@@ -1,4 +1,4 @@
-import fetchData from './APICalls.js'
+import fetchData from './APICalls'
 
 export default class Films {
   constructor() {
