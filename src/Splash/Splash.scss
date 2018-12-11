@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
 @font-face {
   font-family: 'Star Wars';
   src: url(../Fonts/starjedi/Starjhol.ttf);
@@ -9,7 +11,7 @@
 }
 
 h1 {
-  font-family: 'Star Wars';
+  font-family: 'Open Sans', sans-serif;
 }
 
 .splash {

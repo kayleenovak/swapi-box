@@ -9,6 +9,10 @@ const Menu = () => {
     <div className="nav">
       <input className="menu-toggler" id="menu-toggler" type="checkbox"></input>
       <label htmlFor="menu-toggler">$</label>
+      <div className='orbit orbit1'></div>
+      <div className='orbit orbit2'></div>
+      <div className='orbit orbit3'></div>
+      <div className='orbit orbit4'></div>
       <ul>
         <Button name={ 'Vehicles' }/>
         <Button name={ 'People' }/>

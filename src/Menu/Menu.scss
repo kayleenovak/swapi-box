@@ -32,19 +32,19 @@ $main-blue: #03b9ffb0;
   }
 
   &:checked ~ ul .menu-item:nth-child(1) {
-    transform: rotate(160deg) translateX(-115px);
+    transform: rotate(226deg) translateX(-165px);
   }
 
   &:checked ~ ul .menu-item:nth-child(2) {
-    transform: rotate(205deg) translateX(-115px);
+    transform: rotate(255deg) translateX(-273px);
   }
 
   &:checked ~ ul .menu-item:nth-child(3) {
-    transform: rotate(250deg) translateX(-115px);
+    transform: rotate(270deg) translateX(-373px);
   }
 
   &:checked ~ ul .menu-item:nth-child(4) {
-    transform: rotate(295deg) translateX(-115px);
+    transform: rotate(255deg) translateX(-459px);
   }
 
   &:checked ~ ul .menu-item a {
@@ -89,8 +89,8 @@ $main-blue: #03b9ffb0;
   display: block;
   top: 48px;
   left: 50px;
-  width: 80px;
-  height: 80px;
+  width: 90px;
+  height: 90px;
   opacity: 0;
   transition: 0.5s;
 
@@ -104,7 +104,7 @@ $main-blue: #03b9ffb0;
     transform: rotate(180deg);
   }
   &:nth-child(4) a {
-    transform: rotate(180deg);
+    transform: rotate(101deg);
   }
 }
 
@@ -130,5 +130,40 @@ $main-blue: #03b9ffb0;
 
 .active {
   box-shadow: 0 0 8px #03b9ffb0, 0 0 16px #03b9ffb0, 0 0 24px #03b9ffb0, 0 0 32px #03b9ffb0, 0 0 40px #03b9ffb0, 0 0 48px #03b9ffb0;
+  }
+
+
+  .orbit {
+    box-shadow: 0 0 17px 0px #0080b5, inset 0 0 17px 2px #0080b5;
+    border-radius: 50%;
+    position: absolute;
+  }
+
+  .orbit1 {
+    height: 420px;
+    top: -144px;
+    left: -150px;
+    width: 420px; 
+  }
+
+  .orbit2 {
+    height: 540px;
+    top: -163px;
+    left: -177px;
+    width: 540px;
+  }
+
+  .orbit3 {
+    height: 670px;
+    top: -195px;
+    left: -216px;
+    width: 670px; 
+  }
+
+  .orbit4 {
+    height: 780px;
+    top: -230px;
+    left: -261px;
+    width: 780px;
   }
 
