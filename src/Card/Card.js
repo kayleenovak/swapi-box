@@ -24,11 +24,11 @@ const Card = (props) => {
         { info }
       </div>
       <img className="card-image" src={Images[props.item.name]} alt={Images[props.item.name]} />
-      <div className="gradient"></div>
-      <button className="favorite" onClick={() => props.handleFavorite(props.item, props.itemType)}>
+      <div className="gradient" />
+      <button type="button" className="favorite" onClick={() => props.handleFavorite(props.item, props.itemType)}>
         <img src={Images[favorited]} className="white-saber" alt="lightsaber" />
       </button>
-      <div className="card-text-background"></div>
+      <div className="card-text-background" />
     </div>
   )
 }
