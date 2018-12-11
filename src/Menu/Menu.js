@@ -5,18 +5,20 @@ import './Menu.scss'
 
 const Menu = () => (
   <div className="nav">
-    <input className="menu-toggler" id="menu-toggler" type="checkbox"></input>
-    <label htmlFor="menu-toggler">$</label>
+    <label htmlFor="menu-toggler">
+      $
+      <input className="menu-toggler" id="menu-toggler" type="checkbox" />
+      <ul>
+        <Button name="vehicles" />
+        <Button name="People" />
+        <Button name="Planets" />
+        <Button name="Favorites" />
+      </ul>
+    </label>
     <div className="orbit orbit1" />
     <div className="orbit orbit2" />
     <div className="orbit orbit3" />
     <div className="orbit orbit4" />
-    <ul>
-      <Button name="Vehicles" />
-      <Button name="People" />
-      <Button name="Planets" />
-      <Button name="Favorites" />
-    </ul>
   </div>
 )
 
