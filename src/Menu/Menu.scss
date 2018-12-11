@@ -41,14 +41,6 @@ ul {
   &:checked ~ ul .menu-item a {
     pointer-events: auto;
   }
-
-  &:hover + label, 
-  &:hover + label:before, 
-  &:hover + label:after {
-    transition: .2s linear;
-    box-shadow: 0 0 14px 8px $main-blue, 
-      0 0 24px 16px $main-blue;
-  }
 }
 
 label {
@@ -76,6 +68,21 @@ label {
   animation: button-glow 1.5s linear;
   animation-iteration-count: 4; 
   animation-delay: 2.6s;
+
+  &:hover {
+    transition: .3s linear;
+    box-shadow: 0 0 8px $main-blue, 
+    0 0 16px $main-blue, 
+    0 0 24px $main-blue, 
+    0 0 32px $main-blue, 
+    0 0 40px $main-blue, 
+    0 0 68px $main-blue;
+  }
+
+  &:hover h3 {
+    text-shadow: 0 0 10px #ffffffa3;
+    transition: .3s linear;
+  }
 }
 
 .menu-item {
@@ -90,6 +97,7 @@ label {
   height: 90px;
   opacity: 0;
   transition: 0.5s;
+  text-shadow: 0px -1px 20px black;
 
   &:nth-child(1) a {
     transform: rotate(127deg);
@@ -116,12 +124,11 @@ label {
   width: inherit;
   height: inherit;
   line-height: 80px;
-  color: rgba(255, 255, 255, 0.7);
+  color: #ffffffdb;
   border-radius: 50%;
   text-align: center;
   text-decoration: none;
   font-size: 16px;
-  pointer-events: none;
   transition: 0.2s;
 }
 

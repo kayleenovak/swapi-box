@@ -6,7 +6,7 @@ import './Menu.scss'
 const Menu = () => (
   <div className="nav">
     <label htmlFor="menu-toggler">
-      $
+      <h3>$</h3>
       <input className="menu-toggler" id="menu-toggler" type="checkbox" />
       <ul>
         <Button name="vehicles" />
