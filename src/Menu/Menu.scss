@@ -41,6 +41,10 @@ ul {
   &:checked ~ ul .menu-item a {
     pointer-events: auto;
   }
+
+  &:checked ~ ul .menu-item:hover a {
+    font-size: 24px;
+  }
 }
 
 label {
@@ -101,21 +105,17 @@ label {
 
   &:nth-child(1) a {
     transform: rotate(127deg);
-    font-size: 20px;
   }
 
   &:nth-child(2) a {
     transform: rotate(95deg);
-    font-size: 20px;
   }
 
   &:nth-child(3) a {
     transform: rotate(81deg);
-    font-size: 20px;
   }
   &:nth-child(4) a {
     transform: rotate(93deg);
-    font-size: 20px;
   }
 }
 
@@ -128,7 +128,7 @@ label {
   border-radius: 50%;
   text-align: center;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 20px;
   transition: 0.2s;
 }
 
