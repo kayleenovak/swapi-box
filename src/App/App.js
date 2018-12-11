@@ -63,7 +63,6 @@ class App extends Component {
       if (item === data) {
         item.favorite = !item.favorite
       }
-      console.log(item)
       return item
     })
     )

@@ -7,6 +7,8 @@ import Vehicles from '../helper/Vehicles'
 import Planets from '../helper/Planets'
 import App from './App'
 
+const localStorage = require.requireActual('../helper/localStorage')
+
 
 const mockFetchPeople = jest.fn(() => ['Luke Skywalker'])
 jest.mock('../helper/People', () => jest.fn().mockImplementation(() => ({ fetchPeople: mockFetchPeople })))
@@ -29,20 +31,18 @@ it('renders without crashing', () => {
 })
 
 describe('App', () => {
+  let wrapper
+
+  beforeEach(() => {
+    wrapper = shallow(<App />)
+  })
+
   it('should match the snapshot', () => {
-    const wrapper = shallow(<App />)
 
     expect(wrapper).toMatchSnapshot()
   })
 
   describe('componentDidMount', () => {
-    let wrapper
-    const localStorage = require.requireActual('../helper/localStorage')
-
-    beforeEach(() => {
-      wrapper = shallow(<App />)
-    })
-
     it('should instantiate a new People', async () => {
       wrapper.instance().componentDidMount()
 
@@ -101,9 +101,6 @@ describe('App', () => {
     })
   })
   describe('handleFavorite', () => {
-    const localStorage = require.requireActual('../helper/localStorage')
-
-    let wrapper
     let mockPeople
     let mockUnfavItem
     let mockFavorites
@@ -112,7 +109,6 @@ describe('App', () => {
     let mockFavItem
 
     beforeEach(() => {
-      wrapper = shallow(<App />)
       mockUnfavItem = { name: 'Luke', favorite: false }
       mockPeople = [{ name: 'Leah', favorite: true }, mockUnfavItem]
       mockFavorites = [{ name: 'Leah', favorite: true }]
@@ -150,10 +146,10 @@ describe('App', () => {
 
       wrapper.instance().handleFavorite(mockUnfavItem, 'people')
 
-      expect(localStorage.setLocalStorage.mock.calls).toEqual([[mockAddFavorite, 'favorites'], [mockAddFavorite, 'people']])
+      expect(localStorage.setLocalStorage.mock.calls).toEqual([[mockAddFavorite, 'people'], [mockAddFavorite, 'favorites']])
     })
 
-    it('should call setLocalStorage with the correct params if the data passed in is already in fvorites', () => {
+    it('should call setLocalStorage with the correct params if the data passed in is already in favorites', () => {
       wrapper.setState({
         favorites: mockFavorites,
         people: mockPeople
@@ -163,7 +159,7 @@ describe('App', () => {
 
       wrapper.instance().handleFavorite(mockFavItem, 'people')
 
-      expect(localStorage.setLocalStorage.mock.calls).toEqual([[mockRemoveFavorite, 'favorites'], [mockPeople, 'people']])
+      expect(localStorage.setLocalStorage.mock.calls).toEqual([[mockPeople, 'people'], [mockRemoveFavorite, 'favorites']])
     })
 
     describe('toggleItemState', () => {
