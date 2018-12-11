@@ -8,5 +8,3 @@ const getLocalStorage = (itemType) => {
 }
 
 module.exports = { setLocalStorage, getLocalStorage }
-
-
