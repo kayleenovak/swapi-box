@@ -30,14 +30,12 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <h1
-          className="card-text"
-        >
-          Luke Skywalker
-        </h1>,
         <div
           className="card-info"
         >
+          <h1>
+            Luke Skywalker
+          </h1>
           <p>
             homeworld
             : 
@@ -59,6 +57,9 @@ ShallowWrapper {
           className="card-image"
           src="../images/Luke.png"
         />,
+        <div
+          className="gradient"
+        />,
         <button
           className="favorite"
           onClick={[Function]}
@@ -69,6 +70,9 @@ ShallowWrapper {
             src="../images/white-lightsaber.svg"
           />
         </button>,
+        <div
+          className="card-text-background"
+        />,
       ],
       "className": "card",
     },
@@ -79,19 +83,10 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "Luke Skywalker",
-          "className": "card-text",
-        },
-        "ref": null,
-        "rendered": "Luke Skywalker",
-        "type": "h1",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
           "children": Array [
+            <h1>
+              Luke Skywalker
+            </h1>,
             <p>
               homeworld
               : 
@@ -112,6 +107,17 @@ ShallowWrapper {
         },
         "ref": null,
         "rendered": Array [
+          Object {
+            "instance": null,
+            "key": "name",
+            "nodeType": "host",
+            "props": Object {
+              "children": "Luke Skywalker",
+            },
+            "ref": null,
+            "rendered": "Luke Skywalker",
+            "type": "h1",
+          },
           Object {
             "instance": null,
             "key": "homeworld",
@@ -190,6 +196,17 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
+          "className": "gradient",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
           "children": <img
             alt="lightsaber"
             className="white-saber"
@@ -214,6 +231,17 @@ ShallowWrapper {
         },
         "type": "button",
       },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "className": "card-text-background",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "div",
+      },
     ],
     "type": "div",
   },
@@ -224,14 +252,12 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <h1
-            className="card-text"
-          >
-            Luke Skywalker
-          </h1>,
           <div
             className="card-info"
           >
+            <h1>
+              Luke Skywalker
+            </h1>
             <p>
               homeworld
               : 
@@ -253,6 +279,9 @@ ShallowWrapper {
             className="card-image"
             src="../images/Luke.png"
           />,
+          <div
+            className="gradient"
+          />,
           <button
             className="favorite"
             onClick={[Function]}
@@ -263,6 +292,9 @@ ShallowWrapper {
               src="../images/white-lightsaber.svg"
             />
           </button>,
+          <div
+            className="card-text-background"
+          />,
         ],
         "className": "card",
       },
@@ -273,19 +305,10 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "Luke Skywalker",
-            "className": "card-text",
-          },
-          "ref": null,
-          "rendered": "Luke Skywalker",
-          "type": "h1",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
             "children": Array [
+              <h1>
+                Luke Skywalker
+              </h1>,
               <p>
                 homeworld
                 : 
@@ -306,6 +329,17 @@ ShallowWrapper {
           },
           "ref": null,
           "rendered": Array [
+            Object {
+              "instance": null,
+              "key": "name",
+              "nodeType": "host",
+              "props": Object {
+                "children": "Luke Skywalker",
+              },
+              "ref": null,
+              "rendered": "Luke Skywalker",
+              "type": "h1",
+            },
             Object {
               "instance": null,
               "key": "homeworld",
@@ -384,6 +418,17 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
+            "className": "gradient",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
             "children": <img
               alt="lightsaber"
               className="white-saber"
@@ -407,6 +452,17 @@ ShallowWrapper {
             "type": "img",
           },
           "type": "button",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "className": "card-text-background",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "div",
         },
       ],
       "type": "div",

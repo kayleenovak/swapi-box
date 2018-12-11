@@ -23,17 +23,9 @@ $main-blue: #03b9ffb0;
     left: 0;
   }
 
-  &:hover::after {
-    border-top: 2px solid #0081ba99;
-    transform: rotate(270deg);
-    transition:
-      transform .6s linear 0s,
-      border-left-width 0s linear 0.35s; 
-  }
-
   &:hover {
     box-shadow: 0 0 24px 1px $main-blue, 0 0 10px 1px #03b9ffd1;
-    transition: 2s;
+    transition: .5s;
   }
 
   &:hover .gradient {
@@ -43,10 +35,6 @@ $main-blue: #03b9ffb0;
   &:hover .card-info {
     display: block;
     opacity: 1;
-  }
-
-  &:hover .card-text {
-    display: none;
   }
 
   &:hover .card-image {
