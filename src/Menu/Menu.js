@@ -1,26 +1,26 @@
-import React from 'react';
+import React from 'react'
 import Button from '../Button/Button'
 import './Menu.scss'
 
 
-const Menu = () => {
-
-  return (
-    <div className="nav">
-      <input className="menu-toggler" id="menu-toggler" type="checkbox"></input>
-      <label htmlFor="menu-toggler">$</label>
-      <div className='orbit orbit1'></div>
-      <div className='orbit orbit2'></div>
-      <div className='orbit orbit3'></div>
-      <div className='orbit orbit4'></div>
+const Menu = () => (
+  <div className="nav">
+    <label htmlFor="menu-toggler">
+      $
+      <input className="menu-toggler" id="menu-toggler" type="checkbox" />
       <ul>
-        <Button name={ 'Vehicles' }/>
-        <Button name={ 'People' }/>
-        <Button name={ 'Planets' }/>
-        <Button name={ 'Favorites' }/>
+        <Button name="vehicles" />
+        <Button name="People" />
+        <Button name="Planets" />
+        <Button name="Favorites" />
       </ul>
-    </div>
-  )
-}
+    </label>
+    <div className="orbit orbit1" />
+    <div className="orbit orbit2" />
+    <div className="orbit orbit3" />
+    <div className="orbit orbit4" />
+  </div>
+)
 
-export default Menu;
+
+export default Menu
