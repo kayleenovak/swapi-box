@@ -5,7 +5,7 @@ import './Menu.scss'
 
 const Menu = () => (
   <div className="nav">
-    <input className="menu-toggler" id="menu-toggler" type="checkbox" />
+    <input className="menu-toggler" id="menu-toggler" type="checkbox"></input>
     <label htmlFor="menu-toggler">$</label>
     <div className="orbit orbit1" />
     <div className="orbit orbit2" />

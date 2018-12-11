@@ -1,23 +1,10 @@
 $main-blue: #03b9ffb0;
 
-@keyframes button-glow {
-  0% {
-    box-shadow: 0 0 8px $main-blue, 0 0 16px $main-blue, 0 0 24px $main-blue, 0 0 32px $main-blue, 0 0 40px $main-blue, 0 0 48px $main-blue;
-  }
-  50% {
-    box-shadow: 0 0 16px $main-blue, 0 0 24px $main-blue, 0 0 32px $main-blue, 0 0 40px $main-blue, 0 0 48px $main-blue, 0 0 56px $main-blue, 0 0 64px $main-blue;
-  }
-  100% {
-    box-shadow: 0 0 8px $main-blue, 0 0 16px $main-blue, 0 0 24px $main-blue, 0 0 32px $main-blue, 0 0 40px $main-blue, 0 0 48px $main-blue;
-  }
-}
-
 .nav {
   position: relative;
 }
 
 .menu-toggler {
-  background-color: blue;
   position: absolute;
   display: block;
   opacity: 0;
@@ -55,14 +42,20 @@ $main-blue: #03b9ffb0;
   &:hover + label:before, 
   &:hover + label:after {
     transition: .2s linear;
-    box-shadow: 0 0 14px 8px $main-blue, 0 0 24px 16px $main-blue;
+    box-shadow: 0 0 14px 8px $main-blue, 
+      0 0 24px 16px $main-blue;
   }
 }
 
 .menu-toggler + label {
   display: flex;
   align-items: center;
-  box-shadow: 0 0 8px $main-blue, 0 0 16px $main-blue, 0 0 24px $main-blue, 0 0 32px $main-blue, 0 0 40px $main-blue, 0 0 48px $main-blue;
+  box-shadow: 0 0 8px $main-blue, 
+    0 0 16px $main-blue, 
+    0 0 24px $main-blue, 
+    0 0 32px $main-blue, 
+    0 0 40px $main-blue, 
+    0 0 48px $main-blue;
   justify-content: center;
   color: #0080b5;
   font-size: 40px;
@@ -129,41 +122,74 @@ $main-blue: #03b9ffb0;
 }
 
 .active {
-  box-shadow: 0 0 8px #03b9ffb0, 0 0 16px #03b9ffb0, 0 0 24px #03b9ffb0, 0 0 32px #03b9ffb0, 0 0 40px #03b9ffb0, 0 0 48px #03b9ffb0;
-  }
+  box-shadow: 0 0 8px $main-blue, 
+  0 0 16px $main-blue, 
+  0 0 24px $main-blue, 
+  0 0 32px $main-blue, 
+  0 0 40px $main-blue, 
+  0 0 48px $main-blue;
+}
 
+.orbit {
+  box-shadow: 0 0 17px 0px #0080b5, 
+    inset 0 0 17px 2px #0080b5;
+  border-radius: 50%;
+  position: absolute;
+}
 
-  .orbit {
-    box-shadow: 0 0 17px 0px #0080b5, inset 0 0 17px 2px #0080b5;
-    border-radius: 50%;
-    position: absolute;
-  }
+.orbit1 {
+  height: 420px;
+  top: -144px;
+  left: -150px;
+  width: 420px; 
+}
 
-  .orbit1 {
-    height: 420px;
-    top: -144px;
-    left: -150px;
-    width: 420px; 
-  }
+.orbit2 {
+  height: 540px;
+  top: -163px;
+  left: -177px;
+  width: 540px;
+}
 
-  .orbit2 {
-    height: 540px;
-    top: -163px;
-    left: -177px;
-    width: 540px;
-  }
+.orbit3 {
+  height: 670px;
+  top: -195px;
+  left: -216px;
+  width: 670px; 
+}
 
-  .orbit3 {
-    height: 670px;
-    top: -195px;
-    left: -216px;
-    width: 670px; 
-  }
+.orbit4 {
+  height: 780px;
+  top: -230px;
+  left: -261px;
+  width: 780px;
+}
 
-  .orbit4 {
-    height: 780px;
-    top: -230px;
-    left: -261px;
-    width: 780px;
+@keyframes button-glow {
+  0% {
+    box-shadow: 0 0 8px $main-blue, 
+    0 0 16px $main-blue, 
+    0 0 24px $main-blue, 
+    0 0 32px $main-blue, 
+    0 0 40px $main-blue, 
+    0 0 48px $main-blue;
   }
+  50% {
+    box-shadow: 0 0 16px $main-blue, 
+      0 0 24px $main-blue, 
+      0 0 32px $main-blue, 
+      0 0 40px $main-blue, 
+      0 0 48px $main-blue, 
+      0 0 56px $main-blue, 
+      0 0 64px $main-blue;
+  }
+  100% {
+    box-shadow: 0 0 8px $main-blue, 
+      0 0 16px $main-blue, 
+      0 0 24px $main-blue, 
+      0 0 32px $main-blue, 
+      0 0 40px $main-blue, 
+      0 0 48px $main-blue;
+  }
+}
 
