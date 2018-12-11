@@ -1,25 +1,30 @@
-import React from 'react';
+import React from 'react'
+import { Route, Switch } from 'react-router-dom'
+import PropTypes from 'prop-types'
 import CardContainer from '../CardContainer/CardContainer'
 import Yoda from '../Yoda/Yoda'
 import Menu from '../Menu/Menu'
-import { Route, Switch } from 'react-router-dom'
-import PropTypes from 'prop-types';
 
-const Main = ({ vehicles, planets, people, favorites, handleFavorite }) => {
-
+const Main = ({
+  vehicles,
+  planets,
+  people,
+  favorites,
+  handleFavorite
+}) => {
   return (
-    <div className='app'>
-      <div className="stars"></div>
-      <div className="twinkling"></div>
+    <div className="app">
+      <div className="stars" />
+      <div className="twinkling" />
       <Menu />
-    <Switch>
-      <Route exact path='/main' component={Yoda}/>
-      <Route exact path='/main/people' render={({match}) => <CardContainer itemType={'people'} data={people} handleFavorite={ handleFavorite }/> } />
-      <Route exact path='/main/vehicles' render={({match}) => <CardContainer itemType={'vehicles'} data={vehicles} handleFavorite={ handleFavorite } /> } />
-      <Route exact path='/main/planets' render={({match}) => <CardContainer itemType={'planets'} data={planets} handleFavorite={ handleFavorite } /> } />
-      <Route exact path='/main/favorites' render={({match}) => <CardContainer itemType={'planets'} data={favorites} handleFavorite={ handleFavorite } /> } />
-    </Switch>
-  </div>
+      <Switch>
+        <Route exact path="/main" component={Yoda} />
+        <Route exact path="/main/people" render={({ match }) => <CardContainer itemType="people" data={people} handleFavorite={handleFavorite} />} />
+        <Route exact path="/main/vehicles" render={({ match }) => <CardContainer itemType="vehicles" data={vehicles} handleFavorite={handleFavorite} />} />
+        <Route exact path="/main/planets" render={({ match }) => <CardContainer itemType="planets" data={planets} handleFavorite={handleFavorite} />} />
+        <Route exact path="/main/favorites" render={({ match }) => <CardContainer itemType="planets" data={favorites} handleFavorite={handleFavorite} />} />
+      </Switch>
+    </div>
   )
 }
 
