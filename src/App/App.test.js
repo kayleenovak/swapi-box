@@ -131,10 +131,10 @@ describe('App', () => {
       mockAddFavorite = [{ name: 'Leah', favorite: true }, { name: 'Luke', favorite: true }]
       mockRemoveFavorite = []
       mockFavItem = { name: 'Leah', favorite: true }
-    } )
+    })
 
     it('should call toggleItemState if data is not found in wrapper.state.favorites', () => {
-      wrapper.setState({ 'favorites': mockFavorites })
+      wrapper.setState({ favorites: mockFavorites })
       const spy = spyOn(wrapper.instance(), 'toggleItemState')
 
       wrapper.instance().forceUpdate()
@@ -144,7 +144,7 @@ describe('App', () => {
     })
 
     it('should call toggleItemState if data is found in wrapper.state.favorites', () => {
-      wrapper.setState({ 'favorites': mockFavorites })
+      wrapper.setState({ favorites: mockFavorites })
       const spy = spyOn(wrapper.instance(), 'toggleItemState')
 
       wrapper.instance().forceUpdate()
@@ -154,9 +154,11 @@ describe('App', () => {
     })
 
     it('should call setLocalStorage with the correct params if the data passed in is not already in favorites', () => {
-      wrapper.setState({ 'favorites': mockFavorites,
-      'people': mockPeople })
-      localStorage.setLocalStorage = jest.fn() 
+      wrapper.setState({
+        favorites: mockFavorites,
+        people: mockPeople
+      })
+      localStorage.setLocalStorage = jest.fn()
 
       wrapper.instance().handleFavorite(mockUnfavItem, 'people')
 
@@ -164,31 +166,30 @@ describe('App', () => {
     })
 
     it('should call setLocalStorage with the correct params if the data passed in is already in fvorites', () => {
-      wrapper.setState({ 'favorites': mockFavorites,
-      'people': mockPeople })
+      wrapper.setState({
+        favorites: mockFavorites,
+        people: mockPeople
+      })
+
       localStorage.setLocalStorage = jest.fn()
 
       wrapper.instance().handleFavorite(mockFavItem, 'people')
 
       expect(localStorage.setLocalStorage.mock.calls).toEqual([[mockRemoveFavorite, 'favorites'], [mockPeople, 'people']])
-
     })
 
     describe('toggleItemState', () => {
       it('should take in data and switch the data.favorite to the opposite', () => {
-        const wrapper = shallow(<App />)
-        const mockState = {'favorites': [],
-                            'people': [mockUnfavItem]
-                          }
-        const mockFavState = [{'name': 'Luke', 'favorite': true}]
+        const mockState = {
+          favorites: [],
+          people: [mockUnfavItem]
+        }
+        const mockFavState = [{ name: 'Luke', favorite: true }]
         wrapper.setState(mockState)
         const newPeople = wrapper.instance().toggleItemState(mockUnfavItem, 'people')
-        
+
         expect(newPeople).toEqual(mockFavState)
       })
     })
-
-
   })
-
 })

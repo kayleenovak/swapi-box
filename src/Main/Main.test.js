@@ -1,23 +1,21 @@
 import React from 'react'
-import { shallow, mount } from 'enzyme'
-import Main from './Main'
+import { shallow } from 'enzyme'
 import { Route, component } from 'react-router-dom'
-
-import CardContainer from '../CardContainer/CardContainer'
-
+import Main from './Main'
 
 describe('Main', () => {
-  let wrapper;
+  let wrapper
 
   beforeEach(() => {
     wrapper = shallow(
-      <Main 
-        vehicles = {[]}
-        planets = {[]}
-        people = {[]}
-        favorites = {[]}
-        handleFavorite = {jest.fn()}
-      />)
+      <Main
+        vehicles={[]}
+        planets={[]}
+        people={[]}
+        favorites={[]}
+        handleFavorite={jest.fn()}
+      />
+    )
   })
 
   it('should match the snapshot', () => {
@@ -29,6 +27,6 @@ describe('Main', () => {
   })
 
   it('routes /main to the Yoda component', () => {
-    expect(wrapper.find('Route[exact=true][path="/main"]').first().prop('render')).toEqual(component);
-  });
+    expect(wrapper.find('Route[exact=true][path="/main"]').first().prop('render')).toEqual(component)
+  })
 })

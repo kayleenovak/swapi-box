@@ -11,5 +11,6 @@
     "no-param-reassign": [2, { "props": false }],
     "react/destructuring-assignment": [<enabled>, 'never'],
     'arrow-body-style': ["error", "as-needed", { "requireReturnForObjectLiteral": true }],
+    "react/jsx-one-expression-per-line": [<enabled>, { "allow": "single-child" }],
   }
 }
