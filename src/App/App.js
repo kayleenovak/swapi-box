@@ -49,18 +49,18 @@ class App extends Component {
       newFavorites = favorites.filter(item => item.name !== data.name)
     }
 
-    setLocalStorage(newFavorites, 'favorites')
     setLocalStorage(updatedItems, itemType)
+    setLocalStorage(newFavorites, 'favorites')
 
     this.setState({
-      favorites: newFavorites,
-      [itemType]: updatedItems
+      [itemType]: updatedItems,
+      favorites: newFavorites
     })
   }
 
   toggleItemState = (data, itemType) => {
     return (this.state[itemType].map((item) => {
-      if (item == data) {
+      if (item === data) {
         item.favorite = !item.favorite
       }
       console.log(item)
