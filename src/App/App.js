@@ -60,9 +60,10 @@ class App extends Component {
 
   toggleItemState = (data, itemType) => {
     return (this.state[itemType].map((item) => {
-      if (item === data) {
+      if (item == data) {
         item.favorite = !item.favorite
       }
+      console.log(item)
       return item
     })
     )
