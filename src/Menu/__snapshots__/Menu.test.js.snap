@@ -30,6 +30,18 @@ ShallowWrapper {
         >
           $
         </label>,
+        <div
+          className="orbit orbit1"
+        />,
+        <div
+          className="orbit orbit2"
+        />,
+        <div
+          className="orbit orbit3"
+        />,
+        <div
+          className="orbit orbit4"
+        />,
         <ul>
           <Button
             name="Vehicles"
@@ -73,6 +85,50 @@ ShallowWrapper {
         "ref": null,
         "rendered": "$",
         "type": "label",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "className": "orbit orbit1",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "className": "orbit orbit2",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "className": "orbit orbit3",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "className": "orbit orbit4",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "div",
       },
       Object {
         "instance": null,
@@ -163,6 +219,18 @@ ShallowWrapper {
           >
             $
           </label>,
+          <div
+            className="orbit orbit1"
+          />,
+          <div
+            className="orbit orbit2"
+          />,
+          <div
+            className="orbit orbit3"
+          />,
+          <div
+            className="orbit orbit4"
+          />,
           <ul>
             <Button
               name="Vehicles"
@@ -206,6 +274,50 @@ ShallowWrapper {
           "ref": null,
           "rendered": "$",
           "type": "label",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "className": "orbit orbit1",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "className": "orbit orbit2",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "className": "orbit orbit3",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "className": "orbit orbit4",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "div",
         },
         Object {
           "instance": null,
