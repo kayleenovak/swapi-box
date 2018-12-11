@@ -1,22 +1,21 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Card from '../Card/Card'
 import './CardContainer.scss'
-import PropTypes from 'prop-types';
 
 const CardContainer = (props) => {
-
   const cards = props.data.map(item =>
-    <Card 
-      item={item} 
-      handleFavorite={ props.handleFavorite } 
-      itemType={ props.itemType } 
+    <Card
+      item={item}
+      handleFavorite={props.handleFavorite}
+      itemType={props.itemType}
       key={item.name}
     />)
 
   return (
-    <div className='card-container'>
+    <div className="card-container">
       <h3>Tap the lightsaber to favorite</h3>
-      <div className='cards'>
+      <div className="cards">
         {
           cards.length ? cards : <h1>You have no favorites</h1>
         }
@@ -25,7 +24,7 @@ const CardContainer = (props) => {
   )
 }
 
-export default CardContainer;
+export default CardContainer
 
 CardContainer.propTypes = {
   handleFavorite: PropTypes.func.isRequired,
