@@ -20,15 +20,29 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <input
-          className="menu-toggler"
-          id="menu-toggler"
-          type="checkbox"
-        />,
         <label
           htmlFor="menu-toggler"
         >
           $
+          <input
+            className="menu-toggler"
+            id="menu-toggler"
+            type="checkbox"
+          />
+          <ul>
+            <Button
+              name="vehicles"
+            />
+            <Button
+              name="People"
+            />
+            <Button
+              name="Planets"
+            />
+            <Button
+              name="Favorites"
+            />
+          </ul>
         </label>,
         <div
           className="orbit orbit1"
@@ -42,20 +56,6 @@ ShallowWrapper {
         <div
           className="orbit orbit4"
         />,
-        <ul>
-          <Button
-            name="Vehicles"
-          />
-          <Button
-            name="People"
-          />
-          <Button
-            name="Planets"
-          />
-          <Button
-            name="Favorites"
-          />
-        </ul>,
       ],
       "className": "nav",
     },
@@ -66,24 +66,116 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "className": "menu-toggler",
-          "id": "menu-toggler",
-          "type": "checkbox",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": "input",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "$",
+          "children": Array [
+            "$",
+            <input
+              className="menu-toggler"
+              id="menu-toggler"
+              type="checkbox"
+            />,
+            <ul>
+              <Button
+                name="vehicles"
+              />
+              <Button
+                name="People"
+              />
+              <Button
+                name="Planets"
+              />
+              <Button
+                name="Favorites"
+              />
+            </ul>,
+          ],
           "htmlFor": "menu-toggler",
         },
         "ref": null,
-        "rendered": "$",
+        "rendered": Array [
+          "$",
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "menu-toggler",
+              "id": "menu-toggler",
+              "type": "checkbox",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "input",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <Button
+                  name="vehicles"
+                />,
+                <Button
+                  name="People"
+                />,
+                <Button
+                  name="Planets"
+                />,
+                <Button
+                  name="Favorites"
+                />,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "name": "vehicles",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "name": "People",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "name": "Planets",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "name": "Favorites",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+            ],
+            "type": "ul",
+          },
+        ],
         "type": "label",
       },
       Object {
@@ -130,75 +222,6 @@ ShallowWrapper {
         "rendered": null,
         "type": "div",
       },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            <Button
-              name="Vehicles"
-            />,
-            <Button
-              name="People"
-            />,
-            <Button
-              name="Planets"
-            />,
-            <Button
-              name="Favorites"
-            />,
-          ],
-        },
-        "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "function",
-            "props": Object {
-              "name": "Vehicles",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "function",
-            "props": Object {
-              "name": "People",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "function",
-            "props": Object {
-              "name": "Planets",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "function",
-            "props": Object {
-              "name": "Favorites",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-        ],
-        "type": "ul",
-      },
     ],
     "type": "div",
   },
@@ -209,15 +232,29 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <input
-            className="menu-toggler"
-            id="menu-toggler"
-            type="checkbox"
-          />,
           <label
             htmlFor="menu-toggler"
           >
             $
+            <input
+              className="menu-toggler"
+              id="menu-toggler"
+              type="checkbox"
+            />
+            <ul>
+              <Button
+                name="vehicles"
+              />
+              <Button
+                name="People"
+              />
+              <Button
+                name="Planets"
+              />
+              <Button
+                name="Favorites"
+              />
+            </ul>
           </label>,
           <div
             className="orbit orbit1"
@@ -231,20 +268,6 @@ ShallowWrapper {
           <div
             className="orbit orbit4"
           />,
-          <ul>
-            <Button
-              name="Vehicles"
-            />
-            <Button
-              name="People"
-            />
-            <Button
-              name="Planets"
-            />
-            <Button
-              name="Favorites"
-            />
-          </ul>,
         ],
         "className": "nav",
       },
@@ -255,24 +278,116 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "className": "menu-toggler",
-            "id": "menu-toggler",
-            "type": "checkbox",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": "input",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "$",
+            "children": Array [
+              "$",
+              <input
+                className="menu-toggler"
+                id="menu-toggler"
+                type="checkbox"
+              />,
+              <ul>
+                <Button
+                  name="vehicles"
+                />
+                <Button
+                  name="People"
+                />
+                <Button
+                  name="Planets"
+                />
+                <Button
+                  name="Favorites"
+                />
+              </ul>,
+            ],
             "htmlFor": "menu-toggler",
           },
           "ref": null,
-          "rendered": "$",
+          "rendered": Array [
+            "$",
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "menu-toggler",
+                "id": "menu-toggler",
+                "type": "checkbox",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "input",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <Button
+                    name="vehicles"
+                  />,
+                  <Button
+                    name="People"
+                  />,
+                  <Button
+                    name="Planets"
+                  />,
+                  <Button
+                    name="Favorites"
+                  />,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "name": "vehicles",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "name": "People",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "name": "Planets",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "name": "Favorites",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+              ],
+              "type": "ul",
+            },
+          ],
           "type": "label",
         },
         Object {
@@ -318,75 +433,6 @@ ShallowWrapper {
           "ref": null,
           "rendered": null,
           "type": "div",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": Array [
-              <Button
-                name="Vehicles"
-              />,
-              <Button
-                name="People"
-              />,
-              <Button
-                name="Planets"
-              />,
-              <Button
-                name="Favorites"
-              />,
-            ],
-          },
-          "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "function",
-              "props": Object {
-                "name": "Vehicles",
-              },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "function",
-              "props": Object {
-                "name": "People",
-              },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "function",
-              "props": Object {
-                "name": "Planets",
-              },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "function",
-              "props": Object {
-                "name": "Favorites",
-              },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
-          ],
-          "type": "ul",
         },
       ],
       "type": "div",

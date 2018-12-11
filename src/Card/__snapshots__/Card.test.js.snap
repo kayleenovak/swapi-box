@@ -63,6 +63,7 @@ ShallowWrapper {
         <button
           className="favorite"
           onClick={[Function]}
+          type="button"
         >
           <img
             alt="lightsaber"
@@ -214,6 +215,7 @@ ShallowWrapper {
           />,
           "className": "favorite",
           "onClick": [Function],
+          "type": "button",
         },
         "ref": null,
         "rendered": Object {
@@ -285,6 +287,7 @@ ShallowWrapper {
           <button
             className="favorite"
             onClick={[Function]}
+            type="button"
           >
             <img
               alt="lightsaber"
@@ -436,6 +439,7 @@ ShallowWrapper {
             />,
             "className": "favorite",
             "onClick": [Function],
+            "type": "button",
           },
           "ref": null,
           "rendered": Object {

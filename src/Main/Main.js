@@ -17,13 +17,11 @@ const Main = ({
       <div className="stars" />
       <div className="twinkling" />
       <Menu />
-      <Switch>
-        <Route exact path="/main" component={Yoda} />
-        <Route exact path="/main/people" render={() => <CardContainer itemType="people" data={people} handleFavorite={handleFavorite} />} />
-        <Route exact path="/main/vehicles" render={() => <CardContainer itemType="vehicles" data={vehicles} handleFavorite={handleFavorite} />} />
-        <Route exact path="/main/planets" render={() => <CardContainer itemType="planets" data={planets} handleFavorite={handleFavorite} />} />
-        <Route exact path="/main/favorites" render={() => <CardContainer itemType="planets" data={favorites} handleFavorite={handleFavorite} />} />
-      </Switch>
+      <Route exact path="/main" component={Yoda} />
+      <Route exact path="/main/people" render={() => <CardContainer itemType="people" data={people} handleFavorite={handleFavorite} />} />
+      <Route exact path="/main/vehicles" render={() => <CardContainer itemType="vehicles" data={vehicles} handleFavorite={handleFavorite} />} />
+      <Route exact path="/main/planets" render={() => <CardContainer itemType="planets" data={planets} handleFavorite={handleFavorite} />} />
+      <Route exact path="/main/favorites" render={() => <CardContainer itemType="planets" data={favorites} handleFavorite={handleFavorite} />} />
     </div>
   )
 }
