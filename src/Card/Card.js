@@ -1,6 +1,7 @@
 import React from 'react'
 import './Card.scss'
 import Images from '../images.js'
+import Side from '../side.js'
 import PropTypes from 'prop-types';
 
 const Card = (props) => {
@@ -16,7 +17,9 @@ const Card = (props) => {
     }
   })
 
-  const favorited = props.item.favorite ? 'green-saber' : 'white-saber' 
+
+
+  const favorited = !props.item.favorite ? 'white-saber' : Side[props.item.name] === 'light' ? 'green-saber' : 'red-saber' 
   return (
     <div className='card'>
       <div className="card-info">

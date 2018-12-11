@@ -30,7 +30,8 @@ const Images = {
   "Storm IV Twin-Pod cloud car": '../images/storm.png',
   "Sail barge": '../images/sail.png',
   "white-saber": '../images/white-lightsaber.svg',
-  'green-saber': '../images/green-lightsaber.svg'
+  'green-saber': '../images/green-lightsaber.svg',
+  'red-saber': '../images/red-lightsaber.svg'
 }
 
 export default Images;
