@@ -3,7 +3,7 @@ import { shallow } from 'enzyme'
 import Card from './Card'
 
 describe('Card', () => {
-  let wrapper 
+  let wrapper
   let mockFunction
   let mockPerson
 
@@ -26,7 +26,6 @@ describe('Card', () => {
     )
   })
   it('should match the snapshot', () => {
-
     expect(wrapper).toMatchSnapshot()
   })
 
