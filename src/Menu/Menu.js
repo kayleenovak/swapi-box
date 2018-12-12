@@ -9,10 +9,10 @@ const Menu = (props) => (
       <h3>$</h3>
       <input className="menu-toggler" id="menu-toggler" type="checkbox" />
       <ul>
-        <Button name="vehicles" />
-        <Button name="People" />
-        <Button name="Planets" />
-        <Button name={`Favorites ${props.favorites.length}`} />
+        <Button name="vehicles" favorites={[]}/>
+        <Button name="People" favorites={[]}/>
+        <Button name="Planets" favorites={[]}/>
+        <Button name="Favorites" favorites={props.favorites} />
       </ul>
     </label>
     <div className="orbit orbit1" />
