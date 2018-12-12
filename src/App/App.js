@@ -33,7 +33,6 @@ class App extends Component {
   }
 
   handleFavorite = (data, itemType) => {
-    console.log(itemType)
     const { favorites } = this.state
     let updatedItems
     let newFavorites
@@ -59,14 +58,14 @@ class App extends Component {
     })
   }
 
-  toggleItemState = (data, itemType) => {
-    return this.state[itemType].map((item) => {
+  toggleItemState = (data, itemType) => (
+    this.state[itemType].map((item) => {
       if (item === data) {
         item.favorite = !item.favorite
       }
       return item
     })
-  }
+  )
 
   render() {
     return (

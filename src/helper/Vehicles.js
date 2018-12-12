@@ -17,15 +17,14 @@ export default class Vehicles {
   }
 
   cleanVehicles = (data) => {
-    const vehicleData = data.results.map((vehicle) => {
-      return {
-        name: vehicle.name,
-        model: vehicle.model,
-        class: vehicle.vehicle_class,
-        passengers: vehicle.passengers,
-        favorite: false
-      }
-    })
+    const vehicleData = data.results.map(vehicle => ({
+      name: vehicle.name,
+      model: vehicle.model,
+      class: vehicle.vehicle_class,
+      passengers: vehicle.passengers,
+      favorite: false
+    }
+    ))
     return Promise.all(vehicleData)
   }
 }
