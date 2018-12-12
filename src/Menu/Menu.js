@@ -26,5 +26,5 @@ const Menu = props => (
 export default Menu
 
 Menu.propTypes = {
-  favorites: PropTypes.instanceOf(Array)
+  favorites: PropTypes.instanceOf(Array).isRequired
 }
