@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'Jedi';
+  src: url(../Fonts/starjedi/Starjedi.ttf);
+}
+
 .card-container {
   padding: 30px;
 }
@@ -12,4 +17,9 @@
   color: #03b9ffb0;
   font-family: monospace;
   text-align: center;
+}
+
+.no-favorites {
+  color: white;
+  font-family: 'Jedi';
 }
