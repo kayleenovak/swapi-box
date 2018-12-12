@@ -3,7 +3,7 @@ import Button from '../Button/Button'
 import './Menu.scss'
 
 
-const Menu = () => (
+const Menu = (props) => (
   <div className="nav">
     <label htmlFor="menu-toggler">
       <h3>$</h3>
@@ -12,7 +12,7 @@ const Menu = () => (
         <Button name="vehicles" />
         <Button name="People" />
         <Button name="Planets" />
-        <Button name="Favorites" />
+        <Button name={`Favorites ${props.favorites.length}`} />
       </ul>
     </label>
     <div className="orbit orbit1" />

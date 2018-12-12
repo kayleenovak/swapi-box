@@ -16,7 +16,7 @@ const Main = ({
     <div className="app">
       <div className="stars" />
       <div className="twinkling" />
-      <Menu />
+      <Menu favorites={favorites}/>
       <Route exact path="/main" component={Yoda} />
       <Route exact path="/main/people" render={() => <CardContainer itemType="people" data={people} handleFavorite={handleFavorite} />} />
       <Route exact path="/main/vehicles" render={() => <CardContainer itemType="vehicles" data={vehicles} handleFavorite={handleFavorite} />} />

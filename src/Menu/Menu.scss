@@ -120,7 +120,9 @@ label {
 }
 
 .nav-btn {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: inherit;
   height: inherit;
   line-height: 80px;
@@ -130,6 +132,7 @@ label {
   text-decoration: none;
   font-size: 20px;
   transition: 0.2s;
+  line-height: 1.5;
 }
 
 .active {
