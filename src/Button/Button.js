@@ -20,5 +20,5 @@ export default Button
 
 Button.propTypes = {
   name: PropTypes.string.isRequired,
-  favorites: PropTypes.instanceOf(Array).isRequired
+  favorites: PropTypes.instanceOf(Array)
 }

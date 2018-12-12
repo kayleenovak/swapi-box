@@ -4,7 +4,7 @@ exports[`Button should match the snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Button
-    currentSelection="People"
+    favorites={Array []}
     name="Vehicles"
   />,
   Symbol(enzyme.__renderer__): Object {
@@ -26,7 +26,7 @@ ShallowWrapper {
         className="nav-btn"
         to="/main/Vehicles"
       >
-        Vehicles
+        Vehicles 
       </NavLink>,
       "className": "menu-item",
     },
@@ -38,12 +38,12 @@ ShallowWrapper {
       "props": Object {
         "activeClassName": "active",
         "aria-current": "page",
-        "children": "Vehicles",
+        "children": "Vehicles ",
         "className": "nav-btn",
         "to": "/main/Vehicles",
       },
       "ref": null,
-      "rendered": "Vehicles",
+      "rendered": "Vehicles ",
       "type": [Function],
     },
     "type": "li",
@@ -60,7 +60,7 @@ ShallowWrapper {
           className="nav-btn"
           to="/main/Vehicles"
         >
-          Vehicles
+          Vehicles 
         </NavLink>,
         "className": "menu-item",
       },
@@ -72,12 +72,12 @@ ShallowWrapper {
         "props": Object {
           "activeClassName": "active",
           "aria-current": "page",
-          "children": "Vehicles",
+          "children": "Vehicles ",
           "className": "nav-btn",
           "to": "/main/Vehicles",
         },
         "ref": null,
-        "rendered": "Vehicles",
+        "rendered": "Vehicles ",
         "type": [Function],
       },
       "type": "li",

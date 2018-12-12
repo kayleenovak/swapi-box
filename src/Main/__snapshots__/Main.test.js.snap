@@ -30,7 +30,9 @@ ShallowWrapper {
         <div
           className="twinkling"
         />,
-        <Menu />,
+        <Menu
+          favorites={Array []}
+        />,
         <Route
           component={[Function]}
           exact={true}
@@ -38,7 +40,7 @@ ShallowWrapper {
         />,
         <Route
           exact={true}
-          path="/main/people"
+          path="/main/People"
           render={[Function]}
         />,
         <Route
@@ -48,12 +50,12 @@ ShallowWrapper {
         />,
         <Route
           exact={true}
-          path="/main/planets"
+          path="/main/Planets"
           render={[Function]}
         />,
         <Route
           exact={true}
-          path="/main/favorites"
+          path="/main/Favorites"
           render={[Function]}
         />,
       ],
@@ -87,7 +89,9 @@ ShallowWrapper {
         "instance": null,
         "key": undefined,
         "nodeType": "function",
-        "props": Object {},
+        "props": Object {
+          "favorites": Array [],
+        },
         "ref": null,
         "rendered": null,
         "type": [Function],
@@ -111,7 +115,7 @@ ShallowWrapper {
         "nodeType": "class",
         "props": Object {
           "exact": true,
-          "path": "/main/people",
+          "path": "/main/People",
           "render": [Function],
         },
         "ref": null,
@@ -137,7 +141,7 @@ ShallowWrapper {
         "nodeType": "class",
         "props": Object {
           "exact": true,
-          "path": "/main/planets",
+          "path": "/main/Planets",
           "render": [Function],
         },
         "ref": null,
@@ -150,7 +154,7 @@ ShallowWrapper {
         "nodeType": "class",
         "props": Object {
           "exact": true,
-          "path": "/main/favorites",
+          "path": "/main/Favorites",
           "render": [Function],
         },
         "ref": null,
@@ -173,7 +177,9 @@ ShallowWrapper {
           <div
             className="twinkling"
           />,
-          <Menu />,
+          <Menu
+            favorites={Array []}
+          />,
           <Route
             component={[Function]}
             exact={true}
@@ -181,7 +187,7 @@ ShallowWrapper {
           />,
           <Route
             exact={true}
-            path="/main/people"
+            path="/main/People"
             render={[Function]}
           />,
           <Route
@@ -191,12 +197,12 @@ ShallowWrapper {
           />,
           <Route
             exact={true}
-            path="/main/planets"
+            path="/main/Planets"
             render={[Function]}
           />,
           <Route
             exact={true}
-            path="/main/favorites"
+            path="/main/Favorites"
             render={[Function]}
           />,
         ],
@@ -230,7 +236,9 @@ ShallowWrapper {
           "instance": null,
           "key": undefined,
           "nodeType": "function",
-          "props": Object {},
+          "props": Object {
+            "favorites": Array [],
+          },
           "ref": null,
           "rendered": null,
           "type": [Function],
@@ -254,7 +262,7 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "exact": true,
-            "path": "/main/people",
+            "path": "/main/People",
             "render": [Function],
           },
           "ref": null,
@@ -280,7 +288,7 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "exact": true,
-            "path": "/main/planets",
+            "path": "/main/Planets",
             "render": [Function],
           },
           "ref": null,
@@ -293,7 +301,7 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "exact": true,
-            "path": "/main/favorites",
+            "path": "/main/Favorites",
             "render": [Function],
           },
           "ref": null,

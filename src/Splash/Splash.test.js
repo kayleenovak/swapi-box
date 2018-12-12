@@ -21,9 +21,7 @@ const mockFilms = {
   }]
 }
 const mockfetchFilms = jest.fn(() => mockFilms)
-jest.mock('../helper/Films', () => jest.fn().mockImplementation(() => {
-  return { fetchFilms: mockfetchFilms }
-}))
+jest.mock('../helper/Films', () => jest.fn().mockImplementation(() => ({ fetchFilms: mockfetchFilms })))
 
 describe('Splash', () => {
   let wrapper
@@ -41,8 +39,4 @@ describe('Splash', () => {
 
     expect(mockfetchFilms).toHaveBeenCalled()
   })
-
-  // it ('should render a loading page if films has not returned', () => {
-
-  // })
 })

@@ -39,7 +39,9 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <h3>
+        <h3
+          className="tap-to-favorite"
+        >
           Tap the lightsaber to favorite
         </h3>,
         <div
@@ -83,6 +85,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": "Tap the lightsaber to favorite",
+          "className": "tap-to-favorite",
         },
         "ref": null,
         "rendered": "Tap the lightsaber to favorite",
@@ -176,7 +179,9 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <h3>
+          <h3
+            className="tap-to-favorite"
+          >
             Tap the lightsaber to favorite
           </h3>,
           <div
@@ -220,6 +225,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": "Tap the lightsaber to favorite",
+            "className": "tap-to-favorite",
           },
           "ref": null,
           "rendered": "Tap the lightsaber to favorite",

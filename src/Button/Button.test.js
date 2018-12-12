@@ -4,9 +4,8 @@ import Button from './Button'
 
 describe('Button', () => {
   it('should match the snapshot', () => {
-    const mockSelection = 'People'
     const mockName = 'Vehicles'
-    const wrapper = shallow(<Button currentSelection={mockSelection} name={mockName} />)
+    const wrapper = shallow(<Button name={mockName} favorites={[]}/>)
 
     expect(wrapper).toMatchSnapshot()
   })
