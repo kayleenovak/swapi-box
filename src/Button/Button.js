@@ -6,10 +6,12 @@ import PropTypes from 'prop-types'
 
 
 const Button = (props) => {
+
+  const numOfFavorites = props.favorites.length ? props.favorites.length : ''
   return (
     <li className="menu-item">
       <NavLink to={`/main/${props.name}`} className="nav-btn">
-        {props.name}
+        {`${props.name} ${numOfFavorites}`}
       </NavLink>
     </li>
   )

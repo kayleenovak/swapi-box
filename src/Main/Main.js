@@ -18,10 +18,10 @@ const Main = ({
       <div className="twinkling" />
       <Menu favorites={favorites}/>
       <Route exact path="/main" component={Yoda} />
-      <Route exact path="/main/people" render={() => <CardContainer itemType="people" data={people} handleFavorite={handleFavorite} />} />
+      <Route exact path="/main/People" render={() => <CardContainer itemType="people" data={people} handleFavorite={handleFavorite} />} />
       <Route exact path="/main/vehicles" render={() => <CardContainer itemType="vehicles" data={vehicles} handleFavorite={handleFavorite} />} />
-      <Route exact path="/main/planets" render={() => <CardContainer itemType="planets" data={planets} handleFavorite={handleFavorite} />} />
-      <Route exact path="/main/favorites" render={() => <CardContainer itemType="favorites" data={favorites} handleFavorite={handleFavorite} />} />
+      <Route exact path="/main/Planets" render={() => <CardContainer itemType="planets" data={planets} handleFavorite={handleFavorite} />} />
+      <Route exact path="/main/Favorites" render={() => <CardContainer itemType="favorites" data={favorites} handleFavorite={handleFavorite} />} />
     </div>
   )
 }
