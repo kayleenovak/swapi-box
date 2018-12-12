@@ -14,7 +14,16 @@ const Card = (props) => {
     return <p key={key}>{key}: {props.item[key]}</p>
   })
 
-  const favorited = !props.item.favorite ? 'white-saber' : Side[props.item.name] === 'light' ? 'green-saber' : 'red-saber'
+  let favorited
+
+  if (!props.item.favorite) {
+    favorited = 'white-saber'
+  } else if (Side[props.item.name] === 'light') {
+    favorited = 'green-saber'
+  } else {
+    favorited = 'red-saber'
+  }
+
   return (
     <div className="card">
       <div className="black-bg" />
