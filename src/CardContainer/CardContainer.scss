@@ -1,11 +1,15 @@
 .card-container {
-  margin-left: auto;
   padding: 30px;
-  width: 75vw;
 }
 
 .cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.tap-to-favorite {
+  color: #03b9ffb0;
+  font-family: monospace;
+  text-align: center;
 }
