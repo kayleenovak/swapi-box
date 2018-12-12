@@ -17,7 +17,7 @@ const CardContainer = (props) => {
       <h3 className="tap-to-favorite">Tap the lightsaber to favorite</h3>
       <div className="cards">
         {
-          cards.length ? cards : <h1 className='no-favorites'>No favorites you have</h1>
+          cards.length ? cards : <h1 className="no-favorites">No favorites you have</h1>
         }
       </div>
     </div>

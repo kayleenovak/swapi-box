@@ -1,5 +1,5 @@
 import React from 'react'
-import { Route, Switch } from 'react-router-dom'
+import { Route } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import CardContainer from '../CardContainer/CardContainer'
 import Yoda from '../Yoda/Yoda'
@@ -16,7 +16,7 @@ const Main = ({
     <div className="app">
       <div className="stars" />
       <div className="twinkling" />
-      <Menu favorites={favorites}/>
+      <Menu favorites={favorites} />
       <Route exact path="/main" component={Yoda} />
       <Route exact path="/main/People" render={() => <CardContainer itemType="people" data={people} handleFavorite={handleFavorite} />} />
       <Route exact path="/main/vehicles" render={() => <CardContainer itemType="vehicles" data={vehicles} handleFavorite={handleFavorite} />} />

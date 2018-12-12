@@ -10,15 +10,14 @@ const Card = (props) => {
   const info = allInfo.map((key) => {
     if (key === 'name') {
       return <h1 key={key}>{props.item[key]}</h1>
-    } else {
-      return <p key={key}>{key}: {props.item[key]}</p>
     }
+    return <p key={key}>{key}: {props.item[key]}</p>
   })
 
   const favorited = !props.item.favorite ? 'white-saber' : Side[props.item.name] === 'light' ? 'green-saber' : 'red-saber'
   return (
     <div className="card">
-    <div className="black-bg"/>
+      <div className="black-bg" />
       <div className="card-info">
         { info }
       </div>
@@ -35,7 +34,7 @@ const Card = (props) => {
 export default Card
 
 Card.propTypes = {
-  item: PropTypes.object.isRequired,
+  item: PropTypes.instanceOf(Object).isRequired,
   handleFavorite: PropTypes.func.isRequired,
   itemType: PropTypes.string.isRequired
 }
