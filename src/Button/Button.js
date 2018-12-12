@@ -1,12 +1,11 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import PropTypes from 'prop-types'
 import './Button.scss'
 import '../Menu/Menu.scss'
-import PropTypes from 'prop-types'
 
 
 const Button = (props) => {
-
   const numOfFavorites = props.favorites.length ? props.favorites.length : ''
   return (
     <li className="menu-item">
@@ -20,5 +19,6 @@ const Button = (props) => {
 export default Button
 
 Button.propTypes = {
-  name: PropTypes.string.isRequired
+  name: PropTypes.string.isRequired,
+  favorites: PropTypes.instanceOf(Array).isRequired
 }
