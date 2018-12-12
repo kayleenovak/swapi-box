@@ -33,6 +33,7 @@ class App extends Component {
   }
 
   handleFavorite = (data, itemType) => {
+    console.log(itemType)
     const { favorites } = this.state
     let updatedItems
     let newFavorites
