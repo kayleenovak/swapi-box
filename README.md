@@ -1,44 +1,28 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Swapi Box
 
-## Available Scripts
+## Set Up
+  - Clone down this repo (git clone https://github.com/KylieStanley/swapi-box.git)
+  - Run npm install in your terminal
+  - Run npm start in your terminal
+  - Open http://localhost:3000 in your browser
 
-In the project directory, you can run:
+## Stack
+  - React.js
+  - React Router
+  - Jest
+  - Enzyme
 
-### `npm start`
+## About
+SwapiBox is an interactive web application that utilizes the Star Wars API. As a user, you are able to browse between Vehicles, Planets, and People in order to learn more about the specifics of Star Wars. While browsing, you can favorite and unfavorite cards based on your interests. The favorites page will display all of the cards you chose to favorite in one place. 
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Wireframes
+![image](https://user-images.githubusercontent.com/39439089/49846309-daea4a80-fd87-11e8-9880-2bc2350cf49a.png)
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+![image](https://user-images.githubusercontent.com/39439089/49846295-ce65f200-fd87-11e8-9578-b21ab32ab7f4.png)
 
-### `npm test`
+## Screenshots
+![image](https://user-images.githubusercontent.com/39439089/49846267-a8d8e880-fd87-11e8-9cc8-2aae66a991ca.png)
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![image](https://user-images.githubusercontent.com/39439089/49846318-e9d0fd00-fd87-11e8-8a87-cbb3cb096816.png)
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+![image](https://user-images.githubusercontent.com/39439089/49846347-0c631600-fd88-11e8-88bb-ceb1696a21e9.png)
