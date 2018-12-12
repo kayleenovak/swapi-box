@@ -20,5 +20,6 @@ const Button = (props) => {
 export default Button
 
 Button.propTypes = {
-  name: PropTypes.string.isRequired
+  name: PropTypes.string.isRequired,
+  numOfFavorites: PropTypes.number
 }
