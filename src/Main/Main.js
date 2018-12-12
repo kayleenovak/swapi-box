@@ -11,20 +11,18 @@ const Main = ({
   people,
   favorites,
   handleFavorite
-}) => {
-  return (
-    <div className="app">
-      <div className="stars" />
-      <div className="twinkling" />
-      <Menu favorites={favorites} />
-      <Route exact path="/main" component={Yoda} />
-      <Route exact path="/main/People" render={() => <CardContainer itemType="people" data={people} handleFavorite={handleFavorite} />} />
-      <Route exact path="/main/vehicles" render={() => <CardContainer itemType="vehicles" data={vehicles} handleFavorite={handleFavorite} />} />
-      <Route exact path="/main/Planets" render={() => <CardContainer itemType="planets" data={planets} handleFavorite={handleFavorite} />} />
-      <Route exact path="/main/Favorites" render={() => <CardContainer itemType="favorites" data={favorites} handleFavorite={handleFavorite} />} />
-    </div>
-  )
-}
+}) => (
+  <div className="app">
+    <div className="stars" />
+    <div className="twinkling" />
+    <Menu favorites={favorites} />
+    <Route exact path="/main" component={Yoda} />
+    <Route exact path="/main/People" render={() => <CardContainer itemType="people" data={people} handleFavorite={handleFavorite} />} />
+    <Route exact path="/main/vehicles" render={() => <CardContainer itemType="vehicles" data={vehicles} handleFavorite={handleFavorite} />} />
+    <Route exact path="/main/Planets" render={() => <CardContainer itemType="planets" data={planets} handleFavorite={handleFavorite} />} />
+    <Route exact path="/main/Favorites" render={() => <CardContainer itemType="favorites" data={favorites} handleFavorite={handleFavorite} />} />
+  </div>
+)
 
 export default Main
 
