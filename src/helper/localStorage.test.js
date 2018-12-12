@@ -33,5 +33,5 @@ describe('getLocalStorage', () => {
     const getItems = getLocalStorage('people')
 
     expect(getItems).toEqual(mockItems)
-	})
+  })
 })
