@@ -13,7 +13,10 @@
   - Enzyme
 
 ## About
-SwapiBox is an interactive web application that utilizes the Star Wars API. As a user, you are able to browse between Vehicles, Planets, and People in order to learn more about the specifics of Star Wars. While browsing, you can favorite and unfavorite cards based on your interests. The favorites page will display all of the cards you chose to favorite in one place. 
+SwapiBox is an interactive web application that utilizes the Star Wars API. As a user, you are able to browse between Vehicles, Planets, and People in order to learn more about the specifics of Star Wars. While browsing, you can favorite and unfavorite cards based on your interests. The favorites page will display all of the cards you chose to favorite in one place.
+
+## Contributors
+Kaylee Bunce(@kayleenovak) and Kylie Stanley(@KylieStanley)
 
 ## Wireframes
 ![image](https://user-images.githubusercontent.com/39439089/49846309-daea4a80-fd87-11e8-9880-2bc2350cf49a.png)
