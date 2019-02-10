@@ -1,9 +1,9 @@
 # Swapi Box
 
 ## Set Up
-  - Clone down this repo (git clone https://github.com/KylieStanley/swapi-box.git)
-  - Run npm install in your terminal
-  - Run npm start in your terminal
+  - Clone down this repo `git clone https://github.com/kayleenovak/swapi-box.git`
+  - Run `npm install` in your terminal
+  - Run `npm start` in your terminal
   - Open http://localhost:3000 in your browser
 
 ## Stack
